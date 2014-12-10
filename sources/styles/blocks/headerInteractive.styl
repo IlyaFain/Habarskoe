@@ -1,0 +1,42 @@
+.headerInteractive
+	background: $color.white
+	background: rgba($color.white, 0.9)
+	position: absolute
+	min-height: 20px
+	width: 100%
+	top: 100%
+	z-index: 10
+	&-trigger
+		// top: 100%
+		bottom: 0
+		position: absolute
+		height: 20px
+		width: 100%
+		span
+			position: absolute
+			right: 20px
+			bottom: 7px
+			transition: opacity 0.3s
+			opacity: 0.8
+		.i-arrowUp
+			opacity: 0
+			visibility: hidden
+	&-trigger:hover span
+		opacity: 1
+	&-trigger.is-active
+		.i-arrowUp
+			opacity: 1
+			visibility: visible
+		.i-arrowDown
+			opacity: 0
+			visibility: hidden
+	&-popup
+		height: 0
+		overflow: hidden
+		transition: height 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s
+		transform: translate3d(0, -30px, 0)
+		&.is-visible
+			visibility: visible
+			opacity: 1
+			height: 440px
+			transform: none

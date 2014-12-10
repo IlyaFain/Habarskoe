@@ -1,0 +1,37 @@
+.headerInteractive
+	.headerInteractive-popup data-role="headerInteractive"
+		| <!-- Лето / зима -->
+		.headerInteractive-row
+			.headerInteractive-left
+				span.plink.season: span.i-summer
+			.headerInteractive-left
+				span.plink.season: span.i-winter
+
+		| <!-- Погода, камеры -->
+		.headerInteractive-row
+			.headerInteractive-left
+				span.plink.plate
+					span.plate-pic ...
+					span.plate-title -25°
+			.headerInteractive-right
+				span.plink.plate
+					span.plate-pic: span.i-webcam
+					span.plate-title камеры
+
+		| <!-- Вид со склона -->
+		.headerInteractive-row
+
+		| <!-- Схемы -->
+		.headerInteractive-row
+			.headerInteractive-left
+				span.plink.winexplorer
+					span.winexplorer-pic: span.i-flag
+					span.winexplorer-title: u Схема склонов
+			.headerInteractive-right
+				span.plink.winexplorer
+					span.winexplorer-pic: span.i-chum
+					span.winexplorer-title: Схема комплекса
+
+	.plink.headerInteractive-trigger data-role="toggleBlock" data-target="headerInteractive"
+		span.i-arrowDown
+		span.i-arrowUp

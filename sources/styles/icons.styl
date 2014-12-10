@@ -1,0 +1,32 @@
+path($name, $ext = 'png')
+	return '../../sources/images/' + $name + '.' + $ext
+
+icon($name, $ext = 'png')
+	$path = path($name, $ext)
+	$size = image-size($path)
+	.i-{$name}
+		display: inline-block
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-image: inline($path)
+		{block}
+		width: $size[0] unless @width
+		height: $size[1] unless @height
+
+icon('arrowBlueNext')
+icon('arrowBluePrev')
+icon('arrowGrayNext')
+icon('arrowGrayPrev')
+icon('arrowLargeBlueNext')
+icon('arrowLargeBluePrev')
+icon('arrowLargeGrayNext')
+icon('arrowLargeGrayPrev')
+icon('arrowDown')
+icon('arrowUp')
+icon('chum')
+icon('closeSmall')
+icon('closeSmallGray')
+icon('closeWhite')
+icon('flag')
+icon('menu')
+icon('turn')

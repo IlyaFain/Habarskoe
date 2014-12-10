@@ -1,0 +1,42 @@
+*, *:after, *:before
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+a, input, textarea, button
+	&:focus
+		outline: none
+p, blockquote, ul, ol
+	margin: 0 0 unit($font.height + 0.25, em)
+p + ul
+	margin-top: -(unit($font.height + 0.3, em))
+	// background: pink
+
+
+
+
+body
+	color: $color.text
+	background-color: $color.dark
+	font: $font.style $font.weight $font.size/$font.height $font.family
+
+
+a, .plink
+	text-decoration: none
+	cursor: pointer
+	u
+		text-decoration: none
+		border-bottom: 1px solid
+		line-height: 1
+		display: inline-block
+	linkColor($color.blue)
+.plink u
+	border-bottom-style: dotted
+
+
+
+
+
+
+
+
+

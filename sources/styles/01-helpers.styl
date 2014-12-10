@@ -1,0 +1,126 @@
+// Определяем объект кеша и объект с алиасами
+$media_cache = {}
+$media_aliases = {
+	mob: 		'(max-device-width: 480px)'
+	palm:       '(max-width: 480px)'
+	lap:        '(min-width: 481px) and (max-width: 1023px)'
+	lap-and-up: '(min-width: 481px)'
+	portable:   '(max-width: 1023px)'
+	desk:       '(min-width: 1024px)'
+	desk-wide:  '(min-width: 1200px)'
+}
+
+// Миксин, кеширующий медиаквери
+media($condition)
+	helper($condition)
+		unless $media_cache[$condition]
+			$media_cache[$condition] = ()
+		push($media_cache[$condition], block)
+	+helper($condition)
+		{selector() + ''}
+			{block}
+
+// Функция, вызывающая закешированные медиаквери
+apply_media_cache()
+	for $media, $blocks in $media_cache
+		$media = unquote($media_aliases[$media] || $media)
+		$media = '(%s)' % $media unless match('\(', $media)
+		$media = 'only screen and %s' % $media
+		@media $media
+			for $block in $blocks
+				{$block}
+
+
+linkColor(c)
+	color: c
+	transition: color 0.3s
+	u
+		transition: border-color 0.3s
+		border-color: c
+		border-color: rgba(c, 0.5)
+	&:hover
+		transition: color 0.1s
+		u
+			transition: border-color 0.1s
+			border-color: rgba(c, 0.9)
+
+hover()
+	&:hover, &:focus
+		{block}
+no-hover()
+	&, &.was-tapped:hover, &.was-tapped:active
+		{block}
+
+no-tapHighlight()
+	-webkit-tap-highlight-color: rgba(#fff, 0)
+
+styledTaps()
+	.is-tapped, :active
+		transition: none !important
+	body
+		no-tapHighlight()
+
+trans(property, type='hover')
+	if type is 'hover'
+		$duration = $transition.hover.long
+	else
+		$duration = $transition.click.long
+	transition-delay: 0
+	transition-duration: $duration
+	transition-property: unquote(arguments)
+
+retrans(type='hover')
+	if $type is 'hover'
+		$duration = $transition.hover.short
+	else
+		$duration = $transition.click.short
+	transition-duration: $duration
+
+
+o(c = red, o = 0.3)
+	outline: 1px solid rgba(c, o)
+	outline-offset: -1px
+debug(level = 1)
+	o(red)
+	if level > 1
+		& > *
+			o(blue)
+	if level > 2
+		& > * > *
+			o(green)
+	if level > 3
+		& > * > * > *
+			o(orange)
+	if level > 4
+		& > * > * > * > *
+			o(yellow)
+
+clearfix()
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+black(o)
+	rgba(0, 0, 0, o)
+white(o)
+	rgba(255, 255, 255, o)
+
+hide-text()
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+
+display()
+	if arguments == inline-block
+		display: inline-block
+		zoom: 1
+		*display: inline
+	else
+		display: arguments
+colorMix(a, b, m)
+	require-color a
+	require-color b
+	m = unit(m / 100, '')
+	n = 1 - m
+	return a * m +  b * n
