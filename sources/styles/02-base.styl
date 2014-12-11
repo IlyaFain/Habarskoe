@@ -6,11 +6,24 @@ a, input, textarea, button
 	&:focus
 		outline: none
 p, blockquote, ul, ol
-	margin: 0 0 unit($font.height + 0.25, em)
+	margin: 0 0 unit($font.height - 0.5, em)
 p + ul
 	margin-top: -(unit($font.height + 0.3, em))
 	// background: pink
 
+
+.g-flLeft
+	float: left
+.g-flRight
+	float: right
+.g-taLeft
+	text-align: left
+.g-taRight
+	text-align: right
+.g-taCenter
+	text-align: center
+.g-clear
+	clearfix()
 
 
 
@@ -27,7 +40,6 @@ a, .plink
 		text-decoration: none
 		border-bottom: 1px solid
 		line-height: 1
-		display: inline-block
 	linkColor($color.blue)
 .plink u
 	border-bottom-style: dotted

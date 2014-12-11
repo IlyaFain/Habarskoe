@@ -1,0 +1,27 @@
+.season
+	display: inline-block
+	vertical-align: top
+	text-align: center
+	font-size: 15px
+	font-weight: $font.bold
+	color: $color.gray
+	&.is-active
+		color: $color.text
+	&-pic
+		display: inline-block
+		width: 64px
+		height: 64px
+		border: 3px solid $color.yellow
+		border-radius: 100px
+		opacity: 0.6
+		vertical-align: top
+	&.is-active &-pic
+		border-color: $color.blue
+		opacity: 1
+		cursor: default
+	&-title
+		display: block
+		margin-top: 5px
+
+
+

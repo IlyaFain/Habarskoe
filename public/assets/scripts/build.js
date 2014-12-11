@@ -113,3 +113,15 @@ $(function() {
     return $(this).toggleClass('is-active');
   });
 });
+
+$(function() {
+  var swiper;
+  return swiper = $('@swiper').swiper({
+    mode: 'horizontal',
+    loop: false,
+    slidesPerView: 3,
+    calculateHeight: true,
+    visibilityFullFit: false,
+    createPagination: true
+  });
+});

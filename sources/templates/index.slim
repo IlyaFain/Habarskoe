@@ -7,5 +7,24 @@ html lang="ru"
 		= include 'partials/hero.slim'
 
 
+		.laytout
+			.constrain
+				.layout-column.layout-column--narrow
+					.block.bg-bright
+						= include 'partials/news.slim'
+					.block.bg-blue.color-white
+						= include 'partials/footer.slim'
+
+				.layout-column.layout-column--wide
+					.block.bg-dull
+						= include 'partials/soon.slim'
+					.block.bg-orange.color-dark
+						h3.g-flLeft Цена одного подъема 70Р
+						h3.g-flRight Цена одного подъема 570Р
+						.g-clear
+					.block.color-white
+						= include 'partials/photos.slim'
 
 		= include 'partials/scripts.slim'
+
+

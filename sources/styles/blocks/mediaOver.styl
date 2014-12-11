@@ -1,0 +1,27 @@
+.mediaOver
+	position: relative
+	display: block
+	&-pic
+		width: 100%
+		display: block
+	&-text
+		position: absolute
+		background: #FFF
+		background: rgba(#fff, 0.9)
+		width: 100%
+		bottom: 0
+		left: 0
+		padding: 5%
+		display: block
+		transition: background 0.3s
+	&-date
+		font-style: italic
+		font-size: 14px
+	&-title
+		font-size: 18px
+		font-weight: $font.bold
+	&:hover
+		color: $color.white
+	&:hover &-text
+		background: $color.blue
+		background: rgba($color.blue)

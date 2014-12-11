@@ -1,13 +1,50 @@
 .headerMenu
 	background: $color.dark
+	color: $color.white
+	z-index: 3
+	position: relative
+	width: 100%
+	a
+		linkColor($color.white)
+	.plink
+		linkColor($color.gray)
 	&-trigger
 		text-align: center
 		line-height: 95px
+		height: 90px
 		vertical-align: middle
-
+	&-close
+		position: absolute
+		left: 30px
+		top: 30px
+		cursor: pointer
 	&-popup
+		top: 0
+		width: 310px
+		left: 0
+		background: $color.dark
+		position: absolute
 		visibility: hidden
 		opacity: 0
+		transition: height 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s
+		transform: translate3d(0, -30px, 0)
+		padding: 80px 10px 45px 45px
 		&.is-visible
 			visibility: visible
 			opacity: 1
+			transform: none
+	&-title
+		font-size: 30px
+		font-weight: $font.xbold
+		line-height: 1.2
+		span
+			margin-left: -0.5em
+	&-list
+		margin-top: 20px
+	&-item, &-subitem
+		display: inline-block
+		line-height: 1.9
+		margin-right: 20px
+		font-size: 15px
+	&-submenu
+		margin-top: 20px

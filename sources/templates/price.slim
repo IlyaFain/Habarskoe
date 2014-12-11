@@ -1,0 +1,31 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/header.slim'
+
+
+		.laytout
+			.constrain
+				.layout-column
+					.block.bg-bright
+						h1 Прокат
+					.block.bg-orange
+						h2 Правила катания
+					.block.bg-dark.color-white
+						h2 Правила проката
+					.block.bg-blue.color-white
+						= include 'partials/footer.slim'
+
+				.layout-column
+					.block.bg-white
+						p список
+					.block.bg-dull
+						h1 Катание
+					.block.bg-gray
+						p: em: strong Цены, указанные на сайте, не являются публичной офертой.<br>Администрация осталяет за собой право на изменение тарифов.
+
+		= include 'partials/scripts.slim'
+
+

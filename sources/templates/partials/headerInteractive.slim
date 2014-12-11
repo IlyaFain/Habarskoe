@@ -3,15 +3,19 @@
 		| <!-- Лето / зима -->
 		.headerInteractive-row
 			.headerInteractive-left
-				span.plink.season: span.i-summer
+				span.plink.season
+					span.season-pic: span.i-summer
+					span.season-title лето
 			.headerInteractive-left
-				span.plink.season: span.i-winter
+				span.plink.season.is-active
+					span.season-pic: span.i-winter
+					span.season-title лето
 
 		| <!-- Погода, камеры -->
 		.headerInteractive-row
 			.headerInteractive-left
 				span.plink.plate
-					span.plate-pic ...
+					span.plate-pic: span.i-weather
 					span.plate-title -25°
 			.headerInteractive-right
 				span.plink.plate
@@ -20,6 +24,9 @@
 
 		| <!-- Вид со склона -->
 		.headerInteractive-row
+			.span.plink.rotate
+				span.rotate-pic: span.i-rotate
+				span.rotate-title Вид со склона
 
 		| <!-- Схемы -->
 		.headerInteractive-row
@@ -30,7 +37,7 @@
 			.headerInteractive-right
 				span.plink.winexplorer
 					span.winexplorer-pic: span.i-chum
-					span.winexplorer-title: Схема комплекса
+					span.winexplorer-title: u Схема комплекса
 
 	.plink.headerInteractive-trigger data-role="toggleBlock" data-target="headerInteractive"
 		span.i-arrowDown

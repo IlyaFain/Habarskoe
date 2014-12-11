@@ -1,0 +1,52 @@
+.news
+	position: relative
+	> *
+		position: relative
+		z-index: 1
+	&-date
+		color: $color.blue
+		font-weight: $font.bold
+		font-size: 12px
+	&-title
+		margin-top: 10px
+		a
+			linkColor($color.text)
+	&-text
+		margin-top: 10px
+		img
+			width: 100%
+	&--important
+		margin: 40px 0
+	&--important:before
+		content: ''
+		display: block
+		position: absolute
+		border: 1px dashed $color.yellow
+		// width: 100%
+		z-index: 0
+		right: -40px
+		top: -20px
+		bottom: -20px
+		left: -17.5%
+		.layout-column--narrow &
+			left: -28.2%
+		.layout-column--wide &
+			left: -12.7%
+	&-label
+		position: absolute
+		left: 0
+		top: -20px
+		bottom: -20px
+		width: 50px
+		background: $color.yellow
+		text-align: center
+		left: -17.5%
+		.layout-column--narrow &
+			left: -28.2%
+		.layout-column--wide &
+			left: -12.7%
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+

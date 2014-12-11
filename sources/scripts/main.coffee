@@ -16,4 +16,12 @@ $ ->
 		$('@'+targetRole).toggleClass('is-visible')
 		$(this).toggleClass('is-active')
 
+$ ->
+	swiper = $('@swiper').swiper
+		mode: 'horizontal'
+		loop: false
+		slidesPerView: 3
+		calculateHeight: true
+		visibilityFullFit: false
+		createPagination: true
 

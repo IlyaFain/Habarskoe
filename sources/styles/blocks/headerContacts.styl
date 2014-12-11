@@ -4,7 +4,14 @@
 	font-weight: $font.bold
 	font-size: 16px
 	padding: 17px 10% 0
-	// +media('max-width: 480px')
+	+media('max-width: 1300px')
+		font-size: 15px
+		padding-top: 18px
+	+media('max-width: 1240px')
+		font-size: 14px
+		padding-top: 20px
+	+media('max-width: 1160px')
+		font-size: 13px
 	a, .plink
 		linkColor($color.text)
 	&-popup
@@ -28,10 +35,12 @@
 		margin-top: 5px
 	&-left
 		float: left
-		max-width: 70%
+		max-width: 65%
+		u
+			display: inline
 	&-right
 		float: right
-		width: 30%
+		width: 35%
 		text-align: right
 	&-tel
 		max-width: none

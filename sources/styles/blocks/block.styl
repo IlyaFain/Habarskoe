@@ -1,0 +1,21 @@
+.layout
+	clearfix()
+	&-column
+		float: left
+		width: 50%
+		&--narrow
+			width: 36%
+		&--wide
+			width: 64%
+
+.block
+	padding: 40px 13%
+	clearfix()
+
+	.layout-column--narrow &
+		padding-left: (13/36*50)%
+		padding-right: (13/36*50)%
+
+	.layout-column--wide &
+		padding-left: (13/64*50)%
+		padding-right: (13/64*50)%
