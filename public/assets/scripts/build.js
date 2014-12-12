@@ -92,9 +92,10 @@ $(function() {
 });
 
 $(function() {
-  var $hideBlockLinks, $showBlockLinks, $toggleBlockLinks;
+  var $hideBlockLinks, $showBlockLinks, $switchBlockLinks, $toggleBlockLinks;
   $showBlockLinks = $('@showBlock');
   $hideBlockLinks = $('@hideBlock');
+  $switchBlockLinks = $('@switchBlock');
   $toggleBlockLinks = $('@toggleBlock');
   $showBlockLinks.on('click', function() {
     var targetRole;
@@ -106,11 +107,18 @@ $(function() {
     targetRole = $(this).attr('data-target');
     return $('@' + targetRole).removeClass('is-visible');
   });
-  return $toggleBlockLinks.on('click', function() {
+  $toggleBlockLinks.on('click', function() {
     var targetRole;
     targetRole = $(this).attr('data-target');
     $('@' + targetRole).toggleClass('is-visible');
     return $(this).toggleClass('is-active');
+  });
+  return $switchBlockLinks.on('click', function() {
+    var targetRole, targetsRole;
+    targetRole = $(this).attr('data-target');
+    targetsRole = $(this).attr('data-targets');
+    $('@' + targetsRole).removeClass('is-visible').filter('@' + targetRole).addClass('is-visible');
+    return $('[data-targets="' + targetsRole + '"]').removeClass('is-active').filter($(this)).addClass('is-active');
   });
 });
 

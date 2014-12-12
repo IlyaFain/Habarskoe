@@ -442,6 +442,21 @@ a.color-text:hover u {
   max-width: 1366px;
   position: relative;
 }
+.download {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: left;
+}
+.download-pic {
+  display: block;
+  text-align: left;
+}
+.download-title {
+  display: block;
+  font-weight: 700;
+  font-style: italic;
+}
 .footer {
   font-size: 14px;
 }
@@ -799,6 +814,13 @@ a.color-text:hover u {
           transition: border-color 0.1s;
   border-color: rgba(255,255,255,0.9);
 }
+.headerNav a.is-active {
+  color: #fecc00;
+  cursor: default;
+}
+.headerNav a.is-active u {
+  border-color: transparent;
+}
 .hero-slide {
   height: 440px;
   background-color: #fff;
@@ -1003,7 +1025,61 @@ a.color-text:hover u {
   margin-top: 5px;
 }
 .sep {
+  margin-bottom: 20px;
+}
+.sep--xxl {
+  margin-bottom: 50px;
+}
+.sep--xl {
+  margin-bottom: 40px;
+}
+.sep--l {
   margin-bottom: 30px;
+}
+.sep--s {
+  margin-bottom: 10px;
+}
+.sep--xs {
+  margin-bottom: 5px;
+}
+small {
+  font-size: 12px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  line-height: 14px;
+}
+.switcher {
+  margin-left: -25px;
+}
+.switcher-item {
+  background: transparent;
+  border-radius: 100px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transition: background 0.3s, color 0.3s;
+          transition: background 0.3s, color 0.3s;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+.switcher-item.is-active {
+  cursor: default;
+  background: #006eb6;
+  color: #fff;
+}
+.switcher-item.is-active u {
+  border-color: transparent;
+}
+.switchBlock {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.switchBlock.is-visible {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
 }
 table {
   font-size: 12px;
@@ -1025,6 +1101,10 @@ table thead th {
 table td {
   padding: 5px 10px 5px 0;
   vertical-align: top;
+}
+table tbody th {
+  padding-top: 1em;
+  padding-bottom: 0;
 }
 .title,
 h1,

@@ -1,0 +1,20 @@
+
+h1 Прокат
+h3 +7(910) 871 12 94 — администратор
+p В наличии <strong>250 комплектов лыж</strong> и сноубордов. Фирмы: Fischer, Rossignol, Salomon, Dynastar, Volkl, Elan. <br>Есть детские и взрослые модели.
+p Снаряжение выдается <strong>под залог документов</strong> (водительское удостоверение + свидетельство о регистрации на автомобиль) либо под залог денежных средств. Размеры залогов указаны в таблице ниже.
+p: strong: em Паспорт гражданина РФ не является залоговым документом.
+
+.plink.headerMenu-trigger data-role="showBlock" data-target="headerMenu": span.i-menu
+.switcher
+	span.plink.switcher-item.is-active data-role="switchBlock" data-targets="rent" data-target="holidayRent": u Прокат в выходные
+	span.plink.switcher-item data-role="switchBlock" data-targets="rent" data-target="workdayRent": u Прокат в будни
+.sep
+small Показана стоимость за один взрослый комплект.
+br
+small Лыжникам — лыжи, ботинки, палки.  Сноубордистам — доска,ботинки.
+.sep
+.switchBlock.is-visible data-role="rent holidayRent"
+	= include 'rent-holiday.slim'
+.switchBlock data-role="rent workdayRent"
+	= include 'rent-workday.slim'

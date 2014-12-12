@@ -10,90 +10,14 @@ html lang="ru"
 			.constrain
 				.layout-column
 					.block.bg-bright
-						h1 Прокат
-						h3 +7(910) 871 12 94 — администратор
-						p В наличии <strong>250 комплектов лыж</strong> и сноубордов. Фирмы: Fischer, Rossignol, Salomon, Dynastar, Volkl, Elan. <br>Есть детские и взрослые модели.
-						p Снаряжение выдается <strong>под залог документов</strong> (водительское удостоверение + свидетельство о регистрации на автомобиль) либо под залог денежных средств. Размеры залогов указаны в таблице ниже.
-						p: strong: em Паспорт гражданина РФ не является залоговым документом.
-						table style="width: 100%"
-							thead
-								tr
-									th style="width: 20%" Категория
-									th 2 часа
-									th 3-5 часов
-									th <nobr>>5 часов</nobr> <nobr>в сутки</nobr>
-									th Залог <nobr>(без документов)</nobr>
-							tbody
-								tr
-									th colspan="5": h4 Лыжи
-								tr
-									td <h5>А+</h5>Sport
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									td <h5>А+</h5>Rossignol, Salomon 2012/14 гг.
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									td <h5>А+</h5>Лыжи прошлых сезонов
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									td <h5>Детские</h5>Ботинки до 36 р., лыжи до 130 см
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									th colspan="5": h4 Сноуборды
-								tr
-									td <h5>А+</h5>Sport
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									td <h5>А+</h5>Rossignol, Salomon 2012/14 гг.
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									td <h5>А+</h5>Лыжи прошлых сезонов
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									td <h5>Детские</h5>Ботинки до 36 р., лыжи до 130 см
-									td 900 ₽
-									td 300 ₽/<sub>час</sub>
-									td 1700 ₽
-									td 15 000 ₽
-								tr
-									th colspan="5": h4 Шлемы
-								tr
-									td <h5>Детские</h5>
-									td 100 ₽
-									td 30 ₽/<sub>час</sub>
-									td 1900 ₽
-									td 5 000 ₽
-						.sep
-						h3 Лыжи категории А+
-						p Комплект категории «A+ Sport» — это топовые модели прошлых лет. На похожих лыжах катаются профессиональные спортсмены. За счет высокой жесткости, лыжи лучше управляются. Это позволяет кататься более динамично.
-						.sep
-						h4 Лыжи категории А+ в наличии
+						= include 'partials/rent.slim'
 
 					.block.bg-orange
-						h2 Правила катания
+						= include 'partials/rules-1.slim'
+
 					.block.bg-dark.color-white
-						h2 Правила проката
+						= include 'partials/rules-2.slim'
+
 					.block.bg-blue.color-white
 						= include 'partials/footer.slim'
 

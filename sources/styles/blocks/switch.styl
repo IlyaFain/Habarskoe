@@ -1,0 +1,25 @@
+.switcher
+	margin-left: -25px
+	&-item
+		background: transparent
+		border-radius: 100px
+		padding: 10px 25px
+		font-size: 18px
+		font-weight: $font.bold
+		transition: background 0.3s, color 0.3s
+		margin-right: 5px
+		white-space: nowrap
+		&.is-active
+			cursor: default
+			background: $color.blue
+			color: $color.white
+			u
+				border-color: transparent
+.switchBlock
+	visibility: hidden
+	opacity: 0
+	position: absolute
+	&.is-visible
+		visibility: visible
+		opacity: 1
+		position: relative
