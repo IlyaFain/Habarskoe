@@ -42,7 +42,7 @@ p + ul {
 }
 body {
   color: #393939;
-  background-color: #424242;
+  background-color: #212121;
   font: normal 400 14px /1.65 'Open Sans', sans-serif;
 }
 a,
@@ -252,6 +252,69 @@ Pagination Styles
   padding-left: 10.15625%;
   padding-right: 10.15625%;
 }
+.cat {
+  margin-bottom: 5px;
+  position: relative;
+}
+.cat:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cat-title {
+  float: left;
+  width: 70%;
+  color: #393939;
+  -webkit-transition: color 0.3s;
+          transition: color 0.3s;
+  cursor: help;
+}
+.cat-title u {
+  -webkit-transition: border-color 0.3s;
+          transition: border-color 0.3s;
+  border-color: #393939;
+  border-color: rgba(57,57,57,0.5);
+}
+.cat-title:hover {
+  -webkit-transition: color 0.1s;
+          transition: color 0.1s;
+}
+.cat-title:hover u {
+  -webkit-transition: border-color 0.1s;
+          transition: border-color 0.1s;
+  border-color: rgba(57,57,57,0.9);
+}
+.cat-value {
+  float: right;
+  width: 25%;
+}
+.cat-desc {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 100%;
+  background: #fff;
+  font-size: 12px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  padding: 20px;
+  z-index: 2;
+  width: 95%;
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, visibility 0.3s;
+          transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+.cat-desc img {
+  margin-bottom: 10px;
+}
+.cat-title:hover + .cat-desc,
+.cat-desc:hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
 .color-white {
   color: #fff;
 }
@@ -439,7 +502,7 @@ a.color-text:hover u {
 .constrain {
   margin: 0 auto;
   min-width: 1024px;
-  max-width: 1366px;
+  max-width: 1620px;
   position: relative;
 }
 .download {
@@ -821,11 +884,64 @@ a.color-text:hover u {
 .headerNav a.is-active u {
   border-color: transparent;
 }
-.hero-slide {
+.hero .constrain {
+  height: 440px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-seasons {
+  width: 200%;
+}
+.hero-season {
+  float: left;
+  width: 50%;
+  height: 440px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.3s, opacity 0.3s, margin 0.3s;
+          transition: visibility 0.3s, opacity 0.3s, margin 0.3s;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+.hero-season.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.hero-season--summer {
+  margin-left: -50%;
+}
+.hero-season--summer.is-visible {
+  margin-left: 0;
+}
+.hero-pic {
   height: 440px;
   background-color: #fff;
   background-position: 50% 50%;
   background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s, opacity 1s;
+          transition: transform 1s, opacity 1s;
+  opacity: 0.5;
+}
+.hero-pic:first-child {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.hero-pic:last-child {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.hero-pic.is-visible {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 .mediaOver {
   position: relative;
@@ -862,6 +978,57 @@ a.color-text:hover u {
 .mediaOver:hover .mediaOver-text {
   background: #006eb6;
   background: #006eb6;
+}
+body.is-locked {
+  overflow: hidden;
+}
+.modal {
+  z-index: 10;
+  position: fixed;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0.4s;
+          transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform: translate3d(0, -15%, 0) rotateX(40deg);
+          transform: translate3d(0, -15%, 0) rotateX(40deg);
+  visibility: hidden;
+  opacity: 0;
+}
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.modal-window {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0.4s;
+          transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+  padding: 40px 30px 30px;
+  margin-top: 10%;
+  left: 50%;
+  width: 780px;
+  margin-left: -390px;
+  background: #424242;
+}
+.modal-close {
+  z-index: 5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.modal-title {
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
 }
 .news {
   position: relative;

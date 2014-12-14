@@ -37,14 +37,14 @@
         <div class="header-place header-place--logo">
           <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
           <div class="headerInteractive">
-            <div class="headerInteractive-popup" data-role="headerInteractive">
+            <div class="headerInteractive-popup is-visible" data-role="headerInteractive">
               <!-- Лето / зима -->
               <div class="headerInteractive-row">
                 <div class="headerInteractive-left">
-                  <span class="plink season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
+                  <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
                 </div>
                 <div class="headerInteractive-left">
-                  <span class="plink season is-active"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">лето</span></span>
+                  <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
                 </div>
               </div>
               <!-- Погода, камеры -->
@@ -58,7 +58,7 @@
               </div>
               <!-- Вид со склона -->
               <div class="headerInteractive-row">
-                <div class="span plink rotate">
+                <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
                   <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
                 </div>
               </div>
@@ -68,7 +68,7 @@
                   <span class="plink winexplorer"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
                 </div>
                 <div class="headerInteractive-right">
-                  <span class="plink winexplorer"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-1"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
                 </div>
               </div>
             </div>
@@ -174,9 +174,6 @@
             <p>
               <strong><em>Паспорт гражданина РФ не является залоговым документом.</em></strong>
             </p>
-            <div class="plink headerMenu-trigger" data-role="showBlock" data-target="headerMenu">
-              <span class="i-menu"></span>
-            </div>
             <div class="switcher">
               <span class="plink switcher-item is-active" data-role="switchBlock" data-target="holidayRent" data-targets="rent"><u>Прокат в выходные</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="workdayRent" data-targets="rent"><u>Прокат в будни</u></span>
             </div>
@@ -392,6 +389,29 @@
               <h4>
                 Лыжи категории А+ в наличии
               </h4>
+              <dl class="cat">
+                <span class="plink cat-title"><u>Rossignol Oversize 9X Ti</u></span>
+                <div class="cat-desc">
+                  <img src="assets/images/img-cat.jpg" />
+                  <p>
+                    Легкий вход в поворот, четкое ведение дуги, адекватный приложенным усилиям импульс при выходе, очень сбалансированные лыжи. Отличный выбор для тех, кто хочет хорошо погонять по подготовленным трассам.
+                  </p>
+                </div>
+                <dd class="cat-value">
+                  157 или 174 см
+                </dd>
+              </dl>
+              <div class="cat">
+                <span class="plink cat-title"><u>Rossignol Oversize 9X Ti</u></span>
+                <div class="cat-desc">
+                  <p>
+                    Легкий вход в поворот, четкое ведение дуги, адекватный приложенным усилиям импульс при выходе, очень сбалансированные лыжи. Отличный выбор для тех, кто хочет хорошо погонять по подготовленным трассам.
+                  </p>
+                </div>
+                <dd class="cat-value">
+                  157 см
+                </dd>
+              </div>
             </div>
             <div class="switchBlock" data-role="rent workdayRent">
               <table style="width: 100%">

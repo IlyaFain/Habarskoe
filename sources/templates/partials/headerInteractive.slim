@@ -1,15 +1,15 @@
 .headerInteractive
-	.headerInteractive-popup data-role="headerInteractive"
+	.headerInteractive-popup.is-visible data-role="headerInteractive"
 		| <!-- Лето / зима -->
 		.headerInteractive-row
 			.headerInteractive-left
-				span.plink.season
+				span.plink.season data-role="switchBlock" data-targets="hero-season" data-target="summer"
 					span.season-pic: span.i-summer
 					span.season-title лето
 			.headerInteractive-left
-				span.plink.season.is-active
+				span.plink.season.is-active data-role="switchBlock" data-targets="hero-season" data-target="winter"
 					span.season-pic: span.i-winter
-					span.season-title лето
+					span.season-title зима
 
 		| <!-- Погода, камеры -->
 		.headerInteractive-row
@@ -24,7 +24,7 @@
 
 		| <!-- Вид со склона -->
 		.headerInteractive-row
-			.span.plink.rotate
+			.span.plink.rotate data-role="toggleBlock" data-target="hero-slide"
 				span.rotate-pic: span.i-rotate
 				span.rotate-title Вид со склона
 
@@ -35,7 +35,7 @@
 					span.winexplorer-pic: span.i-flag
 					span.winexplorer-title: u Схема склонов
 			.headerInteractive-right
-				span.plink.winexplorer
+				span.plink.winexplorer data-role="showBlock" data-target="scheme-1"
 					span.winexplorer-pic: span.i-chum
 					span.winexplorer-title: u Схема комплекса
 

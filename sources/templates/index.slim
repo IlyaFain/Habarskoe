@@ -3,6 +3,11 @@ html lang="ru"
 	= include 'partials/head.slim'
 	body
 
+		.modal.is-visible data-role="scheme-1"
+			.modal-window
+				span.plink.modal-close data-role="hideBlock" data-target="scheme-1": span.i-closeSmall
+				img src="assets/images/scheme-complex.jpg"
+				.modal-title Схема комплекса
 		= include 'partials/header.slim'
 		= include 'partials/hero.slim'
 
@@ -22,7 +27,7 @@ html lang="ru"
 						h3.g-flLeft Цена одного подъема 70Р
 						h3.g-flRight Цена одного подъема 570Р
 						.g-clear
-					.block.color-white
+					.block.bg-dark.color-white
 						= include 'partials/photos.slim'
 
 		= include 'partials/scripts.slim'

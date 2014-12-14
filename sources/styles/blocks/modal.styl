@@ -1,0 +1,46 @@
+body.is-locked
+	overflow: hidden
+
+.modal
+	z-index: 10
+	position: fixed
+	transition: transform 0.4s, opacity 0.4s, visibility 0.4s
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: auto
+	perspective: 1000px
+	transform: translate3d(0, -15%, 0) rotateX(40deg)
+	visibility: hidden
+	opacity: 0
+	&.is-visible
+		visibility: visible
+		opacity: 1
+		transform: none
+
+.modal
+
+
+	&-window
+		z-index: 2
+		display: block
+		position: absolute
+		transition: transform 0.4s, opacity 0.4s, visibility 0.4s
+		padding: 40px 30px 30px
+		margin-top: 10%
+		left: 50%
+		width: 780px
+		margin-left: -390px
+		background: $color.dark
+
+	&-close
+		z-index: 5
+		position: absolute
+		right: 10px
+		top: 10px
+
+	&-title
+		color: $color.white
+		text-align: center
+		padding-top: 20px
