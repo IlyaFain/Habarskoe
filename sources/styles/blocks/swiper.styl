@@ -1,0 +1,102 @@
+.swiper-container
+	margin 0 auto
+	position relative
+	overflow hidden
+	backface-visibility hidden
+	z-index 1
+
+.swiper-wrapper
+	position relative
+	width 100%
+	transition-property transform, left, top
+	transition-duration 0s
+	transform translate3d(0px,0,0)
+	transition-timing-function ease
+	box-sizing content-box
+
+.swiper-free-mode > .swiper-wrapper
+	transition-timing-function ease-out
+	margin 0 auto
+
+.swiper-slide
+	float left
+	box-sizing content-box
+	padding: 0 20px 0 0
+	box-sizing border-box
+
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal
+	-ms-touch-action pan-y
+
+.swiper-wp8-vertical
+	-ms-touch-action pan-x
+
+.swiper-container
+	/*width 200px
+	height 100px */
+
+.swiper-slide
+	/*width 100%
+	height 100% */
+
+.swiper-slide-active
+	/* Specific active slide styling */
+
+.swiper-slide-visible
+	/* Specific visible slide styling */
+
+.swiper-pagination
+	display: block
+	text-align: right
+	margin-right: 20px
+	margin-top: 40px
+	clearfix()
+.swiper-pagination-switch
+	display: none
+	width: 10px
+	height: 10px
+	background: red
+	margin: 0 0 0 15px
+	border: 2px solid $color.white
+	background: transparent
+	border-radius: 100px
+	cursor: pointer
+	&:nth-child(3n+1)
+		display: inline-block
+.swiper-active-switch
+	background: $color.white
+
+.swiper-active-switch
+	/* Specific active button style */
+
+.swiper-visible-switch
+	/* Specific visible button style */
+
+.swiper-arrows
+	display: block
+	text-align: right
+	margin-right: 20px
+	margin-top: 20px
+.swiper-arrow
+	margin-left: 10px
+	width: 16px
+	height: 16px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	display: inline-block
+	transition: background 0.3s
+	cursor: pointer
+	&--prev
+		background-image: inline('../../sources/images/arrowGrayPrev.png')
+		&:hover
+			background-image: inline('../../sources/images/arrowBluePrev.png')
+	&--next
+		background-image: inline('../../sources/images/arrowGrayNext.png')
+		&:hover
+			background-image: inline('../../sources/images/arrowBlueNext.png')
+
+
+
+
+

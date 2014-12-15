@@ -1,34 +1,26 @@
 h2: a.color-white href="#": u Фотографии
+
 .swiper
-	.swiper-container data-role="swiper"
+	.swiper-container data-role="swiper photos"
 		.swiper-wrapper
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-1.jpg"
-				br
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-2.jpg"
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-3.jpg"
-				br
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-4.jpg"
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-5.jpg"
-				br
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-6.jpg"
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-5.jpg"
-				br
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-6.jpg"
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-5.jpg"
-				br
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/220-6.jpg"
+			- for i in (1..4)
+				.swiper-slide
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/220-1.jpg"
+					br
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/220-2.jpg"
+				.swiper-slide
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/220-3.jpg"
+					br
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/220-4.jpg"
+				.swiper-slide
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/220-5.jpg"
+					br
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/220-6.jpg"
+	.swiper-pagination
+

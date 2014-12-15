@@ -1,22 +1,26 @@
 h2: a href="#": u Скоро будет
 .swiper
-	.swiper-container data-role="swiper"
+	.swiper-container data-role="swiper soon"
 		.swiper-wrapper
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/210-1.jpg"
-					.mediaOver-text
-						.mediaOver-date 14 декабря, Воскресенье
-						.mediaOver-title Открытие горнолыжного сезона
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/210-2.jpg"
-					.mediaOver-text
-						.mediaOver-date 14 декабря, Воскресенье
-						.mediaOver-title Family Day от журнала Family&Home Magazine
-			.swiper-slide
-				a.mediaOver href="#"
-					img.mediaOver-pic src="assets/images/210-3.jpg"
-					.mediaOver-text
-						.mediaOver-date 14 декабря, Воскресенье
-						.mediaOver-title Детская ёлка «Письмо Деду Морозу»
+			- for i in (1..4)
+				.swiper-slide
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/210-1.jpg"
+						.mediaOver-text
+							.mediaOver-date 14 декабря, Воскресенье
+							.mediaOver-title Открытие горнолыжного сезона
+				.swiper-slide
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/210-2.jpg"
+						.mediaOver-text
+							.mediaOver-date 14 декабря, Воскресенье
+							.mediaOver-title Family Day от журнала Family&Home Magazine
+				.swiper-slide
+					a.mediaOver href="#"
+						img.mediaOver-pic src="assets/images/210-3.jpg"
+						.mediaOver-text
+							.mediaOver-date 14 декабря, Воскресенье
+							.mediaOver-title Детская ёлка «Письмо Деду Морозу»
+	.swiper-arrows
+		.swiper-arrow.swiper-arrow--prev data-role="soonPrev"
+		.swiper-arrow.swiper-arrow--next data-role="soonNext"

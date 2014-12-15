@@ -4,35 +4,84 @@ body.is-locked
 .modal
 	z-index: 10
 	position: fixed
-	transition: transform 0.4s, opacity 0.4s, visibility 0.4s
+	transition: transform 0.4s, opacity 0.7s, visibility 0.4s
 	top: 0
 	left: 0
 	right: 0
 	bottom: 0
+	height: 100%
 	overflow: auto
 	perspective: 1000px
-	transform: translate3d(0, -15%, 0) rotateX(40deg)
+	transform: scale3d(0,0,0) translate3d(0, -1000px, 0)
 	visibility: hidden
 	opacity: 0
+	background: #006eb6
+	background: rgba(#006eb6, 0.25)
 	&.is-visible
 		visibility: visible
 		opacity: 1
 		transform: none
 
-.modal
-
+	&-overlay
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		// opacity: 0.25
+		z-index: 1
 
 	&-window
 		z-index: 2
 		display: block
 		position: absolute
-		transition: transform 0.4s, opacity 0.4s, visibility 0.4s
+		transition: transform 0.4s, opacity 0.4s, visibility 0.4s, width 0.4s, margin 0.4s, left 0.4s, top 0.4s, height 0.4s
 		padding: 40px 30px 30px
-		margin-top: 10%
+		margin-top: 90px
 		left: 50%
 		width: 780px
 		margin-left: -390px
 		background: $color.dark
+		text-align: center
+		img
+			// width: 100%
+			max-height: 100%
+			max-width: 100%
+	&.is-zoomed &-window
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		margin-left: 0
+		margin-top: 0
+
+	&-photo
+		display: inline-block
+		position: relative
+	// &-zoom
+	// 	left: 0
+	// 	top: 0
+	// 	width: 100%
+	// 	height: 100%
+	// 	position: absolute
+	// 	background-repeat: no-repeat
+	// 	cursor: zoom-in
+	// 	background-position: 50% 50%
+	// 	display: block
+	// 	transition: background 0.3s
+	// 	background-image: inline('../../sources/images/zoomIn.png')
+	// 	opacity: 0
+	// 	transition: all 0.6s
+	// 	&:hover
+	// 		opacity: 0.9
+	// &.is-zoomed &-zoom
+	// 	background-image: inline('../../sources/images/zoomOut.png')
+	// 	cursor: zoom-out
+	&-zoom
+		cursor: zoom-in
+	&.is-zoomed &-zoom
+		cursor: zoom-out
 
 	&-close
 		z-index: 5
@@ -44,3 +93,11 @@ body.is-locked
 		color: $color.white
 		text-align: center
 		padding-top: 20px
+		.plink
+			linkColor($color.gray)
+			margin: 0 10px
+			&.is-active
+				linkColor($color.white)
+				cursor: default
+				u
+					border-color: transparent !important

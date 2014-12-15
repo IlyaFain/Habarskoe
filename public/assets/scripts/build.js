@@ -92,7 +92,7 @@ $(function() {
 });
 
 $(function() {
-  var $body, $hideBlockLinks, $showBlockLinks, $switchBlockLinks, $toggleBlockLinks, getBlock, getLink, hideBlock, showBlock, toggleBlock;
+  var $body, $closeModalLinks, $hideBlockLinks, $showBlockLinks, $switchBlockLinks, $toggleBlockLinks, $zoomModalLinks, bodyLock, bodyUnlock, getBlock, getLink, hideBlock, showBlock, toggleBlock;
   $body = $('body');
   $showBlockLinks = $('@showBlock');
   $hideBlockLinks = $('@hideBlock');
@@ -108,14 +108,26 @@ $(function() {
     getLink(role).toggleClass('is-active');
     return getBlock(role).toggleClass('is-visible');
   };
+  bodyLock = function(role) {
+    if (getBlock(role).hasRole('modal')) {
+      return $body.addClass('is-locked');
+    }
+  };
+  bodyUnlock = function(role) {
+    if (getBlock(role).hasRole('modal')) {
+      return $body.removeClass('is-locked');
+    }
+  };
   hideBlock = function(role) {
     getLink(role).removeClass('is-active');
     getBlock(role).removeClass('is-visible');
+    bodyUnock(role);
     return $body.off('keyup.hideBlock');
   };
   showBlock = function(role) {
     getLink(role).addClass('is-active');
     getBlock(role).addClass('is-visible');
+    bodyLock(role);
     return $body.on('keyup.hideBlock', function(e) {
       if (e.keyCode === 27) {
         return hideBlock(role);
@@ -137,23 +149,59 @@ $(function() {
     role = $(this).attr('data-target');
     return toggleBlock(role);
   });
-  return $switchBlockLinks.on('click', function() {
+  $switchBlockLinks.on('click', function() {
     var targetRole, targetsRole;
     targetRole = $(this).attr('data-target');
     targetsRole = $(this).attr('data-targets');
     $('@' + targetsRole).removeClass('is-visible').filter('@' + targetRole).addClass('is-visible');
     return $('[data-targets="' + targetsRole + '"]').removeClass('is-active').filter($(this)).addClass('is-active');
   });
+  $closeModalLinks = $('@modal-close');
+  $zoomModalLinks = $('@modal-zoom');
+  $closeModalLinks.on('click', function() {
+    var $modal, role;
+    $modal = $(this).closest('@modal');
+    $modal.removeClass('is-visible');
+    role = $modal.roles()[1];
+    $('[data-target="' + role + '"]').removeClass('is-active');
+    return bodyUnlock(role);
+  });
+  return $zoomModalLinks.on('click', function() {
+    var $modal;
+    $modal = $(this).closest('@modal');
+    return $modal.toggleClass('is-zoomed');
+  });
 });
 
 $(function() {
-  var swiper;
-  return swiper = $('@swiper').swiper({
+  var swiperPhotos, swiperSoon;
+  swiperSoon = $('@swiper@soon').swiper({
     mode: 'horizontal',
     loop: false,
     slidesPerView: 3,
     calculateHeight: true,
     visibilityFullFit: false,
-    createPagination: true
+    createPagination: false,
+    roundLengths: true
+  });
+  $('@soonPrev').on('click', function() {
+    return swiperSoon.swipePrev();
+  });
+  $('@soonNext').on('click', function() {
+    return swiperSoon.swipeNext();
+  });
+  return swiperPhotos = $('@swiper@photos').swiper({
+    mode: 'horizontal',
+    loop: false,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    slidesPerViewFit: true,
+    calculateHeight: true,
+    visibilityFullFit: false,
+    roundLengths: true,
+    createPagination: true,
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    paginationAsRange: true
   });
 });

@@ -3,11 +3,27 @@ html lang="ru"
 	= include 'partials/head.slim'
 	body
 
-		.modal.is-visible data-role="scheme-1"
+		.modal data-role="modal scheme-hills"
+			.modal-overlay data-role="modal-close"
 			.modal-window
-				span.plink.modal-close data-role="hideBlock" data-target="scheme-1": span.i-closeSmall
-				img src="assets/images/scheme-complex.jpg"
+				span.plink.modal-close data-role="modal-close": span.i-closeSmall
+				.switchBlock.is-visible data-role="hills hillsDefault"
+					/ span.modal-zoom data-role="modal-zoom"
+					img.modal-zoom src="assets/images/scheme-hill-1.jpg" data-role="modal-zoom"
+				.switchBlock data-role="hills hillsNewbie"
+					img.modal-zoom src="assets/images/scheme-hill-2.jpg" data-role="modal-zoom"
+				.modal-title
+					span.plink.is-active data-role="switchBlock" data-targets="hills" data-target="hillsDefault": u Основной склон
+					span.plink data-role="switchBlock" data-targets="hills" data-target="hillsNewbie": u Склон для начинающих
+
+
+		.modal data-role="modal scheme-complex"
+			.modal-overlay data-role="modal-close"
+			.modal-window
+				span.plink.modal-close data-role="modal-close": span.i-closeSmall
+				img.modal-zoom src="assets/images/scheme-complex.jpg" data-role="modal-zoom"
 				.modal-title Схема комплекса
+
 		= include 'partials/header.slim'
 		= include 'partials/hero.slim'
 
@@ -24,8 +40,8 @@ html lang="ru"
 					.block.bg-dull
 						= include 'partials/soon.slim'
 					.block.bg-orange.color-dark
-						h3.g-flLeft Цена одного подъема 70Р
-						h3.g-flRight Цена одного подъема 570Р
+						h3.g-flLeft Цена одного подъема 70₽
+						h3.g-flRight Цена одного подъема 570₽
 						.g-clear
 					.block.bg-dark.color-white
 						= include 'partials/photos.slim'

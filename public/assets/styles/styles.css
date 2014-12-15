@@ -80,123 +80,6 @@ a:hover u,
 .plink u {
   border-bottom-style: dotted;
 }
-/*
- * Swiper 2.7.0
- * Mobile touch slider and framework with hardware accelerated transitions
- *
- * http://www.idangero.us/sliders/swiper/
- *
- * Copyright 2010-2014, Vladimir Kharlampidi
- * The iDangero.us
- * http://www.idangero.us/
- *
- * Licensed under GPL & MIT
- *
- * Released on: August 30, 2014
-*/
-/* ===============================================================
-Basic Swiper Styles 
-================================================================*/
-.swiper-container {
-	margin:0 auto;
-	position:relative;
-	overflow:hidden;
-	-webkit-backface-visibility:hidden;
-	-ms-backface-visibility:hidden;
-	-o-backface-visibility:hidden;
-	backface-visibility:hidden;
-	/* Fix of Webkit flickering */
-	z-index:1;
-}
-.swiper-wrapper {
-	position:relative;
-	width:100%;
-	-webkit-transition-property:-webkit-transform, left, top;
-	-webkit-transition-duration:0s;
-	-webkit-transform:translate3d(0px,0,0);
-	-webkit-transition-timing-function:ease;
-	-moz-transition-duration:0s;
-	-moz-transform:translate3d(0px,0,0);
-	-moz-transition-timing-function:ease;
-	-o-transition-duration:0s;
-	-o-transform:translate3d(0px,0,0);
-	-o-transition-timing-function:ease;
-	-o-transform:translate(0px,0px);
-	
-	-ms-transition-property:-ms-transform, left, top;
-	-ms-transition-duration:0s;
-	-ms-transform:translate3d(0px,0,0);
-	-ms-transition-timing-function:ease;
-	
-	-webkit-transition-property:-webkit-transform, left, top;
-	
-	        transition-property:transform, left, top;
-	-webkit-transition-duration:0s;
-	        transition-duration:0s;
-	-webkit-transform:translate3d(0px,0,0);
-	        transform:translate3d(0px,0,0);
-	-webkit-transition-timing-function:ease;
-	        transition-timing-function:ease;
-	box-sizing: content-box;
-}
-.swiper-free-mode > .swiper-wrapper {
-	-webkit-transition-timing-function: ease-out;
-	transition-timing-function: ease-out;
-	margin: 0 auto;
-}
-.swiper-slide {
-	float: left;
-	box-sizing: content-box;
-}
-
-/* IE10 Windows Phone 8 Fixes */
-.swiper-wp8-horizontal {
-	-ms-touch-action: pan-y;
-}
-.swiper-wp8-vertical {
-	-ms-touch-action: pan-x;
-}
-
-/* ===============================================================
-Your custom styles, here you need to specify container's and slide's
-sizes, pagination, etc.
-================================================================*/
-.swiper-container {
-	/* Specify Swiper's Size: */
-
-	/*width:200px;
-	height: 100px;*/
-}
-.swiper-slide {
-	/* Specify Slides's Size: */
-	
-	/*width: 100%;
-	height: 100%;*/
-}
-.swiper-slide-active {
-	/* Specific active slide styling: */
-	
-}
-.swiper-slide-visible {
-	/* Specific visible slide styling: */	
-
-}
-/* ===============================================================
-Pagination Styles
-================================================================*/
-.swiper-pagination-switch {
-	/* Stylize pagination button: */	
-
-}
-.swiper-active-switch {
-	/* Specific active button style: */	
-	
-}
-.swiper-visible-switch {
-	/* Specific visible button style: */	
-	
-}
-
 .bg-white {
   background: #fff;
 }
@@ -985,19 +868,22 @@ body.is-locked {
 .modal {
   z-index: 10;
   position: fixed;
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0.4s;
-          transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.7s, visibility 0.4s;
+          transition: transform 0.4s, opacity 0.7s, visibility 0.4s;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
   overflow: auto;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  -webkit-transform: translate3d(0, -15%, 0) rotateX(40deg);
-          transform: translate3d(0, -15%, 0) rotateX(40deg);
+  -webkit-transform: scale3d(0, 0, 0) translate3d(0, -1000px, 0);
+          transform: scale3d(0, 0, 0) translate3d(0, -1000px, 0);
   visibility: hidden;
   opacity: 0;
+  background: #006eb6;
+  background: rgba(0,110,182,0.25);
 }
 .modal.is-visible {
   visibility: visible;
@@ -1006,18 +892,54 @@ body.is-locked {
       -ms-transform: none;
           transform: none;
 }
+.modal-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 .modal-window {
   z-index: 2;
   display: block;
   position: absolute;
-  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0.4s;
-          transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0.4s, width 0.4s, margin 0.4s, left 0.4s, top 0.4s, height 0.4s;
+          transition: transform 0.4s, opacity 0.4s, visibility 0.4s, width 0.4s, margin 0.4s, left 0.4s, top 0.4s, height 0.4s;
   padding: 40px 30px 30px;
-  margin-top: 10%;
+  margin-top: 90px;
   left: 50%;
   width: 780px;
   margin-left: -390px;
   background: #424242;
+  text-align: center;
+}
+.modal-window img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.modal.is-zoomed .modal-window {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  margin-top: 0;
+}
+.modal-photo {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.modal-zoom {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+.modal.is-zoomed .modal-zoom {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
 }
 .modal-close {
   z-index: 5;
@@ -1029,6 +951,51 @@ body.is-locked {
   color: #fff;
   text-align: center;
   padding-top: 20px;
+}
+.modal-title .plink {
+  color: #868686;
+  -webkit-transition: color 0.3s;
+          transition: color 0.3s;
+  margin: 0 10px;
+}
+.modal-title .plink u {
+  -webkit-transition: border-color 0.3s;
+          transition: border-color 0.3s;
+  border-color: #868686;
+  border-color: rgba(134,134,134,0.5);
+}
+.modal-title .plink:hover {
+  -webkit-transition: color 0.1s;
+          transition: color 0.1s;
+}
+.modal-title .plink:hover u {
+  -webkit-transition: border-color 0.1s;
+          transition: border-color 0.1s;
+  border-color: rgba(134,134,134,0.9);
+}
+.modal-title .plink.is-active {
+  color: #fff;
+  -webkit-transition: color 0.3s;
+          transition: color 0.3s;
+  cursor: default;
+}
+.modal-title .plink.is-active u {
+  -webkit-transition: border-color 0.3s;
+          transition: border-color 0.3s;
+  border-color: #fff;
+  border-color: rgba(255,255,255,0.5);
+}
+.modal-title .plink.is-active:hover {
+  -webkit-transition: color 0.1s;
+          transition: color 0.1s;
+}
+.modal-title .plink.is-active:hover u {
+  -webkit-transition: border-color 0.1s;
+          transition: border-color 0.1s;
+  border-color: rgba(255,255,255,0.9);
+}
+.modal-title .plink.is-active u {
+  border-color: transparent !important;
 }
 .news {
   position: relative;
@@ -1215,6 +1182,105 @@ small {
   zoom: 1;
   *display: inline;
   line-height: 14px;
+}
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 1;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition-property: -webkit-transform, left, top;
+          transition-property: transform, left, top;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  box-sizing: content-box;
+}
+.swiper-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.swiper-slide {
+  float: left;
+  box-sizing: content-box;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+}
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+}
+.swiper-pagination {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+.swiper-pagination:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.swiper-pagination-switch {
+  display: none;
+  width: 10px;
+  height: 10px;
+  background: #f00;
+  margin: 0 0 0 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.swiper-pagination-switch:nth-child(3n+1) {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.swiper-arrows {
+  display: block;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.swiper-arrow {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+  cursor: pointer;
+}
+.swiper-arrow--prev {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE4MzVBMTU1Nzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE4MzVBMTU2Nzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTgzNUExNTM3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTgzNUExNTQ3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4CpLaiAAAAu0lEQVR42pyTMQrCQBBFNxtzCG28TrQWIqS3FhtttPAa1oLpLG32LlZqbR/0D4yV85MhHx5hIP+xzCZZSimQzMAWPMFGn38ZkXIFziDXuQAL68XoKEsm7JjRUW7B0SNg5Rrc+gRd5SZ0RASlUQ46X8CHcAdzEeyNsidTcBJBFoaniLrhdkD5BVZRN1wbEpmXekKLMbj+bqExJLkut+q7heCQlN4vkUkOXgGTPJiA/Y0ieYOdbnvNBF8BBgBh/jAefm4WrgAAAABJRU5ErkJggg==");
+}
+.swiper-arrow--prev:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE4MzVBMTUxNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE4MzVBMTUyNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEE2RjJBNTA3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTgzNUExNTA3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4RxJumAAAAtklEQVR42mJkyNvGgAN4AnE5ED8H4iIojQFYcGgOB+KlQMwM5YPoMGwKmYjQDAIyuJzJRITmv0DcRIwBuDRHA/EOQgbg07ySAQ9gBMaCB5DegqaZGPAQiLNABhwDMiwZyANPmRgoA6xM0BD+S4bmF0CczgQN4WgshoD4EeBwwo4lgXgDzAsrsRjCDI2ZcHzOQA4DfIZ4EJsScRlSS6wBuAx5issAXLkRZMgnIK6AhnYBLgMAAgwAsY4rhpLihcMAAAAASUVORK5CYII=");
+}
+.swiper-arrow--next {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE4MzVBMTU5Nzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE4MzVBMTVBNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTgzNUExNTc3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTgzNUExNTg3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5MCFS6AAAAtElEQVR42mLcu3cvAw4gCcR9ULoTiLdjU8TEgBtMBuIIILYH4s1AHE6qAVJIbGYgXorNEHwGNAHxX0KG4DNgBxBHEzIEnwEgsJKQISxA7AXE04BYnoF4ADPkI8iA2WgBRoohtSAvsDKQDxhBBqQB8QsyNIPCpQlkwAZoamPEgSPQAhGmGRS4OwjFQjg0sJixaF5JKBo9CGkmZEAdIc2EDHhGSDMsIeECuVCNEkDcgSs7AwQYACxmKSZUlYsQAAAAAElFTkSuQmCC");
+}
+.swiper-arrow--next:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRBNkYyQTRFNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRBNkYyQTRGNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEE2RjJBNEM3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEE2RjJBNEQ3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7cuKYsAAAAuElEQVR42mJkyNvGgANIAnEflO4E4u3YFDHiMWAVEIdC2X+BOBqIV6IrYmLADWSQ2MxAvBSIw0kxoAlqM15D8BmwA+psvIbgM4AB6me8hrAAsRcQTwNieQbiAcyQj6BYeAJkSDOQB46DvMDKQAEAGZAOxC/I0AsKlyaQARugqY0RB45AC0TkhLWDUCyEQwOLGYvmlYSi0YOQZkIG1BLSTMiAp4Q0wxISLpAPxP+BWAKIO3BlZ4AAAwDWNSu4dN/JWgAAAABJRU5ErkJggg==");
 }
 .switcher {
   margin-left: -25px;

@@ -8,9 +8,25 @@
     <link href="assets/styles/icons.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="modal is-visible" data-role="scheme-1">
+    <div class="modal" data-role="modal scheme-hills">
+      <div class="modal-overlay" data-role="modal-close"></div>
       <div class="modal-window">
-        <span class="plink modal-close" data-role="hideBlock" data-target="scheme-1"><span class="i-closeSmall"></span></span><img src="assets/images/scheme-complex.jpg" />
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="hills hillsDefault">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+        </div>
+        <div class="switchBlock" data-role="hills hillsNewbie">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="hillsDefault" data-targets="hills"><u>Основной склон</u></span><span class="plink" data-role="switchBlock" data-target="hillsNewbie" data-targets="hills"><u>Склон для начинающих</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal scheme-complex">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span><img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
         <div class="modal-title">
           Схема комплекса
         </div>
@@ -36,7 +52,7 @@
                 <a class="headerMenu-item"><u>О комплексе</u></a><a class="headerMenu-item"><u>Конференц-зал</u></a><a class="headerMenu-item"><u>Акции и спецпредложения</u></a><a class="headerMenu-item"><u>Проживание</u></a><a class="headerMenu-item"><u>Детский отдых</u></a><a class="headerMenu-item"><u>Счастливый Новый Год 2015</u></a><a class="headerMenu-item"><u>Зимний отдых</u></a><a class="headerMenu-item"><u>Летний отдых</u></a><a class="headerMenu-item"><u>Ресторан и кафе</u></a><a class="headerMenu-item"><u>Новости</u></a><a class="headerMenu-item"><u>Контактная Информация</u></a>
               </div>
               <div class="headerMenu-submenu">
-                <span class="plink headerMenu-subitem" data-role="showBlock" data-target="schemeComplex"><u>Схема комплекса</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="schemeHills"><u>Схема склонов</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="schemeWay"><u>Схема проезда</u></span>
+                <span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-complex"><u>Схема комплекса</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-hills"><u>Схема склонов</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-way"><u>Схема проезда</u></span>
               </div>
             </div>
           </div>
@@ -73,10 +89,10 @@
               <!-- Схемы -->
               <div class="headerInteractive-row">
                 <div class="headerInteractive-left">
-                  <span class="plink winexplorer"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
                 </div>
                 <div class="headerInteractive-right">
-                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-1"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
                 </div>
               </div>
             </div>
@@ -259,8 +275,116 @@
               <a href="#"><u>Скоро будет</u></a>
             </h2>
             <div class="swiper">
-              <div class="swiper-container" data-role="swiper">
+              <div class="swiper-container" data-role="swiper soon">
                 <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                   <div class="swiper-slide">
                     <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
                       <div class="mediaOver-text">
@@ -299,14 +423,18 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-arrows">
+                <div class="swiper-arrow swiper-arrow--prev" data-role="soonPrev"></div>
+                <div class="swiper-arrow swiper-arrow--next" data-role="soonNext"></div>
+              </div>
             </div>
           </div>
           <div class="block bg-orange color-dark">
             <h3 class="g-flLeft">
-              Цена одного подъема 70Р
+              Цена одного подъема 70₽
             </h3>
             <h3 class="g-flRight">
-              Цена одного подъема 570Р
+              Цена одного подъема 570₽
             </h3>
             <div class="g-clear"></div>
           </div>
@@ -315,7 +443,7 @@
               <a class="color-white" href="#"><u>Фотографии</u></a>
             </h2>
             <div class="swiper">
-              <div class="swiper-container" data-role="swiper">
+              <div class="swiper-container" data-role="swiper photos">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
@@ -327,13 +455,35 @@
                     <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
                     <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
                     <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
                   </div>
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
