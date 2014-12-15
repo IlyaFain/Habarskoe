@@ -92,26 +92,50 @@ $(function() {
 });
 
 $(function() {
-  var $hideBlockLinks, $showBlockLinks, $switchBlockLinks, $toggleBlockLinks;
+  var $body, $hideBlockLinks, $showBlockLinks, $switchBlockLinks, $toggleBlockLinks, getBlock, getLink, hideBlock, showBlock, toggleBlock;
+  $body = $('body');
   $showBlockLinks = $('@showBlock');
   $hideBlockLinks = $('@hideBlock');
   $switchBlockLinks = $('@switchBlock');
   $toggleBlockLinks = $('@toggleBlock');
+  getLink = function(role) {
+    return $('[data-target="' + role + '"]');
+  };
+  getBlock = function(role) {
+    return $('@' + role);
+  };
+  toggleBlock = function(role) {
+    getLink(role).toggleClass('is-active');
+    return getBlock(role).toggleClass('is-visible');
+  };
+  hideBlock = function(role) {
+    getLink(role).removeClass('is-active');
+    getBlock(role).removeClass('is-visible');
+    return $body.off('keyup.hideBlock');
+  };
+  showBlock = function(role) {
+    getLink(role).addClass('is-active');
+    getBlock(role).addClass('is-visible');
+    return $body.on('keyup.hideBlock', function(e) {
+      if (e.keyCode === 27) {
+        return hideBlock(role);
+      }
+    });
+  };
   $showBlockLinks.on('click', function() {
-    var targetRole;
-    targetRole = $(this).attr('data-target');
-    return $('@' + targetRole).addClass('is-visible');
+    var role;
+    role = $(this).attr('data-target');
+    return showBlock(role);
   });
   $hideBlockLinks.on('click', function() {
-    var targetRole;
-    targetRole = $(this).attr('data-target');
-    return $('@' + targetRole).removeClass('is-visible');
+    var role;
+    role = $(this).attr('data-target');
+    return hideBlock(role);
   });
   $toggleBlockLinks.on('click', function() {
-    var targetRole;
-    targetRole = $(this).attr('data-target');
-    $('@' + targetRole).toggleClass('is-visible');
-    return $(this).toggleClass('is-active');
+    var role;
+    role = $(this).attr('data-target');
+    return toggleBlock(role);
   });
   return $switchBlockLinks.on('click', function() {
     var targetRole, targetsRole;
