@@ -3,6 +3,7 @@ html lang="ru"
 	= include 'partials/head.slim'
 	body
 
+		= include 'partials/modals.slim'
 		= include 'partials/header.slim'
 
 
@@ -23,12 +24,19 @@ html lang="ru"
 
 				.layout-column
 					.block.bg-white
-						p список
+						table style="font-size: 14px; font-weight: bold; font-style: italic; width: 100%"
+							tr
+								td: span.plink: u Сезонные абонименты
+								td: span.plink: u Сезонное хранение снаряжения
+								td: a href="#": u Стоимость услуг гостиницы
+								td: a href="#": u Конференц-зал
 					.block.bg-dull
 						h1 Катание
 						p Чтобы покататься, вам нужно приобрести электронную карту (ski-pass) и пополнить ее. Стоимость карты — 100 Р (списывается с депозита и возвращается при возврате карты). Стоимость катания на горнолыжном комплексе измеряется ценой за один подъем по канатной дороге или один час катания. Внесенные средства вы можете использовать в любое время до конца сезона.
 						p Скидка 50% детям от 8 до 12 лет и пенсионерам старше 65 лет (нужно предъявить пенсионное).
-					.block.bg-gray
+						.sep
+						= include 'partials/price.slim'
+					.block style="background: #E1E1E1"
 						p: em: strong Цены, указанные на сайте, не являются публичной офертой.<br>Администрация осталяет за собой право на изменение тарифов.
 
 		= include 'partials/scripts.slim'

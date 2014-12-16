@@ -8,6 +8,30 @@
     <link href="assets/styles/icons.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="modal" data-role="modal scheme-hills">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="hills hillsDefault">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+        </div>
+        <div class="switchBlock" data-role="hills hillsNewbie">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="hillsDefault" data-targets="hills"><u>Основной склон</u></span><span class="plink" data-role="switchBlock" data-target="hillsNewbie" data-targets="hills"><u>Склон для начинающих</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal scheme-complex">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span><img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
+        <div class="modal-title">
+          Схема комплекса
+        </div>
+      </div>
+    </div>
     <!-- Шапка -->
     <div class="header">
       <div class="constrain">
@@ -669,9 +693,22 @@
         </div>
         <div class="layout-column">
           <div class="block bg-white">
-            <p>
-              список
-            </p>
+            <table style="font-size: 14px; font-weight: bold; font-style: italic; width: 100%">
+              <tr>
+                <td>
+                  <span class="plink"><u>Сезонные абонименты</u></span>
+                </td>
+                <td>
+                  <span class="plink"><u>Сезонное хранение снаряжения</u></span>
+                </td>
+                <td>
+                  <a href="#"><u>Стоимость услуг гостиницы</u></a>
+                </td>
+                <td>
+                  <a href="#"><u>Конференц-зал</u></a>
+                </td>
+              </tr>
+            </table>
           </div>
           <div class="block bg-dull">
             <h1>
@@ -683,8 +720,527 @@
             <p>
               Скидка 50% детям от 8 до 12 лет и пенсионерам старше 65 лет (нужно предъявить пенсионное).
             </p>
+            <div class="sep"></div>
+            <h3>
+              Стоимость одного подъёма
+            </h3>
+            <div class="g-flLeft" style="width: 55%">
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <th>
+                      Понедельник
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Вторник—Четверг
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Пятница
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Суббота
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Воскресенье
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr />
+              <h3>
+                Стоимость часов в будни
+              </h3>
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <th>
+                      1 час
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      2 часа
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      3 часа
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      5 часов
+                    </th>
+                    <td>
+                      50₽ /<sub>24₽</sub>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr />
+            </div>
+            <div class="g-flRight" style="width: 40%">
+              <p>
+                <small>Через наклонную черту и более мелким шрифтом указаны цены для детей и пенсионеров</small>
+              </p>
+            </div>
+            <div class="g-clear"></div>
+            <h3>
+              Стоимость часов в выходные и праздники
+            </h3>
+            <span class="mark"><strong>Утреннее катание с 9<sup>00</sup> до 11<sup>00</sup> — </strong><big>600₽ / 300₽</big></span>
+            <table style="width: 85%">
+              <td style="width: 50%">
+                <h5>
+                  <strong>10<sup>00</sup> — 18<sup>00</sup></strong>
+                </h5>
+                <h5>
+                  дневное катание
+                </h5>
+                <div class="sep sep--xs"></div>
+                <table style="width: 100%">
+                  <tbody>
+                    <tr>
+                      <th>
+                        1 час
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        2 часа
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        3 часа
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        5 часов
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td style="width: 50%">
+                <h5>
+                  <strong>18<sup>00</sup> — до окончания работы</strong>
+                </h5>
+                <h5>
+                  вечернее катание
+                </h5>
+                <div class="sep sep--xs"></div>
+                <table style="width: 100%">
+                  <tbody>
+                    <tr>
+                      <th>
+                        1 час
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        2 часа
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        3 часа
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        5 часов
+                      </th>
+                      <td>
+                        50₽ /<sub>24₽</sub>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </table>
+            <hr />
+            <h3>
+              Катание на учебном склоне
+            </h3>
+            <table style="width: 55%">
+              <tbody>
+                <tr>
+                  <th>
+                    1 час
+                  </th>
+                  <td>
+                    50₽ /<sub>24₽</sub>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    2 часа
+                  </th>
+                  <td>
+                    50₽ /<sub>24₽</sub>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    3 часа
+                  </th>
+                  <td>
+                    50₽ /<sub>24₽</sub>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    5 часов
+                  </th>
+                  <td>
+                    50₽ /<sub>24₽</sub>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="sep"></div>
+            <p>
+              Абонемент действует 4 часа. Это оптимальное время для получения первоначальных навыков катания.
+            </p>
+            <div class="sep sep--l"></div>
+            <h1>
+              Обучение
+            </h1>
+            <h3>
+              424-10-02, +7 (987) 544-10-02 — администратор школы
+            </h3>
+            <div class="sep"></div>
+            <p>
+              Продолжительность групповых занятий по обучению катанию на горных лыжах или сноуборде — <strong>1,5 часа</strong>, продолжительность индивидуальных занятий — <strong>1 час</strong>.
+            </p>
+            <p>
+              Дети до 12 лет на склонах должны находиться в защитных шлемах, яркой одежде и только в сопровождении взрослых (родителей или инструкторов). Ребенок младше 7 лет занимается с инструктором в индивидуальном порядке.
+            </p>
+            <p>
+              В стоимость услуг инструкторов не включено страхование обучаемых от несчастных случаев во время занятий спортом на территории спортивного клуба «Хабарское». Оплата услуг означает согласие с <a href="#"><u>правилами</u></a> пребывания на территории спортивного клуба «Хабарское».
+            </p>
+            <p>
+              <strong><em>Запись на занятия производится заранее у администратора школы.</em></strong>
+            </p>
+            <div class="switcher">
+              <span class="plink switcher-item" data-role="switchBlock" data-target="holidayTeach" data-targets="teach"><u>Выходные</u></span><span class="plink switcher-item is-active" data-role="switchBlock" data-target="workdayTeach" data-targets="teach"><u>Будни</u></span>
+            </div>
+            <div class="sep sep--l"></div>
+            <div class="switchBlock" data-role="teach holidayTeach">
+              <div style="width: 80%">
+                <h3>
+                  Индивидуальные занятия
+                </h3>
+                <p>
+                  <small>Продолжительность занятия 1 час. Серией занятий считается не менее 3-х оплаченных тренировок на 1 человека в течение не менее 2-х дней.</small>
+                </p>
+                <table style="width: 80%">
+                  <thead>
+                    <tr>
+                      <th>
+                        Категория инструктора
+                      </th>
+                      <th>
+                        Первый урок
+                      </th>
+                      <th>
+                        Повторное занятие
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        C
+                      </th>
+                      <td>
+                        1000₽
+                      </td>
+                      <td>
+                        900₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        В
+                      </th>
+                      <td>
+                        1200₽
+                      </td>
+                      <td>
+                        1000₽
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="sep"></div>
+                <h3>
+                  Занятия с группой
+                </h3>
+                <p>
+                  <small>Продолжительность занятия 1,5 часа. Серией занятий считается не менее 3-х оплаченных групповых тренировок в течение не менее 2-х дней. Стоимость указана за одного человека.</small>
+                </p>
+                <h4>
+                  Лыжи
+                </h4>
+                <table style="width: 80%">
+                  <thead>
+                    <tr>
+                      <th>
+                        Категория инструктора
+                      </th>
+                      <th>
+                        Первый урок
+                      </th>
+                      <th>
+                        Повторное занятие
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        C
+                      </th>
+                      <td>
+                        1000₽
+                      </td>
+                      <td>
+                        900₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        В
+                      </th>
+                      <td>
+                        1200₽
+                      </td>
+                      <td>
+                        1000₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        4 и более
+                      </th>
+                      <td>
+                        800₽
+                      </td>
+                      <td>
+                        не проводится
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="sep"></div>
+                <h4>
+                  Сноуборд
+                </h4>
+                <table style="width: 80%">
+                  <thead>
+                    <tr>
+                      <th>
+                        Категория инструктора
+                      </th>
+                      <th>
+                        Первый урок
+                      </th>
+                      <th>
+                        Повторное занятие
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        C
+                      </th>
+                      <td>
+                        1000₽
+                      </td>
+                      <td>
+                        900₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        В
+                      </th>
+                      <td>
+                        1200₽
+                      </td>
+                      <td>
+                        1000₽
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="switchBlock is-visible" data-role="teach workdayTeach">
+              <div style="width: 80%">
+                <h3>
+                  Занятия с группой
+                </h3>
+                <p>
+                  <small>Продолжительность занятия 1,5 часа. Серией занятий считается не менее 3-х оплаченных групповых тренировок в течение не менее 2-х дней. Стоимость указана за одного человека.</small>
+                </p>
+                <h4>
+                  Лыжи
+                </h4>
+                <table style="width: 80%">
+                  <thead>
+                    <tr>
+                      <th>
+                        Категория инструктора
+                      </th>
+                      <th>
+                        Первый урок
+                      </th>
+                      <th>
+                        Повторное занятие
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        C
+                      </th>
+                      <td>
+                        1000₽
+                      </td>
+                      <td>
+                        900₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        В
+                      </th>
+                      <td>
+                        1200₽
+                      </td>
+                      <td>
+                        1000₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        4 и более
+                      </th>
+                      <td>
+                        800₽
+                      </td>
+                      <td>
+                        не проводится
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="sep"></div>
+                <h4>
+                  Сноуборд
+                </h4>
+                <table style="width: 80%">
+                  <thead>
+                    <tr>
+                      <th>
+                        Категория инструктора
+                      </th>
+                      <th>
+                        Первый урок
+                      </th>
+                      <th>
+                        Повторное занятие
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        C
+                      </th>
+                      <td>
+                        1000₽
+                      </td>
+                      <td>
+                        900₽
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        В
+                      </th>
+                      <td>
+                        1200₽
+                      </td>
+                      <td>
+                        1000₽
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          <div class="block bg-gray">
+          <div class="block" style="background: #E1E1E1">
             <p>
               <em><strong>Цены, указанные на сайте, не являются публичной офертой.<br>Администрация осталяет за собой право на изменение тарифов.</strong></em>
             </p>

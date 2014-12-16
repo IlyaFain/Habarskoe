@@ -1,0 +1,20 @@
+.modal data-role="modal scheme-hills"
+	.modal-overlay data-role="modal-close"
+	.modal-window
+		span.plink.modal-close data-role="modal-close": span.i-closeSmall
+		.switchBlock.is-visible data-role="hills hillsDefault"
+			/ span.modal-zoom data-role="modal-zoom"
+			img.modal-zoom src="assets/images/scheme-hill-1.jpg" data-role="modal-zoom"
+		.switchBlock data-role="hills hillsNewbie"
+			img.modal-zoom src="assets/images/scheme-hill-2.jpg" data-role="modal-zoom"
+		.modal-title
+			span.plink.is-active data-role="switchBlock" data-targets="hills" data-target="hillsDefault": u Основной склон
+			span.plink data-role="switchBlock" data-targets="hills" data-target="hillsNewbie": u Склон для начинающих
+
+
+.modal data-role="modal scheme-complex"
+	.modal-overlay data-role="modal-close"
+	.modal-window
+		span.plink.modal-close data-role="modal-close": span.i-closeSmall
+		img.modal-zoom src="assets/images/scheme-complex.jpg" data-role="modal-zoom"
+		.modal-title Схема комплекса
