@@ -3,10 +3,21 @@
 	&-column
 		float: left
 		width: 50%
+		background: pink
+		red
+		&:first-child
+			background: $color.blue
+		&:last-child
+			background: #E1E1E1
+		&:last-child&--wide
+			background: $color.dark
 		&--narrow
 			width: 36%
 		&--wide
 			width: 64%
+			background: $color.dark
+
+
 
 .block
 	padding: 40px 13%

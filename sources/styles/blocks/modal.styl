@@ -37,28 +37,31 @@ body.is-locked
 		display: block
 		position: absolute
 		transition: transform 0.4s, opacity 0.4s, visibility 0.4s, width 0.4s, margin 0.4s, left 0.4s, top 0.4s, height 0.4s
-		padding: 40px 30px 30px
+		padding: 40px 50px 30px
 		margin-top: 90px
 		left: 50%
 		width: 780px
 		margin-left: -390px
 		background: $color.dark
 		text-align: center
+	&-pic
+		background: $color.dark
+		user-select: none
 		img
 			// width: 100%
 			max-height: 100%
 			max-width: 100%
+			padding-bottom: 20px
+			user-select: none
 	&.is-zoomed &-window
 		left: 0
 		top: 0
 		width: 100%
-		height: 100%
+		min-height: 100%
 		margin-left: 0
 		margin-top: 0
 
-	&-photo
-		display: inline-block
-		position: relative
+
 	// &-zoom
 	// 	left: 0
 	// 	top: 0
@@ -92,7 +95,7 @@ body.is-locked
 	&-title
 		color: $color.white
 		text-align: center
-		padding-top: 20px
+		background: $color.dark
 		.plink
 			linkColor($color.gray)
 			margin: 0 10px
@@ -101,3 +104,32 @@ body.is-locked
 				cursor: default
 				u
 					border-color: transparent !important
+
+
+	&-arrow
+		user-select: none
+		width: 24px
+		height: 45px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		display: inline-block
+		transition: background 0.3s, opacity 0.3s
+		cursor: pointer
+		position: absolute
+		top: 50%
+		margin-top: -25px
+		opacity: 0
+		visibility: hidden
+		&.is-visible
+			opacity: 1
+			visibility: visible
+		&--prev
+			background-image: inline('../../sources/images/arrowLargeGrayPrev.png')
+			left: 10px
+			&:hover
+				background-image: inline('../../sources/images/arrowLargeBluePrev.png')
+		&--next
+			background-image: inline('../../sources/images/arrowLargeGrayNext.png')
+			right: 10px
+			&:hover
+				background-image: inline('../../sources/images/arrowLargeBlueNext.png')

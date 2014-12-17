@@ -1,4 +1,18 @@
 $ ->
+	$columns = $('@column')
+	$(window).on 'resize', ->
+		$columns.css('height', 'auto')
+		heights = []
+		console.log $columns.length
+		$columns.each (i, item) =>
+			heights.push($(item).outerHeight())
+		height = Math.max.apply(Math, heights)
+		console.log heights, height
+		$columns.css('height', height)
+	after 500, =>
+		$(window).trigger('resize')
+
+$ ->
 
 	$body = $('body')
 
@@ -6,6 +20,9 @@ $ ->
 	$hideBlockLinks = $('@hideBlock')
 	$switchBlockLinks = $('@switchBlock')
 	$toggleBlockLinks = $('@toggleBlock')
+	$showLightboxLinks = $('@lightbox')
+	$photos = $('@photos').find('@lightbox').find('img')
+
 
 
 	getLink = (role) ->
@@ -29,7 +46,7 @@ $ ->
 	hideBlock = (role) ->
 		getLink(role).removeClass('is-active')
 		getBlock(role).removeClass('is-visible')
-		bodyUnock(role)
+		bodyUnlock(role)
 		$body.off 'keyup.hideBlock'
 
 	showBlock = (role) ->
@@ -52,7 +69,6 @@ $ ->
 		role = $(this).attr('data-target')
 		toggleBlock(role)
 
-
 	$switchBlockLinks.on 'click', ->
 		targetRole = $(this).attr('data-target')
 		targetsRole = $(this).attr('data-targets')
@@ -73,6 +89,51 @@ $ ->
 	$zoomModalLinks.on 'click', ->
 		$modal = $(this).closest('@modal')
 		$modal.toggleClass('is-zoomed')
+
+	setPhoto = ($original) ->
+
+		$modal = $('@modal@photos')
+		$modalPicPlace = $modal.find('@modal-pic')
+		$modalTitlePlace = $modal.find('@modal-title')
+		$modalTitlePlace.html('')
+
+		$img = $original.clone().addRole('modal-zoom')
+		$modalPicPlace.html($img)
+		$modalTitlePlace.html($img.attr('title'))
+
+		setArrows($photos, $original)
+
+	setArrows = ($photos, $original) ->
+		$arrows = $('@modal@photos').find('@modal-arrows')
+		$prev = $('@modal@photos').find('@modal-prev')
+		$next = $('@modal@photos').find('@modal-next')
+		i = $photos.index($original)
+		if $photos.length > 1
+			if i > 0
+				$prev.addClass('is-visible')
+			else
+				$prev.removeClass('is-visible')
+
+			if i + 1 is $photos.length
+				$next.removeClass('is-visible')
+			else
+				$next.addClass('is-visible')
+		else
+			$arrows.removeClass('is-visible')
+		$next.on 'click', ->
+			# debugger
+			setPhoto($photos.eq(i+1))
+		$prev.on 'click', ->
+			setPhoto($photos.eq(i-1))
+
+
+
+	$showLightboxLinks.on 'click', ->
+		role = 'photos'
+		$original = $(this).find('img')
+		setPhoto($original)
+		showBlock(role)
+		return false
 
 $ ->
 	swiperSoon = $('@swiper@soon').swiper

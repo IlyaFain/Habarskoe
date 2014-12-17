@@ -13,10 +13,14 @@
       <div class="modal-window">
         <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
         <div class="switchBlock is-visible" data-role="hills hillsDefault">
-          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
         </div>
         <div class="switchBlock" data-role="hills hillsNewbie">
-          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
         </div>
         <div class="modal-title">
           <span class="plink is-active" data-role="switchBlock" data-target="hillsDefault" data-targets="hills"><u>Основной склон</u></span><span class="plink" data-role="switchBlock" data-target="hillsNewbie" data-targets="hills"><u>Склон для начинающих</u></span>
@@ -26,10 +30,23 @@
     <div class="modal" data-role="modal scheme-complex">
       <div class="modal-overlay" data-role="modal-close"></div>
       <div class="modal-window">
-        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span><img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
+        </div>
         <div class="modal-title">
           Схема комплекса
         </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal photos">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic" data-role="modal-pic"></div>
+        <div class="modal-arrow modal-arrow--prev" data-role="modal-arrow modal-prev"></div>
+        <div class="modal-arrow modal-arrow--next" data-role="modal-arrow modal-next"></div>
+        <div class="modal-title" data-role="modal-title"></div>
       </div>
     </div>
     <!-- Шапка -->
@@ -195,7 +212,7 @@
     </div>
     <div class="laytout">
       <div class="constrain">
-        <div class="layout-column layout-column--narrow">
+        <div class="layout-column layout-column--narrow" data-role="column">
           <div class="block bg-bright">
             <!-- Новости -->
             <h2>
@@ -269,7 +286,7 @@
             </div>
           </div>
         </div>
-        <div class="layout-column layout-column--wide">
+        <div class="layout-column layout-column--wide" data-role="column">
           <div class="block bg-dull">
             <h2>
               <a href="#"><u>Скоро будет</u></a>
@@ -446,40 +463,40 @@
               <div class="swiper-container" data-role="swiper photos">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-1.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
                   </div>
                   <div class="swiper-slide">
-                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
                   </div>
                 </div>
               </div>

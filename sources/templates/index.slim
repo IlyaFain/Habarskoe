@@ -10,13 +10,13 @@ html lang="ru"
 
 		.laytout
 			.constrain
-				.layout-column.layout-column--narrow
+				.layout-column.layout-column--narrow data-role="column"
 					.block.bg-bright
 						= include 'partials/news.slim'
 					.block.bg-blue.color-white
 						= include 'partials/footer.slim'
 
-				.layout-column.layout-column--wide
+				.layout-column.layout-column--wide data-role="column"
 					.block.bg-dull
 						= include 'partials/soon.slim'
 					.block.bg-orange.color-dark

@@ -92,12 +92,38 @@ $(function() {
 });
 
 $(function() {
-  var $body, $closeModalLinks, $hideBlockLinks, $showBlockLinks, $switchBlockLinks, $toggleBlockLinks, $zoomModalLinks, bodyLock, bodyUnlock, getBlock, getLink, hideBlock, showBlock, toggleBlock;
+  var $columns;
+  $columns = $('@column');
+  $(window).on('resize', function() {
+    var height, heights;
+    $columns.css('height', 'auto');
+    heights = [];
+    console.log($columns.length);
+    $columns.each((function(_this) {
+      return function(i, item) {
+        return heights.push($(item).outerHeight());
+      };
+    })(this));
+    height = Math.max.apply(Math, heights);
+    console.log(heights, height);
+    return $columns.css('height', height);
+  });
+  return after(500, (function(_this) {
+    return function() {
+      return $(window).trigger('resize');
+    };
+  })(this));
+});
+
+$(function() {
+  var $body, $closeModalLinks, $hideBlockLinks, $photos, $showBlockLinks, $showLightboxLinks, $switchBlockLinks, $toggleBlockLinks, $zoomModalLinks, bodyLock, bodyUnlock, getBlock, getLink, hideBlock, setArrows, setPhoto, showBlock, toggleBlock;
   $body = $('body');
   $showBlockLinks = $('@showBlock');
   $hideBlockLinks = $('@hideBlock');
   $switchBlockLinks = $('@switchBlock');
   $toggleBlockLinks = $('@toggleBlock');
+  $showLightboxLinks = $('@lightbox');
+  $photos = $('@photos').find('@lightbox').find('img');
   getLink = function(role) {
     return $('[data-target="' + role + '"]');
   };
@@ -121,7 +147,7 @@ $(function() {
   hideBlock = function(role) {
     getLink(role).removeClass('is-active');
     getBlock(role).removeClass('is-visible');
-    bodyUnock(role);
+    bodyUnlock(role);
     return $body.off('keyup.hideBlock');
   };
   showBlock = function(role) {
@@ -166,10 +192,56 @@ $(function() {
     $('[data-target="' + role + '"]').removeClass('is-active');
     return bodyUnlock(role);
   });
-  return $zoomModalLinks.on('click', function() {
+  $zoomModalLinks.on('click', function() {
     var $modal;
     $modal = $(this).closest('@modal');
     return $modal.toggleClass('is-zoomed');
+  });
+  setPhoto = function($original) {
+    var $img, $modal, $modalPicPlace, $modalTitlePlace;
+    $modal = $('@modal@photos');
+    $modalPicPlace = $modal.find('@modal-pic');
+    $modalTitlePlace = $modal.find('@modal-title');
+    $modalTitlePlace.html('');
+    $img = $original.clone().addRole('modal-zoom');
+    $modalPicPlace.html($img);
+    $modalTitlePlace.html($img.attr('title'));
+    return setArrows($photos, $original);
+  };
+  setArrows = function($photos, $original) {
+    var $arrows, $next, $prev, i;
+    $arrows = $('@modal@photos').find('@modal-arrows');
+    $prev = $('@modal@photos').find('@modal-prev');
+    $next = $('@modal@photos').find('@modal-next');
+    i = $photos.index($original);
+    if ($photos.length > 1) {
+      if (i > 0) {
+        $prev.addClass('is-visible');
+      } else {
+        $prev.removeClass('is-visible');
+      }
+      if (i + 1 === $photos.length) {
+        $next.removeClass('is-visible');
+      } else {
+        $next.addClass('is-visible');
+      }
+    } else {
+      $arrows.removeClass('is-visible');
+    }
+    $next.on('click', function() {
+      return setPhoto($photos.eq(i + 1));
+    });
+    return $prev.on('click', function() {
+      return setPhoto($photos.eq(i - 1));
+    });
+  };
+  return $showLightboxLinks.on('click', function() {
+    var $original, role;
+    role = 'photos';
+    $original = $(this).find('img');
+    setPhoto($original);
+    showBlock(role);
+    return false;
   });
 });
 
