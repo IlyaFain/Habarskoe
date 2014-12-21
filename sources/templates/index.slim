@@ -5,6 +5,7 @@ html lang="ru"
 
 		= include 'partials/modals.slim'
 		= include 'partials/header.slim'
+		= include 'partials/headerInteractive-visible.slim'
 		= include 'partials/hero.slim'
 
 
@@ -13,14 +14,13 @@ html lang="ru"
 				.layout-column.layout-column--narrow data-role="column"
 					.block.bg-bright
 						= include 'partials/news.slim'
-					.block.bg-blue.color-white
-						= include 'partials/footer.slim'
+					= include 'partials/footer.slim'
 
 				.layout-column.layout-column--wide data-role="column"
 					.block.bg-dull
 						= include 'partials/soon.slim'
 					.block.bg-orange.color-dark
-						h3.g-flLeft Цена одного подъема 70₽
+						h3.g-flLeft Цена одного подъема сегодня: 70₽
 						h3.g-flRight Цена одного подъема 570₽
 						.g-clear
 					.block.bg-dark.color-white

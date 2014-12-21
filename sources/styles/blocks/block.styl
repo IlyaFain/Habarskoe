@@ -3,10 +3,12 @@
 	&-column
 		float: left
 		width: 50%
-		background: pink
-		red
+		position: relative
 		&:first-child
-			background: $color.blue
+			background: $color.dark
+			padding-bottom: 200px
+		&:first-child&--narrow
+			background: $color.white
 		&:last-child
 			background: #E1E1E1
 		&:last-child&--wide

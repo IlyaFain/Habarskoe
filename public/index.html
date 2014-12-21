@@ -3,7 +3,6 @@
   <head>
     <title>Хабарское</title>
     <meta charset="utf-8" />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800&amp;subset=latin,cyrillic-ext" />
     <link href="assets/styles/styles.css" rel="stylesheet" />
     <link href="assets/styles/icons.css" rel="stylesheet" />
   </head>
@@ -77,46 +76,6 @@
         <!-- Логотип, смена картинки, схемы -->
         <div class="header-place header-place--logo">
           <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
-          <div class="headerInteractive">
-            <div class="headerInteractive-popup" data-role="headerInteractive">
-              <!-- Лето / зима -->
-              <div class="headerInteractive-row">
-                <div class="headerInteractive-left">
-                  <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
-                </div>
-                <div class="headerInteractive-left">
-                  <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
-                </div>
-              </div>
-              <!-- Погода, камеры -->
-              <div class="headerInteractive-row">
-                <div class="headerInteractive-left">
-                  <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
-                </div>
-                <div class="headerInteractive-right">
-                  <span class="plink plate"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
-                </div>
-              </div>
-              <!-- Вид со склона -->
-              <div class="headerInteractive-row">
-                <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
-                  <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
-                </div>
-              </div>
-              <!-- Схемы -->
-              <div class="headerInteractive-row">
-                <div class="headerInteractive-left">
-                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
-                </div>
-                <div class="headerInteractive-right">
-                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
-                </div>
-              </div>
-            </div>
-            <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
-              <span class="i-arrowDown"></span><span class="i-arrowUp"></span>
-            </div>
-          </div>
         </div>
         <!-- Навигация -->
         <div class="header-place header-place--nav">
@@ -183,6 +142,7 @@
                   8<sup>00</sup> — 20<sup>00</sup>
                 </div>
               </div>
+              <div class="sep"></div>
               <div class="headerContacts-row">
                 <div class="headerContacts-left">
                   Гостиница
@@ -193,6 +153,48 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="constrain">
+      <div class="headerInteractive">
+        <div class="headerInteractive-popup is-visible" data-role="headerInteractive">
+          <!-- Лето / зима -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
+            </div>
+            <div class="headerInteractive-left">
+              <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
+            </div>
+          </div>
+          <!-- Погода, камеры -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
+            </div>
+            <div class="headerInteractive-right">
+              <span class="plink plate"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
+            </div>
+          </div>
+          <!-- Вид со склона -->
+          <div class="headerInteractive-row">
+            <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
+              <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
+            </div>
+          </div>
+          <!-- Схемы -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+            </div>
+            <div class="headerInteractive-right">
+              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
+          <span class="i-arrowDown"></span><span class="i-arrowUp"></span>
         </div>
       </div>
     </div>
@@ -272,17 +274,15 @@
               <a href="#"><u><em>Все новости</em></u></a>
             </div>
           </div>
-          <div class="block bg-blue color-white">
-            <div class="footer">
-              <p>
-                Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
-              </p>
-              <div class="footer-meta">
-                <div class="footer-copy">
-                  © 2014 — 2015<br>СК «Хабарское»
-                </div>
-                <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
+          <div class="block footer">
+            <p>
+              Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
+            </p>
+            <div class="footer-meta">
+              <div class="footer-copy">
+                © 2014 — 2015<br>СК «Хабарское»
               </div>
+              <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
             </div>
           </div>
         </div>
@@ -448,7 +448,7 @@
           </div>
           <div class="block bg-orange color-dark">
             <h3 class="g-flLeft">
-              Цена одного подъема 70₽
+              Цена одного подъема сегодня: 70₽
             </h3>
             <h3 class="g-flRight">
               Цена одного подъема 570₽

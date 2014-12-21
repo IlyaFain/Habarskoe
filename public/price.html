@@ -3,7 +3,6 @@
   <head>
     <title>Хабарское</title>
     <meta charset="utf-8" />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800&amp;subset=latin,cyrillic-ext" />
     <link href="assets/styles/styles.css" rel="stylesheet" />
     <link href="assets/styles/icons.css" rel="stylesheet" />
   </head>
@@ -77,46 +76,6 @@
         <!-- Логотип, смена картинки, схемы -->
         <div class="header-place header-place--logo">
           <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
-          <div class="headerInteractive">
-            <div class="headerInteractive-popup" data-role="headerInteractive">
-              <!-- Лето / зима -->
-              <div class="headerInteractive-row">
-                <div class="headerInteractive-left">
-                  <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
-                </div>
-                <div class="headerInteractive-left">
-                  <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
-                </div>
-              </div>
-              <!-- Погода, камеры -->
-              <div class="headerInteractive-row">
-                <div class="headerInteractive-left">
-                  <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
-                </div>
-                <div class="headerInteractive-right">
-                  <span class="plink plate"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
-                </div>
-              </div>
-              <!-- Вид со склона -->
-              <div class="headerInteractive-row">
-                <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
-                  <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
-                </div>
-              </div>
-              <!-- Схемы -->
-              <div class="headerInteractive-row">
-                <div class="headerInteractive-left">
-                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
-                </div>
-                <div class="headerInteractive-right">
-                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
-                </div>
-              </div>
-            </div>
-            <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
-              <span class="i-arrowDown"></span><span class="i-arrowUp"></span>
-            </div>
-          </div>
         </div>
         <!-- Навигация -->
         <div class="header-place header-place--nav">
@@ -183,6 +142,7 @@
                   8<sup>00</sup> — 20<sup>00</sup>
                 </div>
               </div>
+              <div class="sep"></div>
               <div class="headerContacts-row">
                 <div class="headerContacts-left">
                   Гостиница
@@ -193,6 +153,48 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="constrain">
+      <div class="headerInteractive">
+        <div class="headerInteractive-popup" data-role="headerInteractive">
+          <!-- Лето / зима -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
+            </div>
+            <div class="headerInteractive-left">
+              <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
+            </div>
+          </div>
+          <!-- Погода, камеры -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
+            </div>
+            <div class="headerInteractive-right">
+              <span class="plink plate"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
+            </div>
+          </div>
+          <!-- Вид со склона -->
+          <div class="headerInteractive-row">
+            <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
+              <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
+            </div>
+          </div>
+          <!-- Схемы -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+            </div>
+            <div class="headerInteractive-right">
+              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
+          <span class="i-arrowDown"></span><span class="i-arrowUp"></span>
         </div>
       </div>
     </div>
@@ -258,7 +260,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -275,7 +277,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -292,7 +294,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -309,7 +311,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -333,7 +335,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -350,7 +352,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -367,7 +369,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -384,7 +386,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -408,7 +410,7 @@
                       100 ₽
                     </td>
                     <td>
-                      30 ₽/<sub>час</sub>
+                      30 ₽/час
                     </td>
                     <td>
                       1900 ₽
@@ -491,7 +493,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -508,7 +510,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -525,7 +527,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -542,7 +544,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -566,7 +568,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -583,7 +585,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -600,7 +602,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -617,7 +619,7 @@
                       900 ₽
                     </td>
                     <td>
-                      300 ₽/<sub>час</sub>
+                      300 ₽/час
                     </td>
                     <td>
                       1700 ₽
@@ -641,7 +643,7 @@
                       100 ₽
                     </td>
                     <td>
-                      30 ₽/<sub>час</sub>
+                      30 ₽/час
                     </td>
                     <td>
                       1900 ₽
@@ -673,11 +675,13 @@
               Средняя скорость катания опытного лыжника 50 км/ч. Представьте себе снаряд, массой 80 кг, мчащийся на вас с такой скоростью. Новички в этой ситуации теряются и могут получить травму. Если не знать как вести себя на склоне, приятное времяпрепровождение может обернуться неприятностями.  Соблюдение простейших правил, описанных в документах ниже,  позволит вам более уверенно чувствовать себя на склоне и не допускать типичных ошибок новичков. Прочитайте несколько страниц текста, это занимает всего 10 минут.  Соблюдайте правила, а об остальном мы позаботимся.
             </p>
             <div class="g-flLeft" style="width: 60%">
-              <span class="i-fis"></span>
+              <div style="text-align: center">
+                <span class="i-fis" style="margin-left: -50px"></span>
+              </div>
               <div class="sep sep--s"></div>
               <small>Правила безопасности на склоне составлены международной федерацией лыжного спорта и действуют на всех горнолыжных склонах мира</small>
             </div>
-            <div class="g-flRight" style="width: 40%; text-align: right;">
+            <div class="g-flRight" style="width: 40%; text-align: right; position: relative; top: 10px">
               <a class="download color-dark" href="#"><span class="download-pic"><span class="i-pdfDark"></span></span><span class="download-title"><u>Скачать правила</u></span></a>
             </div>
             <div class="g-clear"></div>
@@ -694,17 +698,15 @@
             </div>
             <div class="g-clear"></div>
           </div>
-          <div class="block bg-blue color-white">
-            <div class="footer">
-              <p>
-                Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
-              </p>
-              <div class="footer-meta">
-                <div class="footer-copy">
-                  © 2014 — 2015<br>СК «Хабарское»
-                </div>
-                <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
+          <div class="block footer">
+            <p>
+              Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
+            </p>
+            <div class="footer-meta">
+              <div class="footer-copy">
+                © 2014 — 2015<br>СК «Хабарское»
               </div>
+              <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
             </div>
           </div>
         </div>
