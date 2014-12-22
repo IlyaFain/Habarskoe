@@ -3,9 +3,16 @@ html lang="ru"
 	= include 'partials/head.slim'
 	body
 
+		= include 'partials/modal-seasons-passes.slim'
+		= include 'partials/modal-seasons-safe.slim'
 		= include 'partials/modals.slim'
 		= include 'partials/header.slim'
 		= include 'partials/headerInteractive.slim'
+
+
+
+
+
 
 		.laytout
 			.constrain
@@ -25,8 +32,8 @@ html lang="ru"
 					.block.bg-white
 						table style="font-size: 14px; font-weight: bold; font-style: italic; width: 100%"
 							tr
-								td: span.plink: u Сезонные абонименты
-								td: span.plink: u Сезонное хранение снаряжения
+								td: span.plink data-role="showBlock" data-target="seasons-passes": u Сезонные абонименты
+								td: span.plink data-role="showBlock" data-target="seasons-safe": u Сезонное хранение снаряжения
 								td: a href="#": u Стоимость услуг гостиницы
 								td: a href="#": u Конференц-зал
 					.block.bg-dull

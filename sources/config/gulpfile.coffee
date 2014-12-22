@@ -68,7 +68,7 @@ gulp.task 'templates:watch', ->
 		.on 'change', (file) ->
 			setTimeout ->
 				server.changed(file.path)
-			, 200
+			, 500
 
 
 
