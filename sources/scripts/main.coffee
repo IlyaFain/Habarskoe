@@ -3,11 +3,9 @@ $ ->
 	$(window).on 'resize', ->
 		$columns.css('height', 'auto')
 		heights = []
-		console.log $columns.length
 		$columns.each (i, item) =>
 			heights.push($(item).outerHeight())
 		height = Math.max.apply(Math, heights)
-		console.log heights, height
 		$columns.css('height', height)
 	after 500, =>
 		$(window).trigger('resize')
@@ -149,6 +147,7 @@ $ ->
 	$('@soonNext').on 'click', ->
 		swiperSoon.swipeNext()
 
+$ ->
 	swiperPhotos = $('@swiper@photos').swiper
 		mode: 'horizontal'
 		loop: false
@@ -164,3 +163,44 @@ $ ->
 		paginationClickable: true
 		paginationAsRange: true
 
+
+$ ->
+	swiperPhotos = $('@swiper@archive').swiper
+		mode: 'vertival'
+		loop: false
+		slidesPerView: 'auto'
+		# calculateHeight: tr
+		calculateHeight: false
+		cssWidthAndHeight: true
+		width: '100%'
+
+		slidesPerViewFit: false
+		visibilityFullFit: true
+
+		freeMode: true
+		# freeModeFluid: true
+		scrollContainer: true
+
+$ ->
+	$column = $('@columnFixed')
+	$constrain = $('.constrain').first()
+	$(window).on 'resize', ->
+		$column.css('right', $constrain.offset().left)
+
+$ ->
+	$('@fotorama').fotorama
+		arrows: false
+		nav: 'thumbs'
+		thumbWidth: 120
+		thumbHeight: 90
+		thumbmargin: 10
+		thumbborderwidth: 1
+		width: '100%'
+		fit: 'cober'
+
+$ ->
+	$('@gallery').isotope
+		itemSelector: '.gallery-item'
+		masonry:
+			columnWidth: 280
+			gutter: 10

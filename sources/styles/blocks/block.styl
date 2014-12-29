@@ -1,29 +1,15 @@
-.layout
-	clearfix()
-	&-column
-		float: left
-		width: 50%
-		position: relative
-		&:first-child
-			background: $color.dark
-			padding-bottom: 200px
-		&:first-child&--narrow
-			background: $color.white
-		&:last-child
-			background: #E1E1E1
-		&:last-child&--wide
-			background: $color.dark
-		&--narrow
-			width: 36%
-		&--wide
-			width: 64%
-			background: $color.dark
-
-
-
 .block
 	padding: 40px 13%
 	clearfix()
+
+
+	.layout-column--slightlyLarger &
+		padding-left: (13/53*50)%
+		padding-right: (13/53*50)%
+
+	.layout-column--slightlyLess &
+		padding-left: (13/47*50)%
+		padding-right: (13/47*50)%
 
 	.layout-column--narrow &
 		padding-left: (13/36*50)%
@@ -32,6 +18,10 @@
 	.layout-column--wide &
 		padding-left: (13/64*50)%
 		padding-right: (13/64*50)%
+
+	.layout-column--general &
+		padding-left: (13/80*50)%
+		padding-right: (13/80*50)%
 
 	.modal-window &
 		padding: 20px 30px

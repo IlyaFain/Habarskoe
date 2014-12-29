@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Хабарское</title>
+    <meta charset="utf-8" />
+    <link href="assets/styles/styles.css" rel="stylesheet" />
+    <link href="assets/styles/icons.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="modal" data-role="modal scheme-hills">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="hills hillsDefault">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="hills hillsNewbie">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="hillsDefault" data-targets="hills"><u>Основной склон</u></span><span class="plink" data-role="switchBlock" data-target="hillsNewbie" data-targets="hills"><u>Склон для начинающих</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal scheme-complex">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
+        </div>
+        <div class="modal-title">
+          Схема комплекса
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal photos">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic" data-role="modal-pic"></div>
+        <div class="modal-arrow modal-arrow--prev" data-role="modal-arrow modal-prev"></div>
+        <div class="modal-arrow modal-arrow--next" data-role="modal-arrow modal-next"></div>
+        <div class="modal-title" data-role="modal-title"></div>
+      </div>
+    </div>
+    <!-- Шапка -->
+    <div class="header">
+      <div class="constrain">
+        <!-- Меню -->
+        <div class="header-place header-place--menu">
+          <div class="headerMenu">
+            <div class="plink headerMenu-trigger" data-role="showBlock" data-target="headerMenu">
+              <span class="i-menu"></span>
+            </div>
+            <div class="headerMenu-popup" data-role="headerMenu">
+              <div class="headerMenu-close" data-role="hideBlock" data-target="headerMenu">
+                <span class="i-closeWhite"></span>
+              </div>
+              <div class="headerMenu-title">
+                Спортивный комлекс <span>«Хабарское»</span>
+              </div>
+              <div class="headerMenu-list">
+                <a class="headerMenu-item"><u>О комплексе</u></a><a class="headerMenu-item"><u>Конференц-зал</u></a><a class="headerMenu-item"><u>Акции и спецпредложения</u></a><a class="headerMenu-item"><u>Проживание</u></a><a class="headerMenu-item"><u>Детский отдых</u></a><a class="headerMenu-item"><u>Счастливый Новый Год 2015</u></a><a class="headerMenu-item"><u>Зимний отдых</u></a><a class="headerMenu-item"><u>Летний отдых</u></a><a class="headerMenu-item"><u>Ресторан и кафе</u></a><a class="headerMenu-item"><u>Новости</u></a><a class="headerMenu-item"><u>Контактная Информация</u></a>
+              </div>
+              <div class="headerMenu-submenu">
+                <span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-complex"><u>Схема комплекса</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-hills"><u>Схема склонов</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-way"><u>Схема проезда</u></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Логотип, смена картинки, схемы -->
+        <div class="header-place header-place--logo">
+          <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
+        </div>
+        <!-- Навигация -->
+        <div class="header-place header-place--nav">
+          <div class="headerNav">
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Акции</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link is-active"><u>Цены</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Проживание</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Питание</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Детский отдых</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Фотогалерея</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>О комплексе</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Как проехать</u></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Контакты -->
+        <div class="header-place header-place--contacts">
+          <div class="headerContacts">
+            <div class="headerContacts-row">
+              <div class="headerContacts-left headerContacts-tel">
+                +7 987 531 0000
+              </div>
+              <div class="headerContacts-right headerContacts-tel">
+                8 (831) 438-66-05
+              </div>
+            </div>
+            <div class="headerContacts-row">
+              <div class="headerContacts-left">
+                <span class="plink" data-role="toggleBlock" data-target="workTime"><u>Режим работы склона</u></span>
+              </div>
+              <div class="headerContacts-right">
+                9<sup>00</sup> — 18<sup>00</sup>
+              </div>
+            </div>
+            <div class="headerContacts-popup" data-role="workTime">
+              <div class="headerContacts-row">
+                <div class="headerContacts-left">
+                  Режим работы<br>ресторана
+                </div>
+                <div class="headerContacts-right">
+                  8<sup>00</sup> — 20<sup>00</sup>
+                </div>
+              </div>
+              <div class="sep"></div>
+              <div class="headerContacts-row">
+                <div class="headerContacts-left">
+                  Гостиница
+                </div>
+                <div class="headerContacts-right">
+                  24 часа
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="constrain">
+      <div class="headerInteractive">
+        <div class="headerInteractive-popup" data-role="headerInteractive">
+          <!-- Лето / зима -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
+            </div>
+            <div class="headerInteractive-left">
+              <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
+            </div>
+          </div>
+          <!-- Погода, камеры -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
+            </div>
+            <div class="headerInteractive-right">
+              <span class="plink plate"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
+            </div>
+          </div>
+          <!-- Вид со склона -->
+          <div class="headerInteractive-row">
+            <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
+              <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
+            </div>
+          </div>
+          <!-- Схемы -->
+          <div class="headerInteractive-row">
+            <div class="headerInteractive-left">
+              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+            </div>
+            <div class="headerInteractive-right">
+              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
+          <span class="i-arrowDown"></span><span class="i-arrowUp"></span>
+        </div>
+      </div>
+    </div>
+    <div class="laytout">
+      <div class="constrain">
+        <div class="layout-column layout-column--general" data-role="column">
+          <div class="block bg-dull">
+            <h1>
+              Встреча нового 2015 года
+            </h1>
+            <div class="media media--left">
+              <div class="media-pic">
+                <img src="assets/images/postcard.jpg" />
+              </div>
+              <div class="media-text">
+                <p>
+                  Дорогие друзья!<br>Гостеприимный комплекс "Хабарское" предлагает вашему вниманию новогодние туры по специальным ценам!
+                </p>
+                <p>
+                  <strong>30.12.2014 (заезд к 17.00) – 02.01.2015 (выезд в 15.00)</strong>
+                </p>
+                <p>
+                  Спортивный клуб «Хабарское» - это удивительные по красоте пейзажи, разнообразие трасс, развитая инфраструктура, комфортное проживание, внимательный сервис.
+                </p>
+                <p>
+                  Подарите себе замечательный подарок к Новому году – активный отдых, отличное настроение и волшебную новогоднюю ночь!
+                </p>
+                <p>
+                  <strong>Режим работы горнолыжного стадиона:</strong><br><strong>30.12.2014</strong> – 10:00-21:00, <strong>31.12.2014</strong> – 10:00-18:00, <strong>1.01.2015</strong> – 12:00–21:00, <strong>2.01.2015</strong> – 9:00-23:00
+                </p>
+              </div>
+            </div>
+            <div class="sep"></div>
+            <h3>
+              Программа пребывания
+            </h3>
+            <div class="g-flRight">
+              <a class="download color-dark" href="#"><span class="download-pic"><span class="i-docDark"></span></span><span class="download-title"><u>Программа<br>пребывания</u></span></a>
+            </div>
+            <div style="overflow: hidden">
+              <h4>
+                30 декабря
+              </h4>
+              <dl>
+                <dt>
+                  17:00
+                </dt>
+                <dd>
+                  Прибытие, размещение в гостинице
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  18:00 — 20:00
+                </dt>
+                <dd>
+                  Ужин в ресторане с панорамным видом на р. Ока
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  19:00 (20:00) — 23:00
+                </dt>
+                <dd>
+                  Вечернее катание на сноутюбинге и семейных санях
+                </dd>
+              </dl>
+              <div class="sep"></div>
+              <h4>
+                30 декабря
+              </h4>
+              <dl>
+                <dt>
+                  17:00
+                </dt>
+                <dd>
+                  Прибытие, размещение в гостинице
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  18:00 — 20:00
+                </dt>
+                <dd>
+                  Ужин в ресторане с панорамным видом на р. Ока
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  19:00 (20:00) — 23:00
+                </dt>
+                <dd>
+                  Вечернее катание на сноутюбинге и семейных санях
+                </dd>
+              </dl>
+              <div class="sep"></div>
+              <h4>
+                1 января
+              </h4>
+              <dl>
+                <dt>
+                  17:00
+                </dt>
+                <dd>
+                  Прибытие, размещение в гостинице
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  18:00 — 20:00
+                </dt>
+                <dd>
+                  Ужин в ресторане с панорамным видом на р. Ока
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  19:00 (20:00) — 23:00
+                </dt>
+                <dd>
+                  Вечернее катание на сноутюбинге и семейных санях
+                </dd>
+              </dl>
+              <div class="sep"></div>
+              <h4>
+                2 января
+              </h4>
+              <dl>
+                <dt>
+                  17:00
+                </dt>
+                <dd>
+                  Прибытие, размещение в гостинице
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  18:00 — 20:00
+                </dt>
+                <dd>
+                  Ужин в ресторане с панорамным видом на р. Ока
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  19:00 (20:00) — 23:00
+                </dt>
+                <dd>
+                  Вечернее катание на сноутюбинге и семейных санях
+                </dd>
+              </dl>
+            </div>
+            <div class="sep sep--xl"></div>
+            <div class="sep sep--xl"></div>
+            <h3>
+              +7 910 873-11-82 — телефон для бронирования
+            </h3>
+            <div class="sep"></div>
+            <h2>
+              Клубный дом
+            </h2>
+            <div class="media media--left">
+              <div class="media-pic">
+                <img src="assets/images/361-8.jpg" />
+              </div>
+              <div class="media-text">
+                <h4>
+                  Номера со всеми удобствами. <br>В каждом номере:
+                </h4>
+                <ul>
+                  <li>
+                    кресло,
+                  </li>
+                  <li>
+                    зеркало-светильник,
+                  </li>
+                  <li>
+                    2 прикроватные тумбочки,
+                  </li>
+                  <li>
+                    2 настольные лампы,
+                  </li>
+                  <li>
+                    шкаф для одежды,
+                  </li>
+                  <li>
+                    TV,
+                  </li>
+                  <li>
+                    фен
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sep"></div>
+            <h3>
+              Клубный дом, первый этаж
+            </h3>
+            <table style="width: 100%">
+              <thead>
+                <tr>
+                  <th>
+                    Нумерация и комплектация<br>номеров / комнат
+                  </th>
+                  <th>
+                    Количество<br>осн./доп. мест
+                  </th>
+                  <th>
+                    Стоимость путевки<br>за двоих
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 1, номер 4
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <span class="info">Остался<br>1 номер</span><a class="button" href="#">Отправить заявку</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 2, номер 3
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <a class="button" href="#">Отправить заявку</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 2, номер 3
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <strong class="color-red">Номер продан</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="sep"></div>
+            <h3>
+              Клубный дом, второй этаж
+            </h3>
+            <table style="width: 100%">
+              <thead>
+                <tr>
+                  <th>
+                    Нумерация и комплектация<br>номеров / комнат
+                  </th>
+                  <th>
+                    Количество<br>осн./доп. мест
+                  </th>
+                  <th>
+                    Стоимость путевки<br>за двоих
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 1, номер 4
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <span class="info">Остался<br>1 номер</span><a class="button" href="#">Отправить заявку</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 2, номер 3
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <strong class="color-red">Номер продан</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 2, номер 3
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <strong class="color-red">Номер продан</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 2, номер 3
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <strong class="color-red">Номер продан</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>
+                      Номер 2, номер 3
+                    </h4>
+                    Номер площадью 14,6 и 15,1м² (санузел 2,7 и 2,3 м²)<br><strong>Двуспальная кровать</strong>
+                  </td>
+                  <td>
+                    2/0
+                  </td>
+                  <td>
+                    <h3>
+                      39 800 Р
+                    </h3>
+                  </td>
+                  <td>
+                    <a class="button" href="#">Отправить заявку</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="sep"></div>
+            <h3>
+              Стоимость размещения в номере <small>(с учетом стоимости проживания, двухразового питания<br>и новогоднего банкета с развлекательной программой)</small>
+            </h3>
+            <table>
+              <tr>
+                <td>
+                  <h4>
+                    Взрослый или ребенок от 12 лет
+                  </h4>
+                </td>
+                <td>
+                  <h4>
+                    13 000 P <small> / 1 дополнительное место</small>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>
+                    Ребенок от 6 до 12 лет
+                  </h4>
+                </td>
+                <td>
+                  <h4>
+                    9 400 P <small> / 1 дополнительное место</small>
+                  </h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>
+                    Дети до 6 лет
+                  </h4>
+                </td>
+                <td>
+                  <h4>
+                    Бесплатно <small> / в номере родителей
+                  </h4>
+                </td>
+              </tr>
+            </table>
+            <div class="sep"></div>
+            <p>
+              Посещение завтраков в формате «шведский стол» для детей от 1,5 до 6 лет оплачивается в обязательном порядке в размере 900 руб. за 1 ребенка. Заказ и оплата кулинарной продукции на ужин / новогодний банкет производятся непосредственно в СК «Хабарское».
+            </p>
+            <p>
+              В случае размещения на основном месте ребенка младше 12 лет базовая стоимость путевки уменьшается на 3900 руб.
+            </p>
+          </div>
+          <div class="block bg-yellow color-blue" style="text-align: center">
+            <h1>
+              Скидки 20% на прокат горных лыж и сноубордов
+            </h1>
+            <h3>
+              31 — 13 Января мы особенно рады гостям<br> Щедры на скидки и подарки, широко улыбаемся и поднимаем настроение!
+            </h3>
+          </div>
+          <div class="block bg-dull">
+            <h1>
+              Встреча нового 2015 года
+            </h1>
+            <div class="media media--right">
+              <div class="media-pic">
+                <img src="assets/images/newyear.jpg" />
+              </div>
+              <div class="media-text">
+                <h3>
+                  В стоимость путевки включено:
+                </h3>
+                <ul>
+                  <li>
+                    Встреча гостей и размещение в комфортабельных номерах Клубного дома или Мотеля / в Апартаментах / в бюджетных комнатах Эконом-класса;
+                  </li>
+                  <li>
+                    Двухразовое питание (завтрак в формате «шведского стола», сытный ужин с первым блюдом);
+                  </li>
+                  <li>
+                    Новогодний банкет с развлекательной программой и фейерверком в новогоднюю ночь и фирменными подарками от СК «Хабарское»;
+                  </li>
+                  <li>
+                    Детская ёлка 1.01.2015 с подарками от Деда Мороза и Снегурочки;
+                  </li>
+                  <li>
+                    Безлимитный Ski-pass на основных склонах, в зонах учебного и детского катания, безлимитный прокат спортивного снаряжения категории «В» 30.12.2014 и 1.01.2015;
+                  </li>
+                  <li>
+                    Спутниковое TV;
+                  </li>
+                  <li>
+                    Посещение мини-кинотеатра;
+                  </li>
+                  <li>
+                    Русский бильярд, пользование настольными играми (шахматы, нарды, шашки);
+                  </li>
+                  <li>
+                    Посещение детской комнаты в присутствии родителей;
+                  </li>
+                  <li>
+                    Детская игровая площадка с горкой;
+                  </li>
+                  <li>
+                    Прокат сноутюбов и семейных саней с 20.00 до 22.00;
+                  </li>
+                  <li>
+                    Предоставление детской кроватки в номер для детей до 3 лет (без белья, подушки и одеяла);
+                  </li>
+                  <li>
+                    Охраняемая автомобильная стоянка;
+                  </li>
+                  <li>
+                    Скидка 20% на аренду караоке-зала и зоны барбекю.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sep"></div>
+            <h3>
+              Дополнительно оплачивается:
+            </h3>
+            <ul>
+              <li>
+                Прокат спортивного снаряжения для взрослых и детей (горных лыж, сноубордов, детских защитных шлемов);
+              </li>
+              <li>
+                Пользование подъемниками БКД / подъемниками детского и учебного склонов;
+              </li>
+              <li>
+                Услуги инструкторов по обучению катанию на горных лыжах / сноуборде или совершенствованию навыков;
+              </li>
+              <li>
+                Обеды в ресторане;
+              </li>
+              <li>
+                Посещение сауны с мини-бассейном;
+              </li>
+              <li>
+                Аренда шашлычной и видовой зоны отдыха для самостоятельного приготовления шашлыка;
+              </li>
+              <li>
+                Предоставление белья, подушки и одеяла для детской кроватки для детей до 3 лет;
+              </li>
+              <li>
+                Размещение с домашними животными (допускается только в комнатах Эконом‑класса).
+              </li>
+            </ul>
+          </div>
+          <div class="block footer">
+            <p>
+              Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
+            </p>
+            <div class="footer-meta">
+              <div class="footer-copy">
+                © 2014 — 2015<br>СК «Хабарское»
+              </div>
+              <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="layout-column layout-column--aside" data-role="columnFixed" style="background-image: url(&#39;assets/images/wall-1.jpg&#39;)"></div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/scripts/vendors.js"></script>
+    <script src="assets/scripts/build.js"></script>
+  </body>
+</html>

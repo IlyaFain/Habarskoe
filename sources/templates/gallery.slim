@@ -1,0 +1,31 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modals.slim'
+		= include 'partials/header.slim'
+		= include 'partials/headerInteractive.slim'
+
+
+		.laytout
+			.constrain
+				.layout-column.layout-column--general data-role="column"
+					.block.bg-dull style="padding-right: 0"
+						.gallery data-role="gallery"
+							- for i in (1..11)
+								a.gallery-item href="#": img src="assets/images/280-#{i}.jpg"
+
+
+
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
+					= include 'partials/archive.slim'
+
+
+				div style="clear: both"
+
+		= include 'partials/scripts.slim'
+
+

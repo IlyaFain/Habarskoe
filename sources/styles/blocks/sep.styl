@@ -1,12 +1,42 @@
 .sep
-	margin-bottom: 20px
+	margin: 10px 0
+	display: block
+	overflow: hidden
+	position: relative
+	clear: both
 	&--xxl
-		margin-bottom: 50px
+		margin: 25px 0
 	&--xl
-		margin-bottom: 40px
+		margin: 20px 0
 	&--l
-		margin-bottom: 30px
+		margin: 15px 0
 	&--s
-		margin-bottom: 10px
+		margin: 5px 0
 	&--xs
-		margin-bottom: 5px
+		margin: 2px 0
+
+
+	&--figured
+		height: 19px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-image: inline('../../sources/images/hr.png')
+		overflow: hidden
+		margin: 40px 0
+		&:before, &:after
+			top: 50%
+			margin-top: -1px
+			height: 1px
+			background: #B7B7B7
+			content: ''
+			position: absolute
+			display: block
+			width: 100%
+		&:before
+			right: 50%
+			margin-right: 30px
+		&:after
+			left: 50%
+			margin-left: 30px
+
+

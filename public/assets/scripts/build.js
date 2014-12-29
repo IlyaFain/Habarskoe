@@ -98,14 +98,12 @@ $(function() {
     var height, heights;
     $columns.css('height', 'auto');
     heights = [];
-    console.log($columns.length);
     $columns.each((function(_this) {
       return function(i, item) {
         return heights.push($(item).outerHeight());
       };
     })(this));
     height = Math.max.apply(Math, heights);
-    console.log(heights, height);
     return $columns.css('height', height);
   });
   return after(500, (function(_this) {
@@ -246,7 +244,7 @@ $(function() {
 });
 
 $(function() {
-  var swiperPhotos, swiperSoon;
+  var swiperSoon;
   swiperSoon = $('@swiper@soon').swiper({
     mode: 'horizontal',
     loop: false,
@@ -259,9 +257,13 @@ $(function() {
   $('@soonPrev').on('click', function() {
     return swiperSoon.swipePrev();
   });
-  $('@soonNext').on('click', function() {
+  return $('@soonNext').on('click', function() {
     return swiperSoon.swipeNext();
   });
+});
+
+$(function() {
+  var swiperPhotos;
   return swiperPhotos = $('@swiper@photos').swiper({
     mode: 'horizontal',
     loop: false,
@@ -275,5 +277,53 @@ $(function() {
     pagination: '.swiper-pagination',
     paginationClickable: true,
     paginationAsRange: true
+  });
+});
+
+$(function() {
+  var swiperPhotos;
+  return swiperPhotos = $('@swiper@archive').swiper({
+    mode: 'vertival',
+    loop: false,
+    slidesPerView: 'auto',
+    calculateHeight: false,
+    cssWidthAndHeight: true,
+    width: '100%',
+    slidesPerViewFit: false,
+    visibilityFullFit: true,
+    freeMode: true,
+    scrollContainer: true
+  });
+});
+
+$(function() {
+  var $column, $constrain;
+  $column = $('@columnFixed');
+  $constrain = $('.constrain').first();
+  return $(window).on('resize', function() {
+    return $column.css('right', $constrain.offset().left);
+  });
+});
+
+$(function() {
+  return $('@fotorama').fotorama({
+    arrows: false,
+    nav: 'thumbs',
+    thumbWidth: 120,
+    thumbHeight: 90,
+    thumbmargin: 10,
+    thumbborderwidth: 1,
+    width: '100%',
+    fit: 'cober'
+  });
+});
+
+$(function() {
+  return $('@gallery').isotope({
+    itemSelector: '.gallery-item',
+    masonry: {
+      columnWidth: 280,
+      gutter: 10
+    }
   });
 });

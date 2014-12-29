@@ -2,12 +2,15 @@
 	position: absolute
 	display: block
 	bottom: 0
-	width: 100%
+	left: 0
+	right: 0
 	// height: 200px
 	font-size: 14px
 	background: $color.blue
 	color: $color.white
-	debug()
+	overflow: hidden
+	.layout-column--general &
+		right: 305px
 	p
 		display: block
 		width: 110%

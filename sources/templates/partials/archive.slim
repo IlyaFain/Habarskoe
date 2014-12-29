@@ -1,0 +1,22 @@
+.archive
+	.archive-header Архив
+	.swiper-container data-role="swiper archive"
+		.swiper-wrapper
+			- for i in (1..4)
+				.swiper-slide
+					a.archive-item href="#"
+						.archive-pic: img src="assets/images/195-#{i}.jpg"
+						.archive-title: u Мы вместе — 1 июня 2013г.
+			.swiper-slide
+				a.archive-item.is-active href="#"
+					.archive-pic: img src="assets/images/195-5.jpg"
+					.archive-title: u Мы вместе — 1 июня 2013г.
+			- for i in (6..11)
+				.swiper-slide
+					a.archive-item href="#"
+						.archive-pic: img src="assets/images/195-#{i}.jpg"
+						.archive-title: u Детский лагерь «Мадагаскар»
+	.archive-footer
+		span.plink data-role="scrollTo"
+			u Наверх
+			| ↑
