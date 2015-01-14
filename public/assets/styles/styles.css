@@ -611,7 +611,7 @@ a.color-red:hover u {
 .constrain {
   margin: 0 auto;
   min-width: 1024px;
-  max-width: 1620px;
+  max-width: 1600px;
   position: relative;
 }
 dl {
@@ -720,6 +720,22 @@ dl dd {
 padding:.gallery-item {
   display: block;
   width: 300px;
+  position: relative;
+}
+.gallery-zoom {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -70px;
+  z-index: 2;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+}
+.gallery-item:hover .gallery-zoom {
+  opacity: 1;
 }
 .header {
   height: 90px;
@@ -827,18 +843,21 @@ padding:.gallery-item {
   background: #fff;
   background: rgba(255,255,255,0.9);
   position: absolute;
-  min-height: 20px;
+  min-height: 0;
   z-index: 2;
   left: 6.5%;
   width: 220px;
 }
-.headerInteractive-trigger {
-  bottom: 0;
+.headerInteractive-show,
+.headerInteractive-hide {
+  bottom: -20px;
   position: absolute;
   height: 20px;
   width: 100%;
+  background: rgba(255,255,255,0.9);
 }
-.headerInteractive-trigger span {
+.headerInteractive-show span,
+.headerInteractive-hide span {
   position: absolute;
   right: 20px;
   bottom: 7px;
@@ -846,20 +865,20 @@ padding:.gallery-item {
           transition: opacity 0.3s;
   opacity: 0.8;
 }
-.headerInteractive-trigger .i-arrowUp {
+.headerInteractive-show:hover span {
+  opacity: 1;
+}
+.headerInteractive-show.is-active {
   opacity: 0;
   visibility: hidden;
 }
-.headerInteractive-trigger:hover span {
-  opacity: 1;
-}
-.headerInteractive-trigger.is-active .i-arrowUp {
-  opacity: 1;
-  visibility: visible;
-}
-.headerInteractive-trigger.is-active .i-arrowDown {
+.headerInteractive-hide {
   opacity: 0;
-  visibility: hidden;
+  bottom: 0;
+  background: none;
+}
+.headerInteractive-popup.is-visible + .headerInteractive-hide {
+  opacity: 1;
 }
 .headerInteractive-popup {
   height: 0;
@@ -1042,7 +1061,6 @@ padding:.gallery-item {
 }
 .hero .constrain {
   height: 440px;
-  overflow: hidden;
   position: relative;
 }
 .hero-seasons {
@@ -1203,8 +1221,17 @@ padding:.gallery-item {
   font-size: 18px;
   font-weight: 700;
 }
+.mediaOver-zoom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
 .mediaOver:hover {
   color: #fff;
+  opacity: 1;
 }
 .mediaOver:hover .mediaOver-text {
   background: #006eb6;
@@ -1737,6 +1764,33 @@ small {
 .swiper-arrow--next:hover {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRBNkYyQTRFNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRBNkYyQTRGNzc4NzExRTRBRTU1RUM2NjMyMkIyQjU0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEE2RjJBNEM3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEE2RjJBNEQ3Nzg3MTFFNEFFNTVFQzY2MzIyQjJCNTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7cuKYsAAAAuElEQVR42mJkyNvGgANIAnEflO4E4u3YFDHiMWAVEIdC2X+BOBqIV6IrYmLADWSQ2MxAvBSIw0kxoAlqM15D8BmwA+psvIbgM4AB6me8hrAAsRcQTwNieQbiAcyQj6BYeAJkSDOQB46DvMDKQAEAGZAOxC/I0AsKlyaQARugqY0RB45AC0TkhLWDUCyEQwOLGYvmlYSi0YOQZkIG1BLSTMiAp4Q0wxISLpAPxP+BWAKIO3BlZ4AAAwDWNSu4dN/JWgAAAABJRU5ErkJggg==");
 }
+.swiper-scrollbar {
+  border-radius: 10px;
+  position: relative;
+  -ms-touch-action: none;
+  background: rgba(0,0,0,0.1);
+}
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+.swiper-scrollbar-cursor-drag {
+  cursor: move;
+}
+.swiper-scrollbar {
+  background: #e1e1e1;
+  position: absolute;
+  left: 3px;
+  top: 110px;
+  bottom: 110px;
+  width: 3px;
+}
+.swiper-scrollbar .swiper-scrollbar-drag {
+  background: #006db7;
+}
 .switcher {
   margin-left: -20px;
 }
@@ -1807,6 +1861,16 @@ table td {
 table tbody th {
   padding-top: 1em;
   padding-bottom: 0;
+}
+.textBanner {
+  font-size: 18px;
+  font-weight: 700;
+}
+.textBanner-left {
+  float: left;
+}
+.textBanner-right {
+  float: right;
 }
 .title,
 h1,
@@ -1917,20 +1981,31 @@ h5 {
     font-size: 13px;
   }
 }
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 1200px) {
   .headerNav {
     font-size: 15px;
     padding-top: 18px;
   }
+  .textBanner {
+    font-size: 16px;
+  }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1150px) {
   .headerNav {
     font-size: 14px;
     padding-top: 20px;
   }
 }
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1100px) {
   .headerNav {
     font-size: 13px;
+  }
+  .textBanner {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .textBanner {
+    font-size: 14px;
   }
 }

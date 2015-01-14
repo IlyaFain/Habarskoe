@@ -292,7 +292,13 @@ $(function() {
     slidesPerViewFit: false,
     visibilityFullFit: true,
     freeMode: true,
-    scrollContainer: true
+    mousewheelControl: true,
+    scrollContainer: true,
+    scrollbar: {
+      container: '.swiper-scrollbar',
+      draggable: true,
+      hide: false
+    }
   });
 });
 

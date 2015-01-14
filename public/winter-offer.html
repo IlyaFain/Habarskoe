@@ -26,6 +26,30 @@
         </div>
       </div>
     </div>
+    <div class="modal" data-role="modal cams">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="video video1">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="video video2">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="video video3">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="video1" data-targets="video"><u>Камера 1</u></span><span class="plink" data-role="switchBlock" data-target="video2" data-targets="video"><u>Камера 2</u></span><span class="plink" data-role="switchBlock" data-target="video3" data-targets="video"><u>Камера 3</u></span>
+        </div>
+      </div>
+    </div>
     <div class="modal" data-role="modal scheme-complex">
       <div class="modal-overlay" data-role="modal-close"></div>
       <div class="modal-window">
@@ -76,6 +100,9 @@
         <!-- Логотип, смена картинки, схемы -->
         <div class="header-place header-place--logo">
           <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
+          <div class="plink headerInteractive-show" data-role="showBlock" data-target="headerInteractive">
+            <span class="i-arrowDown"></span>
+          </div>
         </div>
         <!-- Навигация -->
         <div class="header-place header-place--nav">
@@ -193,8 +220,8 @@
             </div>
           </div>
         </div>
-        <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
-          <span class="i-arrowDown"></span><span class="i-arrowUp"></span>
+        <div class="plink headerInteractive-hide" data-role="hideBlock" data-target="headerInteractive">
+          <span class="i-arrowUp"></span>
         </div>
       </div>
     </div>

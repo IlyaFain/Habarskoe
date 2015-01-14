@@ -12,9 +12,11 @@ html lang="ru"
 			.constrain
 				.layout-column.layout-column--general data-role="column"
 					.block.bg-dull style="padding-right: 0"
-						.gallery data-role="gallery"
+						.gallery data-role="gallery photos"
 							- for i in (1..11)
-								a.gallery-item href="#": img src="assets/images/280-#{i}.jpg"
+								a.gallery-item data-role="lightbox" href="assets/images/280-#{i}.jpg"
+									.gallery-zoom: span.i-zoomIn
+									img src="assets/images/280-#{i}.jpg"
 
 
 

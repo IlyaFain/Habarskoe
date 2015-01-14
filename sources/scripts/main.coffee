@@ -179,7 +179,12 @@ $ ->
 
 		freeMode: true
 		# freeModeFluid: true
+		mousewheelControl: true
 		scrollContainer: true
+		scrollbar:
+			container: '.swiper-scrollbar'
+			draggable: true
+			hide: false
 
 $ ->
 	$column = $('@columnFixed')

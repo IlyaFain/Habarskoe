@@ -9,7 +9,8 @@
 		| <!-- Логотип, смена картинки, схемы -->
 		.header-place.header-place--logo
 			= include 'headerLogo.slim'
-			/ include 'headerInteractive.slim'
+			.plink.headerInteractive-show data-role="showBlock" data-target="headerInteractive"
+				span.i-arrowDown
 
 		| <!-- Навигация -->
 		.header-place.header-place--nav

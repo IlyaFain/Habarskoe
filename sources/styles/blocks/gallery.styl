@@ -4,3 +4,16 @@
 		display: block
 		// padding: 0 10px 10px 0
 		width: 300px
+		position: relative
+	&-zoom
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -70px
+		z-index: 2
+		opacity: 0
+		width: 100%
+		text-align: center
+		transition: opacity 0.3s
+	&-item:hover &-zoom
+		opacity: 1
