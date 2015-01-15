@@ -100,8 +100,47 @@
         <!-- Логотип, смена картинки, схемы -->
         <div class="header-place header-place--logo">
           <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
-          <div class="plink headerInteractive-show is-active" data-role="showBlock" data-target="headerInteractive">
-            <span class="i-arrowDown"></span>
+          <div class="constrain">
+            <div class="headerInteractive">
+              <div class="headerInteractive-popup is-visible" data-role="headerInteractive">
+                <!-- Лето / зима -->
+                <div class="headerInteractive-row">
+                  <div class="headerInteractive-left">
+                    <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
+                  </div>
+                  <div class="headerInteractive-left">
+                    <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
+                  </div>
+                </div>
+                <!-- Погода, камеры -->
+                <div class="headerInteractive-row">
+                  <div class="headerInteractive-left">
+                    <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
+                  </div>
+                  <div class="headerInteractive-right">
+                    <span class="plink plate" data-role="showBlock" data-target="cams"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
+                  </div>
+                </div>
+                <!-- Вид со склона -->
+                <div class="headerInteractive-row">
+                  <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
+                    <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
+                  </div>
+                </div>
+                <!-- Схемы -->
+                <div class="headerInteractive-row">
+                  <div class="headerInteractive-left">
+                    <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+                  </div>
+                  <div class="headerInteractive-right">
+                    <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="plink headerInteractive-hide" data-role="hideBlock" data-target="headerInteractive">
+                <span class="i-arrowUp"></span>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Навигация -->
@@ -183,58 +222,24 @@
         </div>
       </div>
     </div>
-    <div class="constrain">
-      <div class="headerInteractive">
-        <div class="headerInteractive-popup is-visible" data-role="headerInteractive">
-          <!-- Лето / зима -->
-          <div class="headerInteractive-row">
-            <div class="headerInteractive-left">
-              <span class="plink season" data-role="switchBlock" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
-            </div>
-            <div class="headerInteractive-left">
-              <span class="plink season is-active" data-role="switchBlock" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
-            </div>
-          </div>
-          <!-- Погода, камеры -->
-          <div class="headerInteractive-row">
-            <div class="headerInteractive-left">
-              <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
-            </div>
-            <div class="headerInteractive-right">
-              <span class="plink plate" data-role="showBlock" data-target="cams"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
-            </div>
-          </div>
-          <!-- Вид со склона -->
-          <div class="headerInteractive-row">
-            <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
-              <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
-            </div>
-          </div>
-          <!-- Схемы -->
-          <div class="headerInteractive-row">
-            <div class="headerInteractive-left">
-              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
-            </div>
-            <div class="headerInteractive-right">
-              <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
-            </div>
-          </div>
-        </div>
-        <div class="plink headerInteractive-hide" data-role="hideBlock" data-target="headerInteractive">
-          <span class="i-arrowUp"></span>
-        </div>
-      </div>
-    </div>
     <div class="hero">
       <div class="constrain">
         <div class="hero-seasons">
           <div class="hero-season hero-season--summer" data-role="hero-season summer">
-            <div class="hero-pic is-visible" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-summer-1.jpg&#39;)"></div>
-            <div class="hero-pic" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-summer-2.jpg&#39;)"></div>
+            <div class="hero-pic is-visible" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-summer-1.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: blue"></a>
+            </div>
+            <div class="hero-pic" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-summer-2.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: yellow"></a>
+            </div>
           </div>
           <div class="hero-season hero-season--winter is-visible" data-role="hero-season winter">
-            <div class="hero-pic is-visible" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-winter-1.jpg&#39;)"></div>
-            <div class="hero-pic" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-winter-2.jpg&#39;)"></div>
+            <div class="hero-pic is-visible" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-winter-1.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: pink"></a>
+            </div>
+            <div class="hero-pic" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-winter-2.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: red"></a>
+            </div>
           </div>
         </div>
       </div>

@@ -611,7 +611,7 @@ a.color-red:hover u {
 .constrain {
   margin: 0 auto;
   min-width: 1024px;
-  max-width: 1600px;
+  max-width: 1366px;
   position: relative;
 }
 dl {
@@ -1087,11 +1087,19 @@ padding:.gallery-item {
 .hero-season--summer.is-visible {
   margin-left: 0;
 }
+.hero-banner {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 286px;
+  margin-left: -57px;
+  width: 227px;
+  height: 121px;
+}
 .hero-pic {
   height: 440px;
   background-color: #fff;
   background-position: 50% 50%;
-  background-size: cover;
   position: absolute;
   left: 0;
   top: 0;

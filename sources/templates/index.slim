@@ -15,8 +15,7 @@ html lang="ru"
 				| <!-- Логотип, смена картинки, схемы -->
 				.header-place.header-place--logo
 					= include 'partials/headerLogo.slim'
-					.plink.headerInteractive-show.is-active data-role="showBlock" data-target="headerInteractive"
-						span.i-arrowDown
+					= include 'partials/headerInteractive-visible.slim'
 
 				| <!-- Навигация -->
 				.header-place.header-place--nav
@@ -25,7 +24,7 @@ html lang="ru"
 				| <!-- Контакты -->
 				.header-place.header-place--contacts
 					= include 'partials/headerContacts.slim'
-		= include 'partials/headerInteractive-visible.slim'
+
 		= include 'partials/hero.slim'
 
 
