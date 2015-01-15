@@ -863,18 +863,18 @@ padding:.gallery-item {
           transition: opacity 0.3s;
   opacity: 0.8;
 }
-.headerInteractive-trigger .i-arrowDown {
+.headerInteractive-trigger .i-arrowUp {
   opacity: 0;
   visibility: hidden;
 }
 .headerInteractive-trigger:hover span {
   opacity: 1;
 }
-.headerInteractive-trigger.is-active .i-arrowDown {
+.headerInteractive-trigger.is-active .i-arrowUp {
   opacity: 1;
   visibility: visible;
 }
-.headerInteractive-trigger.is-active .i-arrowUp {
+.headerInteractive-trigger.is-active .i-arrowDown {
   opacity: 0;
   visibility: hidden;
 }

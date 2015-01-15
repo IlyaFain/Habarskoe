@@ -1,4 +1,4 @@
-.constrain: .headerInteractive
+.headerInteractive
 	.headerInteractive-popup data-role="headerInteractive"
 		| <!-- Лето / зима -->
 		.headerInteractive-row
@@ -39,5 +39,6 @@
 					span.winexplorer-pic: span.i-chum
 					span.winexplorer-title: u Схема комплекса
 
-	.plink.headerInteractive-hide data-role="hideBlock" data-target="headerInteractive"
+	.plink.headerInteractive-trigger data-role="toggleBlock" data-target="headerInteractive"
 		span.i-arrowUp
+		span.i-arrowDown
