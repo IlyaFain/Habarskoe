@@ -333,3 +333,18 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  var top, w;
+  if ($('.hero').length) {
+    w = $(window);
+    top = $('.hero').offset().top;
+    return w.on('scroll', function(e) {
+      if ($('@headerInteractive').hasClass('is-visible')) {
+        if (w.scrollTop() > 50) {
+          return $('@toggleBlock[data-target="headerInteractive"]').click();
+        }
+      }
+    });
+  }
+});

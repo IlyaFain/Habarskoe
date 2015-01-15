@@ -209,3 +209,12 @@ $ ->
 		masonry:
 			columnWidth: 280
 			gutter: 10
+
+$ ->
+	if $('.hero').length
+		w = $(window)
+		top = $('.hero').offset().top
+		w.on 'scroll', (e) ->
+			if $('@headerInteractive').hasClass('is-visible')
+				if w.scrollTop() > 50
+					$('@toggleBlock[data-target="headerInteractive"]').click()

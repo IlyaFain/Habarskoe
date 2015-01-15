@@ -843,21 +843,19 @@ padding:.gallery-item {
   background: #fff;
   background: rgba(255,255,255,0.9);
   position: absolute;
-  min-height: 0;
+  min-height: 20px;
+  top: 90px;
   z-index: 2;
-  left: 6.5%;
+  left: 0;
   width: 220px;
 }
-.headerInteractive-show,
-.headerInteractive-hide {
-  bottom: -20px;
+.headerInteractive-trigger {
+  bottom: 0;
   position: absolute;
   height: 20px;
   width: 100%;
-  background: rgba(255,255,255,0.9);
 }
-.headerInteractive-show span,
-.headerInteractive-hide span {
+.headerInteractive-trigger span {
   position: absolute;
   right: 20px;
   bottom: 7px;
@@ -865,20 +863,20 @@ padding:.gallery-item {
           transition: opacity 0.3s;
   opacity: 0.8;
 }
-.headerInteractive-show:hover span {
-  opacity: 1;
-}
-.headerInteractive-show.is-active {
+.headerInteractive-trigger .i-arrowDown {
   opacity: 0;
   visibility: hidden;
 }
-.headerInteractive-hide {
-  opacity: 0;
-  bottom: 0;
-  background: none;
-}
-.headerInteractive-popup.is-visible + .headerInteractive-hide {
+.headerInteractive-trigger:hover span {
   opacity: 1;
+}
+.headerInteractive-trigger.is-active .i-arrowDown {
+  opacity: 1;
+  visibility: visible;
+}
+.headerInteractive-trigger.is-active .i-arrowUp {
+  opacity: 0;
+  visibility: hidden;
 }
 .headerInteractive-popup {
   height: 0;

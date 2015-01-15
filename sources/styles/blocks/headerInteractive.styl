@@ -2,36 +2,36 @@
 	background: $color.white
 	background: rgba($color.white, 0.9)
 	position: absolute
-	min-height: 0
+	min-height: 20px
 	// width: 100%
-	// top: 90px
+	top: 90px
 	z-index: 2
-	left: 6.5%
+	left: 0
 	width: 220px
-	&-show, &-hide
+	&-trigger
 		// top: 100%
-		bottom: -20px
+		bottom: 0
 		position: absolute
 		height: 20px
 		width: 100%
-		background: rgba($color.white, 0.9)
 		span
 			position: absolute
 			right: 20px
 			bottom: 7px
 			transition: opacity 0.3s
 			opacity: 0.8
-	&-show:hover span
+		.i-arrowDown
+			opacity: 0
+			visibility: hidden
+	&-trigger:hover span
 		opacity: 1
-	&-show.is-active
-		opacity: 0
-		visibility: hidden
-	&-hide
-		opacity: 0
-		bottom: 0
-		background: none
-	&-popup.is-visible + &-hide
-		opacity: 1
+	&-trigger.is-active
+		.i-arrowDown
+			opacity: 1
+			visibility: visible
+		.i-arrowUp
+			opacity: 0
+			visibility: hidden
 
 
 	&-popup
