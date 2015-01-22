@@ -92,19 +92,29 @@ $(function() {
 });
 
 $(function() {
-  var $columns;
+  var $columns, likeFooterHeight;
   $columns = $('@column');
+  likeFooterHeight = function(cb) {
+    var height;
+    height = $('.footer').outerHeight();
+    $('@likeFooterHeight').innerHeight(height);
+    swiperPhotos.resizeFix();
+    swiperSoon.resizeFix();
+    return cb();
+  };
   $(window).on('resize', function() {
-    var height, heights;
-    $columns.css('height', 'auto');
-    heights = [];
-    $columns.each((function(_this) {
-      return function(i, item) {
-        return heights.push($(item).outerHeight());
-      };
-    })(this));
-    height = Math.max.apply(Math, heights);
-    return $columns.css('height', height);
+    return likeFooterHeight(function() {
+      var height, heights;
+      $columns.css('height', 'auto');
+      heights = [];
+      $columns.each((function(_this) {
+        return function(i, item) {
+          return heights.push($(item).outerHeight());
+        };
+      })(this));
+      height = Math.max.apply(Math, heights);
+      return $columns.css('height', height);
+    });
   });
   return after(500, (function(_this) {
     return function() {
@@ -244,15 +254,16 @@ $(function() {
 });
 
 $(function() {
-  var swiperSoon;
-  swiperSoon = $('@swiper@soon').swiper({
+  window.swiperSoon = $('@swiper@soon').swiper({
     mode: 'horizontal',
     loop: false,
     slidesPerView: 3,
     calculateHeight: true,
     visibilityFullFit: false,
     createPagination: false,
-    roundLengths: true
+    roundLengths: true,
+    autoResize: true,
+    resizeReInit: true
   });
   $('@soonPrev').on('click', function() {
     return swiperSoon.swipePrev();
@@ -263,8 +274,7 @@ $(function() {
 });
 
 $(function() {
-  var swiperPhotos;
-  return swiperPhotos = $('@swiper@photos').swiper({
+  return window.swiperPhotos = $('@swiper@photos').swiper({
     mode: 'horizontal',
     loop: false,
     slidesPerView: 3,
@@ -276,7 +286,9 @@ $(function() {
     createPagination: true,
     pagination: '.swiper-pagination',
     paginationClickable: true,
-    paginationAsRange: true
+    paginationAsRange: true,
+    autoResize: true,
+    resizeReInit: true
   });
 });
 
@@ -325,12 +337,18 @@ $(function() {
 });
 
 $(function() {
-  return $('@gallery').isotope({
+  var $gallery;
+  $gallery = $('@gallery').isotope({
     itemSelector: '.gallery-item',
     masonry: {
       columnWidth: 280,
       gutter: 10
     }
+  });
+  return $gallery.on('layoutComplete', function() {
+    return setTimeout(function() {
+      return $(window).resize();
+    }, 300);
   });
 });
 
@@ -345,6 +363,16 @@ $(function() {
           return $('@toggleBlock[data-target="headerInteractive"]').click();
         }
       }
+    });
+  }
+});
+
+$(function() {
+  if ($('@scrollToTop').length) {
+    return $('@scrollToTop').on('click', function() {
+      return $('body').animate({
+        scrollTop: 0
+      }, 300);
     });
   }
 });

@@ -779,6 +779,7 @@ padding:.gallery-item {
   color: #393939;
   -webkit-transition: color 0.3s;
           transition: color 0.3s;
+  padding-bottom: 5px;
 }
 .headerContacts a u,
 .headerContacts .plink u {
@@ -881,19 +882,20 @@ padding:.gallery-item {
 .headerInteractive-popup {
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.3s, opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
-          transition: height 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s;
+  -webkit-transition: height 0.3s, opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s, padding 0.3s;
+          transition: height 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s, padding 0.3s;
   -webkit-transform: translate3d(0, -30px, 0);
           transform: translate3d(0, -30px, 0);
-  padding: 0 20px;
+  padding: 0 20px 0;
 }
 .headerInteractive-popup.is-visible {
   visibility: visible;
   opacity: 1;
-  height: 440px;
+  height: auto;
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
+  padding-bottom: 25px;
 }
 .headerInteractive-row {
   overflow: hidden;
@@ -1197,6 +1199,9 @@ padding:.gallery-item {
 .media--right .media-pic {
   margin-left: 7%;
   float: right;
+}
+.soon .swiper-slide .mediaOver {
+  height: 100%;
 }
 .mediaOver {
   position: relative;
@@ -1837,11 +1842,15 @@ small {
   opacity: 0;
   position: absolute;
   top: 0;
+  height: 0;
+  overflow: hidden;
 }
 .switchBlock.is-visible {
   visibility: visible;
   opacity: 1;
   position: relative;
+  height: auto;
+  overflow: visible;
 }
 table {
   font-size: 12px;

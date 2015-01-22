@@ -37,14 +37,15 @@
 	&-popup
 		height: 0
 		overflow: hidden
-		transition: height 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s
+		transition: height 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s, padding 0.3s
 		transform: translate3d(0, -30px, 0)
-		padding: 0 20px
+		padding: 0 20px 0
 		&.is-visible
 			visibility: visible
 			opacity: 1
-			height: 440px
+			height: auto
 			transform: none
+			padding-bottom: 25px
 	&-row
 		overflow: hidden
 		padding: 11px 0

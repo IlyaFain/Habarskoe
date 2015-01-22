@@ -1,12 +1,20 @@
 $ ->
 	$columns = $('@column')
+	likeFooterHeight = (cb) ->
+		height = $('.footer').outerHeight()
+		$('@likeFooterHeight').innerHeight(height)
+		swiperPhotos.resizeFix()
+		swiperSoon.resizeFix()
+		cb()
 	$(window).on 'resize', ->
-		$columns.css('height', 'auto')
-		heights = []
-		$columns.each (i, item) =>
-			heights.push($(item).outerHeight())
-		height = Math.max.apply(Math, heights)
-		$columns.css('height', height)
+		likeFooterHeight ->
+			$columns.css('height', 'auto')
+			heights = []
+			$columns.each (i, item) =>
+				heights.push($(item).outerHeight())
+			height = Math.max.apply(Math, heights)
+			$columns.css('height', height)
+
 	after 500, =>
 		$(window).trigger('resize')
 
@@ -134,7 +142,7 @@ $ ->
 		return false
 
 $ ->
-	swiperSoon = $('@swiper@soon').swiper
+	window.swiperSoon = $('@swiper@soon').swiper
 		mode: 'horizontal'
 		loop: false
 		slidesPerView: 3
@@ -142,13 +150,15 @@ $ ->
 		visibilityFullFit: false
 		createPagination: false
 		roundLengths: true
+		autoResize: true
+		resizeReInit: true
 	$('@soonPrev').on 'click', ->
 		swiperSoon.swipePrev()
 	$('@soonNext').on 'click', ->
 		swiperSoon.swipeNext()
 
 $ ->
-	swiperPhotos = $('@swiper@photos').swiper
+	window.swiperPhotos = $('@swiper@photos').swiper
 		mode: 'horizontal'
 		loop: false
 		slidesPerView: 3
@@ -162,6 +172,11 @@ $ ->
 		pagination: '.swiper-pagination'
 		paginationClickable: true
 		paginationAsRange: true
+
+		autoResize: true
+		resizeReInit: true
+
+
 
 
 $ ->
@@ -204,11 +219,15 @@ $ ->
 		fit: 'cober'
 
 $ ->
-	$('@gallery').isotope
+	$gallery = $('@gallery').isotope
 		itemSelector: '.gallery-item'
 		masonry:
 			columnWidth: 280
 			gutter: 10
+	$gallery.on 'layoutComplete', ->
+		setTimeout ->
+			$(window).resize()
+		, 300
 
 $ ->
 	if $('.hero').length
@@ -218,3 +237,8 @@ $ ->
 			if $('@headerInteractive').hasClass('is-visible')
 				if w.scrollTop() > 50
 					$('@toggleBlock[data-target="headerInteractive"]').click()
+
+$ ->
+	if $('@scrollToTop').length
+		$('@scrollToTop').on 'click', ->
+			$('body').animate {scrollTop: 0}, 300
