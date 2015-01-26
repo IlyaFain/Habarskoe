@@ -1,0 +1,28 @@
+.archive
+	.archive-header События
+	.swiper-scrollbar
+	.swiper-container data-role="swiper archive"
+		.swiper-wrapper
+			- for i in (1..3)
+				.swiper-slide
+					a.mediaOver.is-static href="#"
+						img.mediaOver-pic src="assets/images/210-#{i}.jpg"
+						.mediaOver-text
+							.mediaOver-date 14 декабря, Воскресенье
+							.mediaOver-title Открытие горнолыжного сезона
+			.swiper-slide
+				a.mediaOver.is-static href="#"
+					img.mediaOver-pic src="assets/images/210-2.jpg"
+					.mediaOver-text
+						.mediaOver-date 14 декабря, Воскресенье
+						.mediaOver-title Открытие горнолыжного сезона
+			.swiper-slide
+				a.mediaOver.is-static href="#"
+					img.mediaOver-pic src="assets/images/210-1.jpg"
+					.mediaOver-text
+						.mediaOver-date 14 декабря, Воскресенье
+						.mediaOver-title Открытие горнолыжного сезона
+	.archive-footer
+		span.plink data-role="scrollToTop"
+			u Наверх
+			| ↑

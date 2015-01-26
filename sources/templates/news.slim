@@ -1,0 +1,58 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modals.slim'
+		= include 'partials/header.slim'
+
+
+		.laytout
+			.constrain
+				.layout-column.layout-column--general data-role="column"
+					.block.bg-dull
+						h1 Новости
+						.sep.sep--xl
+						.media.media--left
+							.media-pic
+								.media-date 11 февраля 2014
+								img src="assets/images/361-1.jpg"
+							.media-text
+								h3: a.color-dark href="#": u Соревнования по горным лыжам
+								p В прошлые выходные в СК «Хабарское» прошли соревнования по горным лыжам. Это самый скоростной вид спорта, не являющийся моторным, за исключением прыжков с парашютом. Однако скоростной спуск на лыжах, предполагает контакт с земной поверхностью.
+
+						.sep.sep--xl
+						.media.media--left
+							.media-pic
+								.media-date 1 января 2014
+								img src="assets/images/361-2.jpg"
+							.media-text
+								h3: a.color-dark href="#": u Новый год в кругу друзей
+								p В прошлые выходные в СК «Хабарское» прошли соревнования по горным лыжам. Это самый скоростной вид спорта, не являющийся моторным, за исключением прыжков с парашютом. Однако скоростной спуск на лыжах, предполагает контакт с земной поверхностью.
+
+						.sep.sep--xl
+						.media
+							.media-text
+								h3: a.color-dark href="#": u 20% скидка на проживание в мотеле
+								p В прошлые выходные в СК «Хабарское» прошли соревнования по горным лыжам. Это самый скоростной вид спорта, не являющийся моторным, за исключением прыжков с парашютом. Однако скоростной спуск на лыжах, предполагает контакт с земной поверхностью.
+
+						.sep.sep--xl
+						.media.media--left
+							.media-pic
+								.media-date 1 января 2014
+								img src="assets/images/361-2.jpg"
+							.media-text
+								h3: a.color-dark href="#": u Веселые старты на сноубордах
+								p В прошлые выходные в СК «Хабарское» прошли соревнования по горным лыжам. Это самый скоростной вид спорта, не являющийся моторным, за исключением прыжков с парашютом. Однако скоростной спуск на лыжах, предполагает контакт с земной поверхностью.
+
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
+					= include 'partials/events.slim'
+
+
+				div style="clear: both"
+
+		= include 'partials/scripts.slim'
+
+

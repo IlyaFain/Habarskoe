@@ -1183,6 +1183,11 @@ padding:.gallery-item {
   display: table;
   clear: both;
 }
+.media-date {
+  position: absolute;
+  margin-top: -27px;
+  font-style: italic;
+}
 .media-pic {
   width: 40%;
 }

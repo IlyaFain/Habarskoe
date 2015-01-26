@@ -98,8 +98,12 @@ $(function() {
     var height;
     height = $('.footer').outerHeight();
     $('@likeFooterHeight').innerHeight(height);
-    swiperPhotos.resizeFix();
-    swiperSoon.resizeFix();
+    if (swiperPhotos) {
+      swiperPhotos.resizeFix();
+    }
+    if (swiperSoon) {
+      swiperSoon.resizeFix();
+    }
     return cb();
   };
   $(window).on('resize', function() {

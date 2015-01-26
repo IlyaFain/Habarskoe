@@ -3,8 +3,8 @@ $ ->
 	likeFooterHeight = (cb) ->
 		height = $('.footer').outerHeight()
 		$('@likeFooterHeight').innerHeight(height)
-		swiperPhotos.resizeFix()
-		swiperSoon.resizeFix()
+		if swiperPhotos then swiperPhotos.resizeFix()
+		if swiperSoon then swiperSoon.resizeFix()
 		cb()
 	$(window).on 'resize', ->
 		likeFooterHeight ->
