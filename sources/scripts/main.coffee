@@ -49,13 +49,13 @@ $ ->
 		if getBlock(role).hasRole('modal')
 			$body.removeClass('is-locked')
 
-	hideBlock = (role) ->
+	window.hideBlock = (role) ->
 		getLink(role).removeClass('is-active')
 		getBlock(role).removeClass('is-visible')
 		bodyUnlock(role)
 		$body.off 'keyup.hideBlock'
 
-	showBlock = (role) ->
+	window.showBlock = (role) ->
 		getLink(role).addClass('is-active')
 		getBlock(role).addClass('is-visible')
 		bodyLock(role)
@@ -242,3 +242,10 @@ $ ->
 	if $('@scrollToTop').length
 		$('@scrollToTop').on 'click', ->
 			$('body').animate {scrollTop: 0}, 300
+
+$ ->
+	$('@request').on 'submit', ->
+		modalRole = $('@request').closest('@modal').roles()[1]
+		hideBlock(modalRole)
+		showBlock('thanks')
+		return false

@@ -128,7 +128,7 @@ $(function() {
 });
 
 $(function() {
-  var $body, $closeModalLinks, $hideBlockLinks, $photos, $showBlockLinks, $showLightboxLinks, $switchBlockLinks, $toggleBlockLinks, $zoomModalLinks, bodyLock, bodyUnlock, getBlock, getLink, hideBlock, setArrows, setPhoto, showBlock, toggleBlock;
+  var $body, $closeModalLinks, $hideBlockLinks, $photos, $showBlockLinks, $showLightboxLinks, $switchBlockLinks, $toggleBlockLinks, $zoomModalLinks, bodyLock, bodyUnlock, getBlock, getLink, setArrows, setPhoto, toggleBlock;
   $body = $('body');
   $showBlockLinks = $('@showBlock');
   $hideBlockLinks = $('@hideBlock');
@@ -156,13 +156,13 @@ $(function() {
       return $body.removeClass('is-locked');
     }
   };
-  hideBlock = function(role) {
+  window.hideBlock = function(role) {
     getLink(role).removeClass('is-active');
     getBlock(role).removeClass('is-visible');
     bodyUnlock(role);
     return $body.off('keyup.hideBlock');
   };
-  showBlock = function(role) {
+  window.showBlock = function(role) {
     getLink(role).addClass('is-active');
     getBlock(role).addClass('is-visible');
     bodyLock(role);
@@ -379,4 +379,14 @@ $(function() {
       }, 300);
     });
   }
+});
+
+$(function() {
+  return $('@request').on('submit', function() {
+    var modalRole;
+    modalRole = $('@request').closest('@modal').roles()[1];
+    hideBlock(modalRole);
+    showBlock('thanks');
+    return false;
+  });
 });

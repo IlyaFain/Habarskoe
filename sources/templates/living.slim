@@ -6,6 +6,118 @@ html lang="ru"
 		= include 'partials/modal-seasons-passes.slim'
 		= include 'partials/modal-seasons-safe.slim'
 		= include 'partials/modals.slim'
+
+		.modal data-role="modal thanks"
+			.modal-overlay data-role="modal-close"
+			.modal-window.modal-window--yellow
+				h1 Вы — чудо!
+				h2 Мы получили вашу заявку. Она прекрасна!<br>Осталось совсем немного подождать<br>и мы с вами свяжемся.
+
+		.modal data-role="modal request-1"
+			.modal-overlay data-role="modal-close"
+			.modal-window.modal-window--light
+				form.request data-role="request" action="" method="post"
+					h1 Заявка на бронирование первого номера на первом этажи<div class="sep sep--xs"></div><small>в клубном доме</small>
+					.sep
+					p: em Отправка заявки не означает бронирование определенного номера в указанный период
+					table
+						tr
+							td style="width: 190px": label for="name" Фамилия Имя
+							td: input.field style="width: 350px" type="text" value="Константин Константинопольский"
+						tr
+							td: label for="name" Мобильный телефон
+							td: input.field style="width: 190px" type="text" value="Константин Константинопольский"
+						tr
+							td: label for="name" E-mail
+							td: input.field style="width: 315px" type="text" value="constantinopolsky@gmail.com"
+						tr
+							td: label for="name" Дата начала отдыха
+							td: input.field style="width: 140px" type="text"
+						tr
+							td: label for="name" Количество дней
+							td: input.field style="width: 80px" type="text"
+					.sep.sep--l
+					p
+						label.checkbox
+							input.checkbox-input type="checkbox" name="rules"
+							span.checkbox-fake: span.checkbox-icon.i-check
+							span.checkbox-desc С <a href="rules.html" class="color-dark"><u>правилами</u></a> проживания в гостинице СК «Хабарское» и публичной офертой (договором) <nobr>на предоставление</nobr> услуг бронирования ознакомлен и согласен.
+					.sep.sep--xxl
+					.g-taCenter
+						input.button.button--xl type="submit" value="Отправить"
+						.sep
+						p: em Заявка рассматривается в течение  24 часов с момента ее получения администратором гостиницы. Если что-то пошло не так, позвоните нам:<br>(831710) 4-15-41, 8-910-873-11-82.
+
+		.modal data-role="modal request-2"
+			.modal-overlay data-role="modal-close"
+			.modal-window.modal-window--light
+				form.request data-role="request" action="" method="post"
+					h1 Заявка на бронирование второго номера на первом этажи<div class="sep sep--xs"></div><small>в клубном доме</small>
+					.sep
+					p: em Отправка заявки не означает бронирование определенного номера в указанный период
+					table
+						tr
+							td style="width: 190px": label for="name" Фамилия Имя
+							td: input.field style="width: 350px" type="text" value="Константин Константинопольский"
+						tr
+							td: label for="name" Мобильный телефон
+							td: input.field style="width: 190px" type="text" value="Константин Константинопольский"
+						tr
+							td: label for="name" E-mail
+							td: input.field style="width: 315px" type="text" value="constantinopolsky@gmail.com"
+						tr
+							td: label for="name" Дата начала отдыха
+							td: input.field style="width: 140px" type="text"
+						tr
+							td: label for="name" Количество дней
+							td: input.field style="width: 80px" type="text"
+					.sep.sep--l
+					p
+						label.checkbox
+							input.checkbox-input type="checkbox" name="rules"
+							span.checkbox-fake: span.checkbox-icon.i-check
+							span.checkbox-desc С <a href="rules.html" class="color-dark"><u>правилами</u></a> проживания в гостинице СК «Хабарское» и публичной офертой (договором) <nobr>на предоставление</nobr> услуг бронирования ознакомлен и согласен.
+					.sep.sep--xxl
+					.g-taCenter
+						input.button.button--xl type="submit" value="Отправить"
+						.sep
+						p: em Заявка рассматривается в течение  24 часов с момента ее получения администратором гостиницы. Если что-то пошло не так, позвоните нам:<br>(831710) 4-15-41, 8-910-873-11-82.
+
+		.modal data-role="modal request-3"
+			.modal-overlay data-role="modal-close"
+			.modal-window.modal-window--light.request
+				form.request data-role="request" action="" method="post"
+					h1 Заявка на бронирование третьего номера на первом этажи<div class="sep sep--xs"></div><small>в клубном доме</small>
+					.sep
+					p: em Отправка заявки не означает бронирование определенного номера в указанный период
+					table
+						tr
+							td style="width: 190px": label for="name" Фамилия Имя
+							td: input.field style="width: 350px" type="text" value="Константин Константинопольский"
+						tr
+							td: label for="name" Мобильный телефон
+							td: input.field style="width: 190px" type="text" value="Константин Константинопольский"
+						tr
+							td: label for="name" E-mail
+							td: input.field style="width: 315px" type="text" value="constantinopolsky@gmail.com"
+						tr
+							td: label for="name" Дата начала отдыха
+							td: input.field style="width: 140px" type="text"
+						tr
+							td: label for="name" Количество дней
+							td: input.field style="width: 80px" type="text"
+					.sep.sep--l
+					p
+						label.checkbox
+							input.checkbox-input type="checkbox" name="rules"
+							span.checkbox-fake: span.checkbox-icon.i-check
+							span.checkbox-desc С <a href="rules.html" class="color-dark"><u>правилами</u></a> проживания в гостинице СК «Хабарское» и публичной офертой (договором) <nobr>на предоставление</nobr> услуг бронирования ознакомлен и согласен.
+					.sep.sep--xxl
+					.g-taCenter
+						input.button.button--xl type="submit" value="Отправить"
+						.sep
+						p: em Заявка рассматривается в течение  24 часов с момента ее получения администратором гостиницы. Если что-то пошло не так, позвоните нам:<br>(831710) 4-15-41, 8-910-873-11-82.
+
 		= include 'partials/header.slim'
 
 
@@ -51,7 +163,7 @@ html lang="ru"
 									.room-header
 										.room-meta
 											.room-cost 2500/3900 P
-											.room-submit: a.button href="#" Отправить заявку
+											.room-submit: span.button data-role="showBlock" data-target="request-1" Отправить заявку
 										.room-title
 											h3 Первый номер (первый этаж)
 											p Двухместный номер с удобствами, площадь 14,6 м², санузел 2,7 м2
@@ -78,7 +190,7 @@ html lang="ru"
 									.room-header
 										.room-meta
 											.room-cost 2500/3900 P
-											.room-submit: a.button href="#" Отправить заявку
+											.room-submit: span.button data-role="showBlock" data-target="request-2" Отправить заявку
 										.room-title
 											h3 Первый номер (первый этаж)
 											p Двухместный номер с удобствами, площадь 14,6 м², санузел 2,7 м2
@@ -105,7 +217,7 @@ html lang="ru"
 									.room-header
 										.room-meta
 											.room-cost 2500/3900 P
-											.room-submit: a.button href="#" Отправить заявку
+											.room-submit: span.button data-role="showBlock" data-target="request-3" Отправить заявку
 										.room-title
 											h3 Первый номер (первый этаж)
 											p Двухместный номер с удобствами, площадь 14,6 м², санузел 2,7 м2
