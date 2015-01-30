@@ -1,0 +1,119 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modal-seasons-passes.slim'
+		= include 'partials/modal-seasons-safe.slim'
+		= include 'partials/modals.slim'
+		= include 'partials/header.slim'
+
+
+
+		.laytout
+			.constrain
+				.layout-column.layout-column--general data-role="column"
+					.block.bg-dull
+						.stocks
+							h1 Акции и спецпредложения
+							h2: span.plink.is-active data-role="toggleBlock" data-target="stock-1"
+								u Вечерний тур «3 в одном» <span class="minimize">Свернуть</span>
+							.switchBlock.is-visible data-role="stock stock-1"
+								h4: em С 7 декабря 2014 г. в СК «Хабарское»  действует спецпредложение - Вечерний Тур «3 в одном»!
+								img src="assets/images/861.jpg" style="width: 100%"
+								.sep.sep--l
+								h3 Стоимость тура:
+								table style="width: 70%; vertical-align: middle"
+									tr
+										td style="font-size: 16px; width: 35%"
+											| <strong>2000 ₽</strong>/<strong style="font-size: 14px">1800 ₽</strong> на двоих
+											br
+											| <strong>2000 ₽</strong>/<strong style="font-size: 14px">1800 ₽</strong> на двоих
+										td style="font-size: 12px;" Через наклонную черту и более мелким шрифтом указаны цены для счастливого обладателя безлимитного абонемента
+								.sep
+								strong: small В номерах Эконом-класса
+								div style="font-size: 16px"
+									| <strong>1000 ₽</strong> с человека при размещении компании от 3-х человек
+									br
+									| <strong>900 ₽</strong> дополнительное место для ребёнка, достигшего 6 лет
+								.sep.sep--l
+
+								h3 В стоимость тура входит:
+								ul
+									li проживание для двоих на одну ночь в номере соответствующей категории Клубный дом (1 этаж), Мотель 2 и Эконом-класс,
+									li континентальный завтрак в ресторане комплекса,
+									li безлимитный ski-pass на пользование подъемниками основных склонов с 17.00 до 22.00 (залог за карточку - 100 рублей, возвращается поcле сдачи ski-pass), окончание катания по режиму работы горнолыжного стадиона,
+									li безлимитное катание на учебном склоне,
+									li оборудованная комната для хранения горнолыжного снаряжения и сушки экипировки.
+
+								p: em Заезд осуществляется в будние дни (кроме понедельника и пятницы) в 17:00, выезд — в 10:00 (либо по договоренности).
+
+								.sep.sep--l
+
+								div style="overflow: hidden; padding: 10px 0;"
+									.g-flLeft style="width: 30%"
+										span.i-kids.g-flLeft
+										em style="padding: 5px 0 0 10px; overflow: hidden; display: block" Дети до 6 лет размещаются бесплатно
+									.g-flLeft style="width: 30%; margin: 0 3%"
+										span.i-phone.g-flLeft
+										em style="padding: 5px 0 0 10px; overflow: hidden; display: block" Обязательна предварительная запись бронирования по телефону.
+									.g-flLeft style="width: 30%"
+										span.i-passport.g-flLeft
+										em style="padding: 5px 0 0 10px; overflow: hidden; display: block" При заезде с собой необходимо иметь паспорт.
+
+								.sep.sep--l
+
+								h3 Дополнительные услуги:
+								ul
+		    						li ужин
+		    						li сауна
+		    						li бильярд
+		    						li занятия с инструктором
+
+								.sep
+								h4 Обязательна предварительная запись +7(910)870-91-42
+								em Бронирование номера только в день заезда!
+								.sep.sep--l
+
+								h4 Поделиться:
+								.sep.sep--s
+								.social-likes data-url="http://habarskoe.xdesign-nn.ru"
+									.facebook title="Поделиться ссылкой на Фейсбуке" Facebook
+									.twitter data-via="виа" data-related="описание" title="Поделиться ссылкой в Твиттере" Twitter
+									.vkontakte title="Поделиться ссылкой во Вконтакте" Вконтакте
+									.odnoklassniki title="Поделиться ссылкой в Одноклассниках" Одноклассники
+
+							h2: span.plink data-role="toggleBlock" data-target="stock-2"
+								u Новогодние каникулы и Рождество <span class="minimize">Свернуть</span>
+							.switchBlock data-role="stock stock-2"
+								h1 2
+
+							h2: span.plink data-role="toggleBlock" data-target="stock-3"
+								u Счастливый Новый год — 2015 <span class="minimize">Свернуть</span>
+							.switchBlock data-role="stock stock-3"
+								h1 3
+
+							h2: span.plink data-role="toggleBlock" data-target="stock-4"
+								u Скидка на безлимитный абонемент <span class="minimize">Свернуть</span>
+							.switchBlock data-role="stock stock-4"
+								h1 4
+
+
+
+
+
+
+
+
+
+
+
+
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
+					= include 'partials/events.slim'
+
+		= include 'partials/scripts.slim'
+
+

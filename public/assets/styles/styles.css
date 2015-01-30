@@ -1803,6 +1803,26 @@ small {
   *display: inline;
   line-height: 14px;
 }
+.stocks {
+  position: relative;
+}
+.stocks .plink.is-active u {
+  border: none;
+}
+.stocks .minimize {
+  position: absolute;
+  text-align: right;
+  right: 0;
+  border-bottom: 1px dotted;
+  font-style: normal;
+  font-size: 16px;
+  visibility: hidden;
+  opacity: 0;
+}
+.stocks .is-active .minimize {
+  visibility: visible;
+  opacity: 1;
+}
 .swiper-container {
   margin: 0 auto;
   position: relative;
