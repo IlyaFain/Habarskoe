@@ -1293,6 +1293,9 @@ padding:.gallery-item {
   right: 0;
   background-size: cover;
 }
+.media {
+  display: block;
+}
 .media:after {
   content: "";
   display: table;
@@ -1304,12 +1307,14 @@ padding:.gallery-item {
   font-style: italic;
 }
 .media-pic {
+  display: block;
   width: 40%;
 }
 .media-pic img {
   width: 100%;
 }
 .media-text {
+  display: block;
   overflow: hidden;
 }
 .media--left .media-pic {
@@ -1319,6 +1324,10 @@ padding:.gallery-item {
 .media--right .media-pic {
   margin-left: 7%;
   float: right;
+}
+.media--icon .media-pic {
+  width: 80px;
+  margin-right: 0;
 }
 .soon .swiper-slide .mediaOver {
   height: 100%;
@@ -1647,6 +1656,13 @@ body.is-locked {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+.nicePlates {
+  overflow: hidden;
+}
+.nicePlates img {
+  float: left;
+  margin: 0 10px 10px 0;
 }
 .plate {
   display: block;

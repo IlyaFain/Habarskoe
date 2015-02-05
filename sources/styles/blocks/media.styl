@@ -1,15 +1,18 @@
 
 .media
+	display: block
 	clearfix()
 	&-date
 		position: absolute
 		margin-top: -27px
 		font-style: italic
 	&-pic
+		display: block
 		width: 40%
 		img
 			width: 100%
 	&-text
+		display: block
 		overflow: hidden
 	&--left &-pic
 		float: left
@@ -17,3 +20,6 @@
 	&--right &-pic
 		margin-left: 7%
 		float: right
+	&--icon &-pic
+		width: 80px
+		margin-right: 0
