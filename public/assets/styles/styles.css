@@ -347,6 +347,52 @@ hr {
   font-size: 16px;
   padding: 20px 70px;
 }
+.calendar {
+  width: 100%;
+  font-size: 12px;
+  border-collapse: separate;
+}
+.calendar-date {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: bold;
+}
+.calendar td,
+.calendar th {
+  width: 15%;
+  text-align: left;
+  margin: 10px;
+  border-spacing: 10px;
+}
+.calendar td:last-child,
+.calendar th:last-child {
+  padding-right: 0;
+}
+.calendar th {
+  border: none;
+  padding: 5px;
+  font-style: italic;
+  font-weight: bold;
+  color: #393939;
+  font-size: 15px;
+}
+.calendar td {
+  color: #bebebe;
+  padding: 5px;
+  height: 90px;
+  vertical-align: top;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+}
+.calendar tbody th {
+  padding-top: 1em;
+  padding-bottom: 0;
+}
 .cat {
   margin-bottom: 5px;
   position: relative;
