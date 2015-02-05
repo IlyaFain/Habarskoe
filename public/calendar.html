@@ -212,154 +212,175 @@
             <h1>
               Календарь мероприятий
             </h1>
-            <table class="calendar">
-              <tr>
-                <th>
-                  Пн.
-                </th>
-                <th>
-                  Вт.
-                </th>
-                <th>
-                  Ср.
-                </th>
-                <th>
-                  Чт.
-                </th>
-                <th>
-                  Пт.
-                </th>
-                <th>
-                  Сб.
-                </th>
-                <th>
-                  Вс.
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <span class="calendar-date">01</span>
-                </td>
-                <td>
-                  <span class="calendar-date">02</span>
-                </td>
-                <td>
-                  <span class="calendar-date">03</span>
-                </td>
-                <td class="bg-dull">
-                  <p class="color-gray">
-                    Корпоратив ООО «Эталон»
-                  </p>
-                  <p>
-                    <a href="#"><u>Отчет</u></a>
-                  </p>
-                  <span class="calendar-date">04</span>
-                </td>
-                <td>
-                  <span class="calendar-date">05</span>
-                </td>
-                <td>
-                  <span class="calendar-date">06</span>
-                </td>
-                <td>
-                  <span class="calendar-date">07</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="calendar-date">08</span>
-                </td>
-                <td>
-                  <span class="calendar-date">09</span>
-                </td>
-                <td>
-                  <span class="calendar-date">10</span>
-                </td>
-                <td>
-                  <span class="calendar-date">11</span>
-                </td>
-                <td>
-                  <span class="calendar-date">12</span>
-                </td>
-                <td>
-                  <span class="calendar-date">13</span>
-                </td>
-                <td class="bg-blue">
-                  <p class="color-white">
-                    Открытие горнолыжного сезона
-                  </p>
-                  <span class="calendar-date color-white">14</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="calendar-date">15</span>
-                </td>
-                <td>
-                  <span class="calendar-date">16</span>
-                </td>
-                <td>
-                  <span class="calendar-date">17</span>
-                </td>
-                <td style="background: #F1085C; text-align: center; font-size: 18px; font-weight: 400; vertical-align: middle;">
-                  <p class="color-white">
-                    Thnx!
-                  </p>
-                </td>
-                <td>
-                  <span class="calendar-date">19</span>
-                </td>
-                <td class="bg-dull">
-                  <p class="color-blue">
-                    Family Day от журнала Family&Home Magazine
-                  </p>
-                  <span class="calendar-date color-blue">20</span>
-                </td>
-                <td>
-                  <span class="calendar-date">21</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="calendar-date">22</span>
-                </td>
-                <td>
-                  <span class="calendar-date">23</span>
-                </td>
-                <td>
-                  <span class="calendar-date">24</span>
-                </td>
-                <td>
-                  <span class="calendar-date">25</span>
-                </td>
-                <td>
-                  <span class="calendar-date">26</span>
-                </td>
-                <td>
-                  <span class="calendar-date">27</span>
-                </td>
-                <td>
-                  <span class="calendar-date">28</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span class="calendar-date">29</span>
-                </td>
-                <td class="bg-dull">
-                  <p class="color-blue">
-                    Family Day от журнала Family&Home Magazine
-                  </p>
-                  <span class="calendar-date color-blue">30</span>
-                </td>
-                <td class="bg-dull">
-                  <p class="color-blue">
-                    Family Day от журнала Family&Home Magazine
-                  </p>
-                  <span class="calendar-date color-blue">31</span>
-                </td>
-              </tr>
-            </table>
+            <div class="switcher">
+              <span class="plink switcher-item is-active" data-role="switchBlock" data-target="cal1" data-targets="cal"><u>Декабрь</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="cal2" data-targets="cal"><u>Январь</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="cal3" data-targets="cal"><u>Февраль</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="cal4" data-targets="cal"><u>Март</u></span>
+            </div>
+            <div class="sep"></div>
+            <div class="switchBlock is-visible" data-role="cal cal1">
+              <table class="calendar">
+                <tr>
+                  <th>
+                    Пн.
+                  </th>
+                  <th>
+                    Вт.
+                  </th>
+                  <th>
+                    Ср.
+                  </th>
+                  <th>
+                    Чт.
+                  </th>
+                  <th>
+                    Пт.
+                  </th>
+                  <th>
+                    Сб.
+                  </th>
+                  <th>
+                    Вс.
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="calendar-date">01</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">02</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">03</span>
+                  </td>
+                  <td class="bg-dull">
+                    <p class="color-gray">
+                      Корпоратив ООО «Эталон»
+                    </p>
+                    <p>
+                      <a href="#"><u>Отчет</u></a>
+                    </p>
+                    <span class="calendar-date">04</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">05</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">06</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">07</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="calendar-date">08</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">09</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">10</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">11</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">12</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">13</span>
+                  </td>
+                  <td class="bg-blue">
+                    <p class="color-white">
+                      Открытие горнолыжного сезона
+                    </p>
+                    <span class="calendar-date color-white">14</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="calendar-date">15</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">16</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">17</span>
+                  </td>
+                  <td style="background: #F1085C; text-align: center; font-size: 18px; font-weight: 400; vertical-align: middle;">
+                    <p class="color-white">
+                      Thnx!
+                    </p>
+                  </td>
+                  <td>
+                    <span class="calendar-date">19</span>
+                  </td>
+                  <td class="bg-dull">
+                    <p class="color-blue">
+                      Family Day от журнала Family&Home Magazine
+                    </p>
+                    <span class="calendar-date color-blue">20</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">21</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="calendar-date">22</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">23</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">24</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">25</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">26</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">27</span>
+                  </td>
+                  <td>
+                    <span class="calendar-date">28</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="calendar-date">29</span>
+                  </td>
+                  <td class="bg-dull">
+                    <p class="color-blue">
+                      Family Day от журнала Family&Home Magazine
+                    </p>
+                    <span class="calendar-date color-blue">30</span>
+                  </td>
+                  <td class="bg-dull">
+                    <p class="color-blue">
+                      Family Day от журнала Family&Home Magazine
+                    </p>
+                    <span class="calendar-date color-blue">31</span>
+                  </td>
+                </tr>
+              </table>
+              <div class="switchBlock" data-role="cal cal2">
+                <h2>
+                  январь
+                </h2>
+              </div>
+              <div class="switchBlock" data-role="cal cal3">
+                <h2>
+                  февраль
+                </h2>
+              </div>
+              <div class="switchBlock" data-role="cal cal4">
+                <h2>
+                  март
+                </h2>
+              </div>
+            </div>
           </div>
           <div class="block footer">
             <p>
