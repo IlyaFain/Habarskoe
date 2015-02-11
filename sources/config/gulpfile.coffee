@@ -51,24 +51,26 @@ gulp.task 'styles:watch', ->
 
 
 gulp.task 'templates:compile', ['templates:clean', 'templates:slim']
+
 gulp.task 'templates:clean', ->
-	gulp.src [paths.html + all.html], { read: false }
-		.pipe run.clean {force: true}
+	# gulp.src [paths.html + all.html], { read: false }
+	# 	.pipe run.clean {force: true}
+
 gulp.task 'templates:slim', ->
 	gulp.src [paths.slim + '*.slim']
-		.pipe run.plumber()
 		.pipe run.include()
-		.pipe run.plumber()
 		.pipe run.slim {pretty: true}
 		.pipe gulp.dest paths.html
+
 gulp.task 'templates:watch', ->
 	gulp.watch [paths.slim + all.slim], ['templates:slim']
 
 	gulp.watch paths.html + all.html
 		.on 'change', (file) ->
-			setTimeout ->
-				server.changed(file.path)
-			, 500
+			server.changed(file.path)
+			# setTimeout ->
+			# 	server.changed(file.path)
+			# , 100
 
 
 
