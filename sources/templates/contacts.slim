@@ -1,0 +1,93 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modal-seasons-passes.slim'
+		= include 'partials/modal-seasons-safe.slim'
+		= include 'partials/modals.slim'
+		= include 'partials/header.slim'
+
+
+
+
+
+		.layout
+			.constrain.bg-white
+				.layout-column.layout-column--slightlyLarger.bg-dull style="padding-bottom: 0"
+					.block.bg-dull
+						h1 Контактная информация
+						.sep
+						table style="width: 100%"
+							tr
+								td width="60%"
+									h4 Размещение в гостинице (бронирование)
+									.sep.sep--s
+									ul
+										li Гостиница: <nobr>(83170) 4-15-41</nobr>
+										li Бронирование номеров: <nobr>+7 (910) 870-91-42</nobr>
+								td
+									h4 Администратор кассового павильона и проката
+									.sep.sep--s
+									ul
+										li Тел.: <nobr>+7 (910) 871-12-94</nobr>
+							tr
+								td
+									h4 Офис в Нижнем Новгороде
+									.sep.sep--s
+									ul
+										li Тел.: <nobr>(831) 438-66-05</nobr>, <nobr>+7 (987) 531-00-00</nobr>
+								td
+									h4 &nbsp;
+									.sep.sep--s
+									ul
+										li Эл. почта: <a href="mailto:pr@habarskoe.ru"><u>pr@habarskoe.ru</u></a>
+
+						hr
+
+						table.feedback style="width: 100%"
+							tr
+								td colspan="2"
+									textarea.field.field--white placeholder="Обратная связь" rows="10" style="width: 100%"
+								td
+									p: em Напишите нам пару строк о том, что вы думаете о Хабарском, о нас, о наших услугах. Мы будем рады конструктивной критике и конечно же сохраним втайне ваши данные
+							tr
+								td width="40%"
+									input.field.field--white type="text" placeholder="Ваш e-mail" style="width: 100%"
+								td width="20%"
+									input.button.button--blue type="submit" value="Отправить"
+								td width="40%" &nbsp;
+
+
+
+
+
+
+				.layout-column.layout-column--slightlyLess.bg-white
+					.googleMaps data-role="map"
+						iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2213.0717418842382!2d44.030189!3d56.311335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d4f91fa4229d%3A0xb66bf3b13eaf6803!2z0J_QvtC70YLQsNCy0YHQutCw0Y8g0YPQuy4sIDMyLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgNjAzMDg5!5e0!3m2!1sru!2sru!4v1423806186556" width="100%" height="450" frameborder="0" style="border:0"
+					.block.bg-white
+						.switcher.switcher--s
+							span.plink.switcher-item.is-active data-role="switchBlock" data-targets="a" data-target="a1": u Офис в Нижнем Новгороде
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a2": u СК «Хабарское»
+
+						.sep.sep--l
+						.switchBlock.is-visible data-role="a a1"
+							p 603089 Россия, г. Н.Новгород, <br>ул. Полтавская, д. 32 (третий этаж, офис 29)
+						.switchBlock data-role="a a2"
+							h2 Про хабарское
+				.g-clear
+		.layout
+			.constrain.bg-white
+				img src="assets/images/scheme-2.jpg" style="width: 100%; margin-bottom: -20px"
+		.layout
+			.constrain.bg-white
+				.sep
+				= include 'partials/footer-static.slim'
+
+
+
+
+		= include 'partials/scripts.slim'
+
+

@@ -340,6 +340,9 @@ hr {
   font-size: 16px;
   padding: 20px 70px;
 }
+.button--blue {
+  background: #006eb6;
+}
 .calendar {
   width: 100%;
   font-size: 12px;
@@ -751,6 +754,23 @@ dl dd {
   padding: 10px 20px;
   font-size: 18px;
 }
+.field--white {
+  background: #fff;
+  color: #393939;
+  font-size: 14px;
+}
+.field--white::-webkit-input-placeholder {
+  font-style: italic;
+}
+.field--white::-moz-placeholder {
+  font-style: italic;
+}
+.field--white:-ms-input-placeholder {
+  font-style: italic;
+}
+.field--white::placeholder {
+  font-style: italic;
+}
 label {
   font-size: 14px;
 }
@@ -767,6 +787,9 @@ label {
 }
 .layout-column--general .footer {
   right: 305px;
+}
+.footer--static {
+  position: relative;
 }
 .footer p {
   display: block;
