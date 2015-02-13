@@ -1,0 +1,131 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modals.slim'
+		= include 'partials/header.slim'
+
+
+		.laytout
+			.constrain
+				.layout-column.layout-column--general data-role="column"
+					.block.bg-dull style="padding-right: 0"
+						h1 Детский отдых
+						.sep
+						.switcher.switcher--s
+							span.plink.switcher-item.is-active data-role="switchBlock" data-targets="a" data-target="a1": u Детский клуб
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a2": u Игровая площадка
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a3": u СДЮСШОР
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a4": u Горнолыжный детский сад
+						.sep.sep--l
+						.switchBlock.is-visible data-role="a a1"
+							table width="100%"
+								tr
+									td width="40%"
+										h2 style="font-style: normal" Игровая комната
+										p style="font-size: 16px;" Для самых маленьких гостей спортивного клуба "Хабарское" в летнем сезоне 2015, как и всегда, будет работать Игровая комната. У малышей будет возможность поиграть со сверстниками и научиться чему-нибудь новому и интересному, что является важной составляющей социальной адаптации и полноценного развития ребенка. А родители, зная что их драгоценное чадо под бдительным присмотром, смогут получить массу удовольствия от отдыха на природе.
+									td
+										img src="assets/images/kids.jpg" style="width: 100%"
+								tr
+									td
+									td: h2 Расписание работы детской комнаты:
+								tr
+									td
+										.media.media--left.media--icon
+											.media-pic style="width: 50px": span.i-cal
+											.media-text: strong с 5 января по 11 января — <br>каждый день
+										.sep
+										.media.media--left.media--icon
+											.media-pic style="width: 50px": span.i-clock
+											.media-text
+												em Начало работы: 
+												strong 4 июня 2014 года
+												br
+												em Время работы: 
+												strong с 10.00 до 20.00
+										.sep
+										.media.media--left.media--icon
+											.media-pic style="width: 50px": span.i-kidshead
+											.media-text
+												em Мы рекомендуем детскую комнату для детей 
+												strong от 3.5 до 8 лет
+									td
+										dl style="font-size: 16px;"
+											dt: strong 10<sup>00</sup> — 12<sup>00</sup>
+											dd — свободное посещение (игры, рисование, просмотр мультфильмов)
+											dt: strong 10<sup>00</sup> — 12<sup>00</sup>
+											dd — тематический мастер-класс
+											dt: strong 10<sup>00</sup> — 12<sup>00</sup>
+											dd — перерыв на обед
+											dt: strong 10<sup>00</sup> — 12<sup>00</sup>
+											dd — свободное посещение
+											dt: strong 10<sup>00</sup> — 12<sup>00</sup>
+											dd — тематический мастер-класс (продолжение)
+											dt: strong 10<sup>00</sup> — 12<sup>00</sup>
+											dd — психологический тест для детей в игровой форме с описанием для родителей (по желанию)
+										.sep.sep--xl
+										.media.media--left.media--icon style="font-size: 16px"
+											.media-pic style="width: 40px; margin-top: 3px": span.i-snow
+											.media-text.color-blue: em: strong Во вторник и четверг детская комната<br>работает без педагога.
+
+							.sep.sep--xxl
+							.kidsFigure
+								.kidsFigure-text
+									p Посещение мастер-<br>классов платное.
+									p Стоимость (необходимые  материалы и обучение технике у педагога): <br><strong>1 час — 250 рублей</strong>
+								.kidsFigure-pic
+									img src="assets/images/893.jpg"
+
+							.sep.sep--xxl
+							.program
+								.program-text
+									span.i-angle.program-angle
+									h2 Программа мастер-классов — НОВОГОДНИЕ КАНИКУЛЫ:
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+									dl style="font-size: 16px;"
+										dt: strong 2 января
+										dd — Мастер-класс «Новогодняя Маска» - аппликация
+
+
+							p 603089 Россия, г. Н.Новгород, <br>ул. Полтавская, д. 32 (третий этаж, офис 29)
+						.switchBlock data-role="a a2"
+							h2 Про хабарское
+						.switchBlock data-role="a a3"
+							h2 Про хабарское
+						.switchBlock data-role="a a4"
+							h2 Про хабарское
+
+
+
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
+					= include 'partials/archive.slim'
+
+
+				div style="clear: both"
+
+		= include 'partials/scripts.slim'
+
+
