@@ -1690,70 +1690,21 @@ body.is-locked {
   display: block;
   margin-top: -3px;
 }
-.hero .constrain {
-  height: 440px;
+.program {
+  background: url("../images/wall-snow.jpg") no-repeat 100% 100%;
+}
+.program-text {
+  width: 60%;
+  background: #fff;
+  border: 10px solid #006eb6;
   position: relative;
+  padding: 50px 30px;
 }
-.hero-seasons {
-  width: 200%;
-}
-.hero-season {
-  float: left;
-  width: 50%;
-  height: 440px;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s, margin 0.3s;
-  -webkit-perspective: 1000;
-          perspective: 1000;
-}
-.hero-season.is-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.hero-season--summer {
-  margin-left: -50%;
-}
-.hero-season--summer.is-visible {
-  margin-left: 0;
-}
-.hero-banner {
-  display: block;
+.program-angle {
   position: absolute;
-  left: 50%;
-  top: 286px;
-  margin-left: -57px;
-  width: 227px;
-  height: 121px;
-}
-.hero-pic {
-  height: 440px;
-  background-color: #fff;
-  background-position: 50% 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  transition: -webkit-transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s;
-  opacity: 0.5;
-}
-.hero-pic:first-child {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-.hero-pic:last-child {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
-}
-.hero-pic.is-visible {
-  z-index: 1;
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  left: 100%;
+  top: 50%;
+  margin-top: -20px;
 }
 .request table {
   width: 100%;
