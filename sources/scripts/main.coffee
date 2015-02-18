@@ -227,7 +227,7 @@ $ ->
 	$gallery.on 'layoutComplete', ->
 		setTimeout ->
 			$(window).resize()
-		, 300
+		, 600
 
 $ ->
 	if $('.hero').length

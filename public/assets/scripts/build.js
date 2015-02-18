@@ -352,7 +352,7 @@ $(function() {
   return $gallery.on('layoutComplete', function() {
     return setTimeout(function() {
       return $(window).resize();
-    }, 300);
+    }, 600);
   });
 });
 

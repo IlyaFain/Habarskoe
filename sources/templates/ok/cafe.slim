@@ -22,10 +22,9 @@ html lang="ru"
 						p Вас приятно удивят разнообразное домашнее меню, изумительный внешний вид блюд и умение нашего шеф-повара чувствовать тончайшие нюансы вкуса. Ресторан - это отличное место для встречи друзей или празднования памятных событий. Приятная атмосфера, внимательный сервис и вкусная кухня оставят тёплые воспоминания о Вашем празднике!
 						h4 Режим работы с 9.00 до 19.00.
 						.sep
-						div style="overflow: hidden"
-						.nicePlates
+						.rama data-role="fotorama"
 							img src="assets/images/img-b-1.jpg"
-							img src="assets/images/img-b-2.jpg" style="clear: both"
+							img src="assets/images/img-b-2.jpg"
 							img src="assets/images/img-b-3.jpg"
 					.block.bg-white
 						h1 Кафе «Veranda»
@@ -33,7 +32,7 @@ html lang="ru"
 						p Уютный зал кафе на 35 посадочных мест прекрасно подходит для семейных торжеств или  деловых встреч. Живописный вид, открывающийся с веранды кафе, никого не оставит равнодушным.
 						h4 Режим работы с 9.00 до 19.00.
 						.sep
-						.nicePlates
+						.rama data-role="fotorama"
 							img src="assets/images/img-b-4.jpg"
 							img src="assets/images/img-b-5.jpg"
 					.block.bg-orange
@@ -41,7 +40,7 @@ html lang="ru"
 						.sep.sep--l
 						p VIP-зал на 20 посадочных мест идеально подходит для проведения деловых встреч, торжественных и праздничных мероприятий.
 						.sep
-						.nicePlates
+						.rama data-role="fotorama"
 							img src="assets/images/img-b-11.jpg"
 							img src="assets/images/img-b-12.jpg"
 					.block.bg-white
@@ -52,9 +51,9 @@ html lang="ru"
 						p Вместимость шашлычной 15 человек и зоны отдыха под навесом около шашлычной - 30 человек. Шашлычная оборудована очагом с дымоходом, рукомойником, пластиковой и (или) деревянной мебелью. Предоставляем древесный уголь, жидкость для розжига, набор шампуров (6 шт.) и набор одноразовой посуды (тарелки, вилки, ножи, стаканы, бумажные салфетки на 6 персон).
 						h4 Помещение шашлычной в зимний период не отапливается.
 						.sep
-						.nicePlates
+						.rama data-role="fotorama"
 							img src="assets/images/img-b-7.jpg"
-							img src="assets/images/img-b-8.jpg" style="clear: both"
+							img src="assets/images/img-b-8.jpg"
 							img src="assets/images/img-b-9.jpg"
 					.block.bg-white
 						h1 Чум
@@ -65,7 +64,7 @@ html lang="ru"
 						img src="assets/images/img-b-10.jpg"
 
 
-					= include 'partials/footer.slim'
+
 
 				.layout-column.layout-column--slightlyLess.bg-dark data-role="column"
 					.block.bg-dull
@@ -196,8 +195,10 @@ html lang="ru"
 						div style="font-size: 16px" <strong>500 ₽</strong> на 1 час
 						p: em Только для использования во время проведения корпоративного мероприятия Заказчиком – юридическим лицом.
 						p В стоимость аренды чума включено небольшое количество дров для поддержания огня в очаге в течение срока аренды. Огонь в очаге разводится Заказчиком, жидкость для розжига не предоставляется.
-					.block style="background: #E0E0E0" data-role="likeFooterHeight"
+					.block style="background: #E0E0E0"
 						h4: em Цены, указанные на сайте, не являются публичной офертой.<br>Администрация осталяет за собой право на изменение тарифов.
+
+			= include 'partials/footer-static.slim'
 
 
 

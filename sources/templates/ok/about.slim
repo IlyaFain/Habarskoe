@@ -64,7 +64,7 @@ html lang="ru"
 				.layout-column.layout-column--slightlyLess.bg-dull
 					.block.bg-dull
 						h1 Окрестности
-						.switcher
+						.switcher style="font-style: italic;"
 							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a1": u Трек
 							span.plink.switcher-item.is-active data-role="switchBlock" data-targets="a" data-target="a2": u Монастырь
 							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a3": u Усадьба
@@ -92,16 +92,13 @@ html lang="ru"
 				.g-clear
 		.layout
 			.constrain
-				img src="assets/images/history.jpg" style="width: 100%"
+				img src="assets/images/history.jpg" style="width: 100%; margin-bottom: -10px"
 		.laytout
 			.constrain
 				.layout-column.layout-column--slightlyLarger.bg-white data-role="column"
 					.block.bg-white
 						h1 Схема проезда
 						img src="assets/images/scheme.jpg"
-
-
-					= include 'partials/footer.slim'
 
 				.layout-column.layout-column--slightlyLess.bg-dull data-role="column"
 					.block.bg-dull
@@ -119,6 +116,8 @@ html lang="ru"
 
 						h4 Адрес офиса в Нижнем Новгороде
 						p 603089 Россия, г. Нижний Новгород, ул. Полтавская, д. 32 (третий этаж, офис 29)<br>Тел.: (831) 438-66-05, +7 (987) 531-00-00<br>Эл. почта:  pr@habarskoe.ru
+						.sep
+				= include 'partials/footer.slim'
 
 
 
