@@ -1706,6 +1706,9 @@ body.is-locked {
   top: 50%;
   margin-top: -20px;
 }
+.program--empty {
+  background-image: url("../images/wall-snow-empty.jpg");
+}
 .request table {
   width: 100%;
 }
