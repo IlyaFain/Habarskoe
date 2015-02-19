@@ -15,8 +15,9 @@ $ ->
 			height = Math.max.apply(Math, heights)
 			$columns.css('height', height)
 
-	after 500, =>
-		$(window).trigger('resize')
+	$(window).on 'load', ->
+		after 500, =>
+			$(window).trigger('resize')
 
 $ ->
 

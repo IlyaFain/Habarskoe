@@ -120,11 +120,13 @@ $(function() {
       return $columns.css('height', height);
     });
   });
-  return after(500, (function(_this) {
-    return function() {
-      return $(window).trigger('resize');
-    };
-  })(this));
+  return $(window).on('load', function() {
+    return after(500, (function(_this) {
+      return function() {
+        return $(window).trigger('resize');
+      };
+    })(this));
+  });
 });
 
 $(function() {
