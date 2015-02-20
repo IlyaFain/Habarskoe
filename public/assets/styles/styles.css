@@ -956,6 +956,14 @@ padding:.gallery-item {
   transition: border-color 0.1s;
   border-color: rgba(57,57,57,0.9);
 }
+.headerContacts a u,
+.headerContacts .plink u {
+  display: inline;
+  border: none;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAYAAAD0In+KAAAAAXNSR0IArs4c6QAAAA9JREFUCB1jsLS0/M8ABAAJsQGrJunLoQAAAABJRU5ErkJggg==");
+  background-repeat: repeat-x;
+  background-position: center 1.3em;
+}
 .headerContacts-popup {
   left: 0;
   width: 100%;
