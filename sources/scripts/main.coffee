@@ -222,13 +222,18 @@ $ ->
 $ ->
 	$gallery = $('@gallery').isotope
 		itemSelector: '.gallery-item'
+		isInitLayout: true
 		masonry:
 			columnWidth: 280
 			gutter: 10
-	$gallery.on 'layoutComplete', ->
+
+	$gallery.isotope 'on', 'layoutComplete', ->
+		$(window).resize()
 		setTimeout ->
+			console.log 'layoutComplete'
 			$(window).resize()
-		, 600
+		, 500
+
 
 $ ->
 	if $('.hero').length
@@ -245,7 +250,8 @@ $ ->
 			$('body').animate {scrollTop: 0}, 300
 
 $ ->
-	$('@request').on 'submit', ->
+	$('@request').on 'submit', (e, data) ->
+		console.log e, data
 		modalRole = $('@request').closest('@modal').roles()[1]
 		hideBlock(modalRole)
 		showBlock('thanks')

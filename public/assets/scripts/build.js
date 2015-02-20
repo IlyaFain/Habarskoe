@@ -346,15 +346,18 @@ $(function() {
   var $gallery;
   $gallery = $('@gallery').isotope({
     itemSelector: '.gallery-item',
+    isInitLayout: true,
     masonry: {
       columnWidth: 280,
       gutter: 10
     }
   });
-  return $gallery.on('layoutComplete', function() {
+  return $gallery.isotope('on', 'layoutComplete', function() {
+    $(window).resize();
     return setTimeout(function() {
+      console.log('layoutComplete');
       return $(window).resize();
-    }, 600);
+    }, 500);
   });
 });
 
@@ -384,8 +387,9 @@ $(function() {
 });
 
 $(function() {
-  return $('@request').on('submit', function() {
+  return $('@request').on('submit', function(e, data) {
     var modalRole;
+    console.log(e, data);
     modalRole = $('@request').closest('@modal').roles()[1];
     hideBlock(modalRole);
     showBlock('thanks');

@@ -898,6 +898,35 @@ padding:.gallery-item {
 .gallery-item:hover .gallery-zoom {
   opacity: 1;
 }
+.gallery-more {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  background: rgba(255,255,255,0.6);
+  left: 50%;
+  margin-left: -150px;
+  margin-bottom: -25px;
+  padding: 50px 40px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: #006eb6;
+  transition: color 0.3s;
+  font-size: 18px;
+}
+.gallery-more u {
+  transition: border-color 0.3s;
+  border-color: #006eb6;
+  border-color: rgba(0,110,182,0.5);
+}
+.gallery-more:hover {
+  transition: color 0.1s;
+}
+.gallery-more:hover u {
+  transition: border-color 0.1s;
+  border-color: rgba(0,110,182,0.9);
+}
 .header {
   height: 90px;
   position: fixed;
@@ -1285,9 +1314,10 @@ padding:.gallery-item {
   font-size: 12px;
   font-weight: 700;
   line-height: 1.1;
-  cursor: pointer;
+  cursor: default;
   vertical-align: top;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 .kidsFigure {
   position: relative;
