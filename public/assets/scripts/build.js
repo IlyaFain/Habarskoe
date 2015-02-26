@@ -106,7 +106,7 @@ $(function() {
     }
     return cb();
   };
-  $(window).on('resize', function() {
+  return $(window).on('resize', function() {
     return likeFooterHeight(function() {
       var height, heights;
       $columns.css('height', 'auto');
@@ -119,13 +119,6 @@ $(function() {
       height = Math.max.apply(Math, heights);
       return $columns.css('height', height);
     });
-  });
-  return $(window).on('load', function() {
-    return after(500, (function(_this) {
-      return function() {
-        return $(window).trigger('resize');
-      };
-    })(this));
   });
 });
 
@@ -343,22 +336,18 @@ $(function() {
 });
 
 $(function() {
-  var $gallery;
+  var $gallery, onComplete;
   $gallery = $('@gallery').isotope({
     itemSelector: '.gallery-item',
-    isInitLayout: true,
     masonry: {
       columnWidth: 280,
       gutter: 10
     }
   });
-  return $gallery.isotope('on', 'layoutComplete', function() {
-    $(window).resize();
-    return setTimeout(function() {
-      console.log('layoutComplete');
-      return $(window).resize();
-    }, 500);
-  });
+  onComplete = function() {
+    return console.log('complete');
+  };
+  return $gallery.isotope('on', 'layoutComplete', onComplete());
 });
 
 $(function() {

@@ -9,7 +9,7 @@ html lang="ru"
 
 		.laytout
 			.constrain
-				.layout-column.layout-column--general data-role="column"
+				.layout-column.layout-column--general.bg-dull style="padding-bottom: 0"
 					.block.bg-dull style="padding-right: 0"
 						.gallery data-role="gallery photos"
 							- for i in (1..11)
@@ -19,8 +19,8 @@ html lang="ru"
 							a.gallery-more href="#": u Загрузить ещё
 
 
-
-					= include 'partials/footer.slim'
+					.sep.sep--xxl
+					= include 'partials/footer-static.slim'
 
 				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
 					= include 'partials/archive.slim'

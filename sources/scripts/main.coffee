@@ -15,9 +15,9 @@ $ ->
 			height = Math.max.apply(Math, heights)
 			$columns.css('height', height)
 
-	$(window).on 'load', ->
-		after 500, =>
-			$(window).trigger('resize')
+	# $(window).on 'load', ->
+	# 	after 500, =>
+	# 		$(window).trigger('resize')
 
 $ ->
 
@@ -222,17 +222,22 @@ $ ->
 $ ->
 	$gallery = $('@gallery').isotope
 		itemSelector: '.gallery-item'
-		isInitLayout: true
 		masonry:
 			columnWidth: 280
 			gutter: 10
 
-	$gallery.isotope 'on', 'layoutComplete', ->
-		$(window).resize()
-		setTimeout ->
-			console.log 'layoutComplete'
-			$(window).resize()
-		, 500
+	onComplete = ->
+		console.log 'complete'
+		# $(window).resize()
+
+
+
+	$gallery.isotope 'on', 'layoutComplete', onComplete()
+		# $(window).resize()
+		# setTimeout ->
+		# 	console.log 'layoutComplete'
+		# 	$(window).resize()
+		# , 1500
 
 
 $ ->
