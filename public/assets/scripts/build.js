@@ -317,9 +317,16 @@ $(function() {
   var $column, $constrain;
   $column = $('@columnFixed');
   $constrain = $('.constrain').first();
-  return $(window).on('resize', function() {
+  $(window).on('resize', function() {
     return $column.css('right', $constrain.offset().left);
   });
+  if ($column[0]) {
+    return after(300, (function(_this) {
+      return function() {
+        return $(window).resize();
+      };
+    })(this));
+  }
 });
 
 $(function() {

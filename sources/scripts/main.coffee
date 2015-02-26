@@ -207,6 +207,9 @@ $ ->
 	$constrain = $('.constrain').first()
 	$(window).on 'resize', ->
 		$column.css('right', $constrain.offset().left)
+	if $column[0]
+		after 300, =>
+			$(window).resize()
 
 $ ->
 	$('@fotorama').fotorama
