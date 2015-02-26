@@ -1374,6 +1374,11 @@ padding:.gallery-item {
   bottom: 0;
   right: 0;
   background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.layout-column--aside.is-visible {
+  opacity: 1;
 }
 .media {
   display: block;

@@ -324,11 +324,8 @@ $(function() {
     return $column.css('right', $constrain.offset().left);
   });
   if ($column[0]) {
-    return after(300, (function(_this) {
-      return function() {
-        return $(window).resize();
-      };
-    })(this));
+    $(window).resize();
+    return $column.addClass('is-visible');
   }
 });
 

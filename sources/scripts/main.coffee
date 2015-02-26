@@ -211,8 +211,8 @@ $ ->
 	$(window).on 'resize', ->
 		$column.css('right', $constrain.offset().left)
 	if $column[0]
-		after 300, =>
-			$(window).resize()
+		$(window).resize()
+		$column.addClass('is-visible')
 
 $ ->
 	$('@fotorama').fotorama
