@@ -67,14 +67,17 @@ $ ->
 	$showBlockLinks.on 'click', ->
 		role = $(this).attr('data-target')
 		showBlock(role)
+		$(window).trigger('resize')
 
 	$hideBlockLinks.on 'click', ->
 		role = $(this).attr('data-target')
 		hideBlock(role)
+		$(window).trigger('resize')
 
 	$toggleBlockLinks.on 'click', ->
 		role = $(this).attr('data-target')
 		toggleBlock(role)
+		$(window).trigger('resize')
 
 	$switchBlockLinks.on 'click', ->
 		targetRole = $(this).attr('data-target')

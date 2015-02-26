@@ -170,17 +170,20 @@ $(function() {
   $showBlockLinks.on('click', function() {
     var role;
     role = $(this).attr('data-target');
-    return showBlock(role);
+    showBlock(role);
+    return $(window).trigger('resize');
   });
   $hideBlockLinks.on('click', function() {
     var role;
     role = $(this).attr('data-target');
-    return hideBlock(role);
+    hideBlock(role);
+    return $(window).trigger('resize');
   });
   $toggleBlockLinks.on('click', function() {
     var role;
     role = $(this).attr('data-target');
-    return toggleBlock(role);
+    toggleBlock(role);
+    return $(window).trigger('resize');
   });
   $switchBlockLinks.on('click', function() {
     var targetRole, targetsRole;
