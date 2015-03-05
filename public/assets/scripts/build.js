@@ -392,3 +392,12 @@ $(function() {
     return false;
   });
 });
+
+$(function() {
+  $('@toSummer').on('click', function() {
+    return $('@headerNav').addClass('headerNav--summer');
+  });
+  return $('@toWinter').on('click', function() {
+    return $('@headerNav').removeClass('headerNav--summer');
+  });
+});

@@ -1209,7 +1209,7 @@ padding:.gallery-item {
   padding: 17px 0 0 7%;
   height: 90px;
   font-size: 16px;
-  transition: font-size 0.1s;
+  transition: font-size 0.1s, background 0.3s;
 }
 .headerNav-column {
   float: left;
@@ -1238,6 +1238,12 @@ padding:.gallery-item {
 }
 .headerNav a.is-active u {
   border-color: transparent;
+}
+.headerNav--summer {
+  background: #ff7a54;
+}
+.headerNav--summer a.is-active {
+  color: #393939;
 }
 .hero .constrain {
   height: 440px;

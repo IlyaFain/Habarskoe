@@ -6,7 +6,7 @@
 	// font-weight: $font.bold
 	font-size: 16px
 	// font-size: 14px
-	transition: font-size 0.1s
+	transition: font-size 0.1s, background 0.3s
 	+media('max-width: 1200px')
 		font-size: 15px
 		padding-top: 18px
@@ -27,3 +27,7 @@
 			cursor: default
 			u
 				border-color: transparent
+	&--summer
+		background: #FF7A54
+	&--summer a.is-active
+		color: $color.text

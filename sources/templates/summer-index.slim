@@ -1,0 +1,49 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modals.slim'
+		| <!-- Шапка -->
+		.header
+			.constrain
+
+				| <!-- Меню -->
+				.header-place.header-place--menu
+					= include 'partials/headerMenu.slim'
+
+				| <!-- Логотип, смена картинки, схемы -->
+				.header-place.header-place--logo
+					= include 'partials/headerLogo.slim'
+					= include 'partials/headerInteractive-visible-summer.slim'
+
+				| <!-- Навигация -->
+				.header-place.header-place--nav
+					= include 'partials/headerNav-summer.slim'
+
+				| <!-- Контакты -->
+				.header-place.header-place--contacts
+					= include 'partials/headerContacts.slim'
+
+		= include 'partials/hero-summer.slim'
+
+
+		.laytout
+			.constrain
+				.layout-column.layout-column--narrow.bg-white data-role="column"
+					.block.bg-bright
+						= include 'partials/news.slim'
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--wide.bg-dark data-role="column"
+					.block.bg-dull
+						= include 'partials/soon.slim'
+					.block.bg-orange.color-dark.textBanner
+						.textBanner-left Цена одного подъема сегодня: 70₽
+						.textBanner-right Цена одного подъема 570₽
+					.block.bg-dark.color-white
+						= include 'partials/photos.slim'
+
+		= include 'partials/scripts.slim'
+
+

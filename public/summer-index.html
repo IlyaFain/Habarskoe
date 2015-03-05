@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Хабарское</title>
+    <meta charset="utf-8" />
+    <link href="assets/styles/styles.css" rel="stylesheet" />
+    <link href="assets/styles/icons.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="modal" data-role="modal scheme-hills">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="hills hillsDefault">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="hills hillsNewbie">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="hillsDefault" data-targets="hills"><u>Основной склон</u></span><span class="plink" data-role="switchBlock" data-target="hillsNewbie" data-targets="hills"><u>Склон для начинающих</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal cams">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="video video1">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="video video2">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="video video3">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="video1" data-targets="video"><u>Камера 1</u></span><span class="plink" data-role="switchBlock" data-target="video2" data-targets="video"><u>Камера 2</u></span><span class="plink" data-role="switchBlock" data-target="video3" data-targets="video"><u>Камера 3</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal scheme-complex">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
+        </div>
+        <div class="modal-title">
+          Схема комплекса
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal photos">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic" data-role="modal-pic"></div>
+        <div class="modal-arrow modal-arrow--prev" data-role="modal-arrow modal-prev"></div>
+        <div class="modal-arrow modal-arrow--next" data-role="modal-arrow modal-next"></div>
+        <div class="modal-title" data-role="modal-title"></div>
+      </div>
+    </div>
+    <!-- Шапка -->
+    <div class="header">
+      <div class="constrain">
+        <!-- Меню -->
+        <div class="header-place header-place--menu">
+          <div class="headerMenu">
+            <div class="plink headerMenu-trigger" data-role="showBlock" data-target="headerMenu">
+              <span class="i-menu"></span>
+            </div>
+            <div class="headerMenu-popup" data-role="headerMenu">
+              <div class="headerMenu-close" data-role="hideBlock" data-target="headerMenu">
+                <span class="i-closeWhite"></span>
+              </div>
+              <div class="headerMenu-title">
+                Спортивный комлекс <span>«Хабарское»</span>
+              </div>
+              <div class="headerMenu-list">
+                <a class="headerMenu-item"><u>О комплексе</u></a><a class="headerMenu-item"><u>Конференц-зал</u></a><a class="headerMenu-item"><u>Акции и спецпредложения</u></a><a class="headerMenu-item"><u>Проживание</u></a><a class="headerMenu-item"><u>Детский отдых</u></a><a class="headerMenu-item"><u>Счастливый Новый Год 2015</u></a><a class="headerMenu-item"><u>Зимний отдых</u></a><a class="headerMenu-item"><u>Летний отдых</u></a><a class="headerMenu-item"><u>Ресторан и кафе</u></a><a class="headerMenu-item"><u>Новости</u></a><a class="headerMenu-item"><u>Контактная Информация</u></a>
+              </div>
+              <div class="headerMenu-submenu">
+                <span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-complex"><u>Схема комплекса</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-hills"><u>Схема склонов</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-way"><u>Схема проезда</u></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Логотип, смена картинки, схемы -->
+        <div class="header-place header-place--logo">
+          <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
+          <div class="headerInteractive">
+            <div class="headerInteractive-popup is-visible" data-role="headerInteractive">
+              <!-- Лето / зима -->
+              <div class="headerInteractive-row">
+                <div class="headerInteractive-left">
+                  <span class="plink season is-active" data-role="switchBlock toSummer" data-target="summer" data-targets="hero-season"><span class="season-pic"><span class="i-summer"></span></span><span class="season-title">лето</span></span>
+                </div>
+                <div class="headerInteractive-left">
+                  <span class="plink season" data-role="switchBlock toWinter" data-target="winter" data-targets="hero-season"><span class="season-pic"><span class="i-winter"></span></span><span class="season-title">зима</span></span>
+                </div>
+              </div>
+              <!-- Погода, камеры -->
+              <div class="headerInteractive-row">
+                <div class="headerInteractive-left">
+                  <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
+                </div>
+                <div class="headerInteractive-right">
+                  <span class="plink plate" data-role="showBlock" data-target="cams"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
+                </div>
+              </div>
+              <!-- Вид со склона -->
+              <div class="headerInteractive-row">
+                <div class="span plink rotate" data-role="toggleBlock" data-target="hero-slide">
+                  <span class="rotate-pic"><span class="i-rotate"></span></span><span class="rotate-title">Вид со склона</span>
+                </div>
+              </div>
+              <!-- Схемы -->
+              <div class="headerInteractive-row">
+                <div class="headerInteractive-left">
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+                </div>
+                <div class="headerInteractive-right">
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="plink headerInteractive-trigger is-active" data-role="toggleBlock" data-target="headerInteractive">
+              <span class="i-arrowUp"></span><span class="i-arrowDown"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Навигация -->
+        <div class="header-place header-place--nav">
+          <div class="headerNav headerNav--summer" data-role="headerNav">
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Акции</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link is-active"><u>Цены</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Проживание</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Питание</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Детский отдых</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Фотогалерея</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>О комплексе</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Как проехать</u></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Контакты -->
+        <div class="header-place header-place--contacts">
+          <div class="headerContacts">
+            <div class="headerContacts-row">
+              <div class="headerContacts-left headerContacts-tel">
+                +7 987 531 0000
+              </div>
+              <div class="headerContacts-right headerContacts-tel">
+                8 (831) 438-66-05
+              </div>
+            </div>
+            <div class="headerContacts-row">
+              <div class="headerContacts-left">
+                <span class="plink" data-role="toggleBlock" data-target="workTime"><u>Режим работы склона</u></span>
+              </div>
+              <div class="headerContacts-right">
+                9<sup>00</sup> — 18<sup>00</sup>
+              </div>
+            </div>
+            <div class="headerContacts-popup" data-role="workTime">
+              <div class="headerContacts-row">
+                <div class="headerContacts-left">
+                  Режим работы<br>ресторана
+                </div>
+                <div class="headerContacts-right">
+                  8<sup>00</sup> — 20<sup>00</sup>
+                </div>
+              </div>
+              <div class="sep"></div>
+              <div class="headerContacts-row">
+                <div class="headerContacts-left">
+                  Гостиница
+                </div>
+                <div class="headerContacts-right">
+                  24 часа
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="constrain">
+        <div class="hero-seasons">
+          <div class="hero-season hero-season--summer is-visible" data-role="hero-season summer">
+            <div class="hero-pic is-visible" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-summer-1.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: blue"></a>
+            </div>
+            <div class="hero-pic" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-summer-2.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: yellow"></a>
+            </div>
+          </div>
+          <div class="hero-season hero-season--winter" data-role="hero-season winter">
+            <div class="hero-pic is-visible" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-winter-1.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: pink"></a>
+            </div>
+            <div class="hero-pic" data-role="hero-slide" style="background-image: url(&#39;assets/images/photo-winter-2.jpg&#39;)">
+              <a class="hero-banner" href="#" style="background: red"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="laytout">
+      <div class="constrain">
+        <div class="layout-column layout-column--narrow bg-white" data-role="column">
+          <div class="block bg-bright">
+            <!-- Новости -->
+            <h2>
+              <a href="#"><u>Новости</u></a>
+            </h2>
+            <div class="news news--important">
+              <!-- margin-top и margin-left у лэйбла — половина размера картинки -->
+              <div class="news-label">
+                <img src="assets/images/spec.png" style="margin-top: -73px; margin-left: -7px" />
+              </div>
+              <div class="news-date">
+                с 20.09 — 15.10.2014
+              </div>
+              <h4 class="news-title">
+                <a href="#"><u>Новый 2015 год и Рождественские каникулы в СК «Хабарское»</u></a>
+              </h4>
+              <div class="news-text">
+                <p>
+                  Открыта продажа путевок на Новый 2015 год по прошлогодним ценам! В акции участвуют всего 9 номеров! Успейте забронировать проживание со скидкой. Только до 15 октября!
+                </p>
+                <p>
+                  <strong>Бронирование по тел. +7-987-531-0000</strong>
+                </p>
+              </div>
+            </div>
+            <div class="sep"></div>
+            <div class="news">
+              <div class="news-date">
+                12.10.2014
+              </div>
+              <h4 class="news-title">
+                С первым снегом друзья!
+              </h4>
+              <div class="news-text">
+                <img src="assets/images/news.jpg" />
+              </div>
+            </div>
+            <div class="sep"></div>
+            <div class="news">
+              <div class="news-date">
+                12.10.2014
+              </div>
+              <h4 class="news-title">
+                <a href="#"><u>Новый 2015 год и Рождественские каникулы в СК «Хабарское»</u></a>
+              </h4>
+              <div class="news-text">
+                <p>
+                  Открыта продажа путевок на Новый 2015 год по прошлогодним ценам! В акции участвуют всего 9 номеров! Успейте забронировать проживание со скидкой. Только до 15 октября!
+                </p>
+                <p>
+                  <strong>Бронирование по тел. +7-987-531-0000</strong>
+                </p>
+              </div>
+            </div>
+            <div class="sep sep--l"></div>
+            <div class="title title--s">
+              <a href="#"><u><em>Все новости</em></u></a>
+            </div>
+          </div>
+          <div class="block footer">
+            <p>
+              Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
+            </p>
+            <div class="footer-meta">
+              <div class="footer-copy">
+                © 2014 — 2015<br>СК «Хабарское»
+              </div>
+              <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="layout-column layout-column--wide bg-dark" data-role="column">
+          <div class="block bg-dull">
+            <h2>
+              <a href="#"><u>Скоро будет</u></a>
+            </h2>
+            <div class="swiper soon">
+              <div class="swiper-container" data-role="swiper soon">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-1.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Открытие горнолыжного сезона
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-2.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Family Day от журнала Family&Home Magazine
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" href="#"><img class="mediaOver-pic" src="assets/images/210-3.jpg" />
+                      <div class="mediaOver-text">
+                        <div class="mediaOver-date">
+                          14 декабря, Воскресенье
+                        </div>
+                        <div class="mediaOver-title">
+                          Детская ёлка «Письмо Деду Морозу»
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-arrows">
+                <div class="swiper-arrow swiper-arrow--prev" data-role="soonPrev"></div>
+                <div class="swiper-arrow swiper-arrow--next" data-role="soonNext"></div>
+              </div>
+            </div>
+          </div>
+          <div class="block bg-orange color-dark textBanner">
+            <div class="textBanner-left">
+              Цена одного подъема сегодня: 70₽
+            </div>
+            <div class="textBanner-right">
+              Цена одного подъема 570₽
+            </div>
+          </div>
+          <div class="block bg-dark color-white">
+            <h2>
+              <a class="color-white" href="#"><u>Фотографии</u></a>
+            </h2>
+            <div class="swiper">
+              <div class="swiper-container" data-role="swiper photos">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-1.jpg"><img class="mediaOver-pic" src="assets/images/220-1.jpg" title="привет" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-2.jpg"><img class="mediaOver-pic" src="assets/images/220-2.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-3.jpg"><img class="mediaOver-pic" src="assets/images/220-3.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-4.jpg"><img class="mediaOver-pic" src="assets/images/220-4.jpg" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="mediaOver" data-role="lightbox" href="assets/images/220-5.jpg"><img class="mediaOver-pic" src="assets/images/220-5.jpg" /></a><br /><a class="mediaOver" data-role="lightbox" href="assets/images/220-6.jpg"><img class="mediaOver-pic" src="assets/images/220-6.jpg" /></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/scripts/vendors.js"></script>
+    <script src="assets/scripts/build.js"></script>
+  </body>
+</html>

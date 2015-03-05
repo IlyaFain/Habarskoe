@@ -267,3 +267,9 @@ $ ->
 		hideBlock(modalRole)
 		showBlock('thanks')
 		return false
+
+$ ->
+	$('@toSummer').on 'click', ->
+		$('@headerNav').addClass('headerNav--summer')
+	$('@toWinter').on 'click', ->
+		$('@headerNav').removeClass('headerNav--summer')
