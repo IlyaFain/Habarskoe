@@ -4,11 +4,13 @@
 		background: transparent
 		border-radius: 100px
 		padding: 10px 20px
+		line-height: 1.3
 		font-weight: $font.bold
 		transition: background 0.3s, color 0.3s
 		// margin-right: 5px
 		font-size: 18px
 		white-space: nowrap
+		display: inline-block
 		&.is-active
 			cursor: default
 			background: $color.blue
@@ -20,6 +22,11 @@
 	&--s &-item
 		font-size: 16px
 		padding: 8px 10px
+	&--sm
+		margin-left: -10px
+	&--sm &-item
+		font-size: 16px
+		padding: 8px 15px
 	&--xs
 		margin-left: -10px
 	&--xs &-item

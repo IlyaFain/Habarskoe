@@ -2080,10 +2080,14 @@ small {
   background: transparent;
   border-radius: 100px;
   padding: 10px 20px;
+  line-height: 1.3;
   font-weight: 700;
   transition: background 0.3s, color 0.3s;
   font-size: 18px;
   white-space: nowrap;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
 .switcher-item.is-active {
   cursor: default;
@@ -2099,6 +2103,13 @@ small {
 .switcher--s .switcher-item {
   font-size: 16px;
   padding: 8px 10px;
+}
+.switcher--sm {
+  margin-left: -10px;
+}
+.switcher--sm .switcher-item {
+  font-size: 16px;
+  padding: 8px 15px;
 }
 .switcher--xs {
   margin-left: -10px;

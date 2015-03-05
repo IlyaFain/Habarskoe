@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Хабарское</title>
+    <meta charset="utf-8" />
+    <link href="assets/styles/styles.css" rel="stylesheet" />
+    <link href="assets/styles/icons.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="modal" data-role="modal scheme-hills">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="hills hillsDefault">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="hills hillsNewbie">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="hillsDefault" data-targets="hills"><u>Основной склон</u></span><span class="plink" data-role="switchBlock" data-target="hillsNewbie" data-targets="hills"><u>Склон для начинающих</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal cams">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="switchBlock is-visible" data-role="video video1">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-1.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="video video2">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="switchBlock" data-role="video video3">
+          <div class="modal-pic">
+            <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-hill-2.jpg" />
+          </div>
+        </div>
+        <div class="modal-title">
+          <span class="plink is-active" data-role="switchBlock" data-target="video1" data-targets="video"><u>Камера 1</u></span><span class="plink" data-role="switchBlock" data-target="video2" data-targets="video"><u>Камера 2</u></span><span class="plink" data-role="switchBlock" data-target="video3" data-targets="video"><u>Камера 3</u></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal scheme-complex">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic">
+          <img class="modal-zoom" data-role="modal-zoom" src="assets/images/scheme-complex.jpg" />
+        </div>
+        <div class="modal-title">
+          Схема комплекса
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal photos">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window">
+        <span class="plink modal-close" data-role="modal-close"><span class="i-closeSmall"></span></span>
+        <div class="modal-pic" data-role="modal-pic"></div>
+        <div class="modal-arrow modal-arrow--prev" data-role="modal-arrow modal-prev"></div>
+        <div class="modal-arrow modal-arrow--next" data-role="modal-arrow modal-next"></div>
+        <div class="modal-title" data-role="modal-title"></div>
+      </div>
+    </div>
+    <!-- Шапка -->
+    <div class="header">
+      <div class="constrain">
+        <!-- Меню -->
+        <div class="header-place header-place--menu">
+          <div class="headerMenu">
+            <div class="plink headerMenu-trigger" data-role="showBlock" data-target="headerMenu">
+              <span class="i-menu"></span>
+            </div>
+            <div class="headerMenu-popup" data-role="headerMenu">
+              <div class="headerMenu-close" data-role="hideBlock" data-target="headerMenu">
+                <span class="i-closeWhite"></span>
+              </div>
+              <div class="headerMenu-title">
+                Спортивный комлекс <span>«Хабарское»</span>
+              </div>
+              <div class="headerMenu-list">
+                <a class="headerMenu-item"><u>О комплексе</u></a><a class="headerMenu-item"><u>Конференц-зал</u></a><a class="headerMenu-item"><u>Акции и спецпредложения</u></a><a class="headerMenu-item"><u>Проживание</u></a><a class="headerMenu-item"><u>Детский отдых</u></a><a class="headerMenu-item"><u>Счастливый Новый Год 2015</u></a><a class="headerMenu-item"><u>Зимний отдых</u></a><a class="headerMenu-item"><u>Летний отдых</u></a><a class="headerMenu-item"><u>Ресторан и кафе</u></a><a class="headerMenu-item"><u>Новости</u></a><a class="headerMenu-item"><u>Контактная Информация</u></a>
+              </div>
+              <div class="headerMenu-submenu">
+                <span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-complex"><u>Схема комплекса</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-hills"><u>Схема склонов</u></span><span class="plink headerMenu-subitem" data-role="showBlock" data-target="scheme-way"><u>Схема проезда</u></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Логотип, смена картинки, схемы -->
+        <div class="header-place header-place--logo">
+          <a class="headerLogo"><img height="90" src="assets/images/logotype.png" title="Хабарское" width="220" /></a>
+          <div class="headerInteractive">
+            <div class="headerInteractive-popup" data-role="headerInteractive">
+              <!-- Погода, камеры -->
+              <div class="headerInteractive-row">
+                <div class="headerInteractive-left">
+                  <span class="plink plate"><span class="plate-pic"><span class="i-weather"></span></span><span class="plate-title">-25°</span></span>
+                </div>
+                <div class="headerInteractive-right">
+                  <span class="plink plate"><span class="plate-pic"><span class="i-webcam"></span></span><span class="plate-title">камеры</span></span>
+                </div>
+              </div>
+              <!-- Схемы -->
+              <div class="headerInteractive-row">
+                <div class="headerInteractive-left">
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-hills"><span class="winexplorer-pic"><span class="i-flag"></span></span><span class="winexplorer-title"><u>Схема склонов</u></span></span>
+                </div>
+                <div class="headerInteractive-right">
+                  <span class="plink winexplorer" data-role="showBlock" data-target="scheme-complex"><span class="winexplorer-pic"><span class="i-chum"></span></span><span class="winexplorer-title"><u>Схема комплекса</u></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="plink headerInteractive-trigger" data-role="toggleBlock" data-target="headerInteractive">
+              <span class="i-arrowUp"></span><span class="i-arrowDown"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Навигация -->
+        <div class="header-place header-place--nav">
+          <div class="headerNav headerNav--summer" data-role="headerNav">
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Акции</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link is-active"><u>Цены</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Проживание</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Питание</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Детский отдых</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Фотогалерея</u></a>
+              </div>
+            </div>
+            <div class="headerNav-column">
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>О комплексе</u></a>
+              </div>
+              <div class="headerNav-item">
+                <a class="headerNav-link"><u>Как проехать</u></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Контакты -->
+        <div class="header-place header-place--contacts">
+          <div class="headerContacts">
+            <div class="headerContacts-row">
+              <div class="headerContacts-left headerContacts-tel">
+                +7 987 531 0000
+              </div>
+              <div class="headerContacts-right headerContacts-tel">
+                8 (831) 438-66-05
+              </div>
+            </div>
+            <div class="headerContacts-row">
+              <div class="headerContacts-left">
+                <span class="plink" data-role="toggleBlock" data-target="workTime"><u>Режим работы склона</u></span>
+              </div>
+              <div class="headerContacts-right">
+                9<sup>00</sup> — 18<sup>00</sup>
+              </div>
+            </div>
+            <div class="headerContacts-popup" data-role="workTime">
+              <div class="headerContacts-row">
+                <div class="headerContacts-left">
+                  Режим работы<br>ресторана
+                </div>
+                <div class="headerContacts-right">
+                  8<sup>00</sup> — 20<sup>00</sup>
+                </div>
+              </div>
+              <div class="sep"></div>
+              <div class="headerContacts-row">
+                <div class="headerContacts-left">
+                  Гостиница
+                </div>
+                <div class="headerContacts-right">
+                  24 часа
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="laytout">
+      <div class="constrain bg-white">
+        <div class="layout-column layout-column--general bg-dull" data-role="column">
+          <div class="block bg-dull" style="padding-right: 0">
+            <h1>
+              Корпоративный отдых
+            </h1>
+            <h3>
+              +7 957 531-00-00 — Отдел корпоративного отдыха <br><a href="#"><u>manager@habarskoe.ru</u></a>
+            </h3>
+            <div class="sep"></div>
+            <p>
+              Готовы рассмотреть ваши предложения и идеи яркого и неповторимого мероприятия. и можем предложить варианты, которые будут соотвтествовать вашим целям , корпоративному стилю, и бюджетам.
+            </p>
+            <h3>
+              Информация о стоимости проведения мероприятий — <a href="#"><u>Ресторан и кафе</u></a>
+            </h3>
+            <div class="sep sep--xl"></div>
+            <div class="switcher switcher--s">
+              <span class="plink switcher-item is-active" data-role="switchBlock" data-target="a1" data-targets="a"><u>Корпоративы</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="a2" data-targets="a"><u>Банкеты</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="a3" data-targets="a"><u>Конференции</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="a4" data-targets="a"><u>Тест-драйвы</u></span><span class="plink switcher-item" data-role="switchBlock" data-target="a5" data-targets="a"><u>Соревнования</u></span>
+            </div>
+            <div class="sep sep--l"></div>
+            <div class="switchBlock is-visible" data-role="a a1" style="font-size: 16px">
+              <div class="rama" data-height="400" data-role="fotorama" data-width="100%">
+                <img src="assets/images/corp-1.jpg" /><img src="assets/images/corp-2.jpg" /><img src="assets/images/corp-3.jpg" /><img src="assets/images/corp-4.jpg" /><img src="assets/images/corp-5.jpg" />
+              </div>
+              <div class="sep sep--xxl"></div>
+              <p>
+                Планируете юбилей, свадьбу или званый ужин для ваших деловых партнеров — Наши ресторан и кафе к вашим услугам!
+              </p>
+              <p>
+                Изящная сервировка столов, сказочный вид из окна ресторанаили открытой веранды кафе, и вкусная еда аодарят вам и вашим гостям отличное настроение, оставив в душе самы е теплые воспоминания о празднике.
+              </p>
+              <p>
+                Индивидуальный подход и уважение к каждому клиенту помогут сделат ьпраздник таким, каким вы о нем мечтали.
+              </p>
+            </div>
+            <div class="switchBlock" data-role="a a2">
+              <h2 style="font-style: normal">
+                Альпийская школа
+              </h2>
+              <p style="font-size: 16px;">
+                Ваш ребенок уверенно стоит на лыжах и может спуститься почти со всех склонов Хабарского, однако вы видите, что его техника далека от идеальной? Вы собрались поехать всей семьей в Большие Горы? Тогда Вашему ребенку необходима "Альпийская школа"!
+              </p>
+              <p style="font-size: 16px;">
+                Горнолыжный комплекс "Хабарское", детский клуб "Мадагаскар", и школа горных лыж и сноуборда "Икс-Тим" приглашает мальчишек и девчонок в возрасте 7-14 лет на программу "Альпийская школа".
+              </p>
+              <p style="font-size: 16px;">
+                Во время групповых занятий с опытными инструкторами и вожатыми клуба "Мадагаскар" в СК "Хабарское" ваш ребенок познакомится с основами современной горнолыжной техники, забудет о плуге, перестанет бояться крутых или бугристых склонов и получит большое удовольствие в поездке с родителями в Большие горы!
+              </p>
+              <div class="rama" data-height="400" data-role="fotorama">
+                <img src="assets/images/alp-1.jpg" /><img src="assets/images/alp-2.jpg" /><img src="assets/images/alp-3.jpg" /><img src="assets/images/alp-4.jpg" /><img src="assets/images/alp-5.jpg" />
+              </div>
+              <div class="sep sep--xxl"></div>
+              <div class="program program--empty">
+                <div class="program-text" style="font-size: 16px;">
+                  <h2>
+                    Программа школы:
+                  </h2>
+                  <p>
+                    <strong>Цель:</strong> поставить правильную технику и достичь уверенного и безопасного катания детей на горных лыжах со склонов различной сложности.
+                  </p>
+                  <p>
+                    <strong>Поэтапное освоение техник катания:</strong> упор, параллельные лыжи, резаный поворот.
+                  </p>
+                  <p>
+                    <strong>Дополнительные полезные навыки:</strong> крутые склоны, бугры, свежий склон, катание по трассе с вешками.
+                  </p>
+                  <p>
+                    Рекомендуем регулярные занятия и дополнительное катание с родителями для закрепления полученных навыков.
+                  </p>
+                  <p>
+                    <strong>Тренер секции:</strong> Трянин Юрий.
+                  </p>
+                  <p>
+                    <strong>Начало занятий:</strong> 11.01.2015 г.
+                  </p>
+                  <p>
+                    <strong>Расписание занятий:</strong> Каждое воскресенье с 9-00 до 12-00
+                  </p>
+                  <p>
+                    Виды месячных абонементов (4 занятия). Стоимость в месяц
+                  </p>
+                  <dl style="font-size: 16px">
+                    <dt style="width: 60%">
+                      <strong>Инструктор+прокат+ски-пасс</strong>
+                    </dt>
+                    <dd>
+                      <strong>4 400 руб.</strong>
+                    </dd>
+                  </dl>
+                  <dl style="font-size: 16px;">
+                    <dt style="width: 60%">
+                      <strong>Инструктор+ски-пасс</strong>
+                    </dt>
+                    <dd>
+                      <strong>3 400 руб.</strong>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="switchBlock" data-role="a a3">
+              <h2>
+                Про хабарское
+              </h2>
+            </div>
+            <div class="switchBlock" data-role="a a4">
+              <h2>
+                Про хабарское
+              </h2>
+            </div>
+          </div>
+          <div class="block footer">
+            <p>
+              Богородский р-он, д. Хабарское<br><nobr>тел.: +7 (987) 531-00-00,</nobr> <nobr>факс: (831) 438-66-05</nobr><br>бронирование: <nobr>+7 910 870 91 42</nobr>
+            </p>
+            <div class="footer-meta">
+              <div class="footer-copy">
+                © 2014 — 2015<br>СК «Хабарское»
+              </div>
+              <a class="footer-dev" href="#"><u>Разработка сайта</u> — <span class="i-xdesign"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="layout-column layout-column--aside" data-role="columnFixed" style="background: #E1E1E1">
+          <div class="archive">
+            <div class="archive-header">
+              Архив
+            </div>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-container" data-role="swiper archive">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-1.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Мы вместе — 1 июня 2013г.</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-2.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Мы вместе — 1 июня 2013г.</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-3.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Мы вместе — 1 июня 2013г.</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-4.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Мы вместе — 1 июня 2013г.</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item is-active" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-5.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Мы вместе — 1 июня 2013г.</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-6.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Детский лагерь «Мадагаскар»</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-7.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Детский лагерь «Мадагаскар»</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-8.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Детский лагерь «Мадагаскар»</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-9.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Детский лагерь «Мадагаскар»</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-10.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Детский лагерь «Мадагаскар»</u>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="archive-item" href="#">
+                    <div class="archive-pic">
+                      <img src="assets/images/195-11.jpg" />
+                    </div>
+                    <div class="archive-title">
+                      <u>Детский лагерь «Мадагаскар»</u>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="archive-footer">
+              <span class="plink" data-role="scrollToTop"><u>Наверх</u>↑</span>
+            </div>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/scripts/vendors.js"></script>
+    <script src="assets/scripts/build.js"></script>
+  </body>
+</html>

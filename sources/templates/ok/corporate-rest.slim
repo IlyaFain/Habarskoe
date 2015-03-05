@@ -1,0 +1,63 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modals.slim'
+		= include 'partials/header-summer.slim'
+
+
+		.laytout
+			.constrain.bg-white
+				.layout-column.layout-column--general.bg-dull  data-role="column"
+					.block.bg-dull style="padding-right: 0"
+						h1 Корпоративный отдых
+						h3 +7 957 531-00-00 — Отдел корпоративного отдыха <br><a href="#"><u>manager@habarskoe.ru</u></a>
+						.sep
+						p Готовы рассмотреть ваши предложения и идеи яркого и неповторимого мероприятия. и можем предложить варианты, которые будут соотвтествовать вашим целям , корпоративному стилю, и бюджетам.
+						h3 Информация о стоимости проведения мероприятий — <a href="#"><u>Ресторан и кафе</u></a>
+						.sep.sep--xl
+						.switcher.switcher--s
+							span.plink.switcher-item.is-active data-role="switchBlock" data-targets="a" data-target="a1": u Корпоративы
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a2": u Банкеты
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a3": u Конференции
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a4": u Тест-драйвы
+							span.plink.switcher-item data-role="switchBlock" data-targets="a" data-target="a5": u Соревнования
+						.sep.sep--l
+						.switchBlock.is-visible data-role="a a1" style="font-size: 16px"
+
+							.rama data-role="fotorama" data-height="400" data-width="100%"
+								img src="assets/images/corp-1.jpg"
+								img src="assets/images/corp-2.jpg"
+								img src="assets/images/corp-3.jpg"
+								img src="assets/images/corp-4.jpg"
+								img src="assets/images/corp-5.jpg"
+							.sep.sep--xxl
+							p Планируете юбилей, свадьбу или званый ужин для ваших деловых партнеров — Наши ресторан и кафе к вашим услугам!
+							p Изящная сервировка столов, сказочный вид из окна ресторанаили открытой веранды кафе, и вкусная еда аодарят вам и вашим гостям отличное настроение, оставив в душе самы е теплые воспоминания о празднике.
+							p Индивидуальный подход и уважение к каждому клиенту помогут сделат ьпраздник таким, каким вы о нем мечтали.
+
+
+
+						.switchBlock data-role="a a2"
+							h2 2
+						.switchBlock data-role="a a3"
+							h2 3
+						.switchBlock data-role="a a4"
+							h2 4
+						.switchBlock data-role="a a5"
+							h2 5
+
+
+
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
+					= include 'partials/archive.slim'
+
+
+				div style="clear: both"
+
+		= include 'partials/scripts.slim'
+
+
