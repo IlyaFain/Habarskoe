@@ -1,0 +1,20 @@
+| <!-- Шапка -->
+.header
+	.constrain
+
+		| <!-- Меню -->
+		.header-place.header-place--menu
+			= include 'headerMenu.slim'
+
+		| <!-- Логотип, смена картинки, схемы -->
+		.header-place.header-place--logo
+			= include 'headerLogo.slim'
+			= include 'headerInteractive.slim'
+
+		| <!-- Навигация -->
+		.header-place.header-place--nav
+			= include 'headerNav-summer.slim'
+
+		| <!-- Контакты -->
+		.header-place.header-place--contacts
+			= include 'headerContacts.slim'

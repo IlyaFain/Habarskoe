@@ -1,0 +1,78 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body
+
+		= include 'partials/modals.slim'
+		= include 'partials/header-summer.slim'
+
+
+		.laytout
+			.constrain.bg-white
+				.layout-column.layout-column--general data-role="column"
+					.block.bg-dull
+						h1 Летний отдых
+						.media.media--left
+							.media-pic
+								img src="assets/images/361-9.jpg"
+							.media-text
+								h3 Аква-зона
+								p Плавание  — одно из самых полезных и приятных занятий на отдыхе. Вода восстанавливает силы, и спасает в жаркий день. А если у вас есть дети, то они будут вдвойне рады поплескаться в бассейне.
+								p В вашем распоряжении 12-ти метровый бассейн с чистой артезианской водой, джакузи и финская сауна со своим бассейном.
+
+
+						.sep.sep--figured.sep--summer
+						.media.media--right
+							.media-pic
+								img src="assets/images/361-10.jpg"
+							.media-text
+								h3 Фитнес на открытом воздухе
+								p Программа рассчитана для людейвсех возрастов, физической подготовки и направлена на общее оздоровление.
+								p Важнейшую роль в оздоровлении играет обычное движение. Неудивительно, что для многих движение, тренировка и спорт — лучший отдых после сидячей работы. Движение помогает сохранить здоровье, меньше уставать и работать эффективнее.
+
+
+
+						.sep.sep--figured.sep--summer
+
+						.media.media--left
+							.media-pic
+								img src="assets/images/361-11.jpg"
+							.media-text
+								h3 Йога
+								p Это не спорт и не религия. Это образ жизни, направленный на улучшение состояния нашей души.
+								p Нам так не хватает этого в нашей современной жизни с ее высокими скоростями и агрессивной внешней средой.<br>Йога — это зарядка для ума и тела. Она призвана настроить наш разум и организм на правильный лад, и тогда мы будем абсолютно здоровыми и счастливыми людьми!
+
+
+
+
+						.sep.sep--figured.sep--summer
+
+						.media.media--right
+							.media-pic
+								img src="assets/images/361-12.jpg"
+							.media-text
+								h3 Сауна
+								p Актуальная и зимой и летом, сауна поможет расслабиться в приятном окружении друзей. Для контраста имеется просторный бассейн с прохладной водой.
+								p Вместительность сауны — до 8 человек.<br>Температурный диапазон: от 80 до 120 °С.
+
+
+
+
+						.sep.sep--figured.sep--summer
+
+						h3 Информацию о предстоящих мероприятиях смотрите в <a href="/calendar.html"><u>Календаре мероприятий</u></a>
+						.sep.sep--xl
+
+
+
+					= include 'partials/footer.slim'
+
+				.layout-column.layout-column--aside data-role="columnFixed" style="background: #E1E1E1"
+					= include 'partials/archive.slim'
+
+
+				div style="clear: both"
+
+		= include 'partials/scripts.slim'
+
+
