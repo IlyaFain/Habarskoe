@@ -19,6 +19,17 @@
 		float: left
 		margin-right: 7%
 		// margin-right: 3%
+	&--errorpage
+		background: transparent
+		padding: 0
+		margin: 50px auto 0
+		overflow: visible
+	&--errorpage &-column
+		float: none
+		margin: 0 3%
+		display: inline-block
+		text-align: left
+		font-weight: bold
 	a
 		display: block
 		linkColor(#fff)
@@ -27,6 +38,8 @@
 			cursor: default
 			u
 				border-color: transparent
+	&--errorpage a
+		linkColor($color.blue)
 	&--summer
 		background: #FF7A54
 	&--summer a.is-active

@@ -1,0 +1,32 @@
+doctype html
+html lang="ru"
+	= include 'partials/head.slim'
+	body.errorpage
+
+
+		.laytout
+			.constrain
+				a.errorpage-logo: img title="Хабарское" src="assets/images/logotype-large.png" width="221" height="77"
+				img.errorpage-pic src="assets/images/404.png"
+				.errorpage-title Страница не найдена. Возможно, страница удалена,<br>или вы ошиблись, набирая адрес.
+				.errorpage-subtitle Попробуйте заново набрать адрес, или воспользуйтесь навигацией:
+				.errorpage-nav.headerNav.headerNav--errorpage
+					.headerNav-column
+						.headerNav-item: a.headerNav-link: u Акции
+						.headerNav-item: a.headerNav-link: u Цены
+					.headerNav-column
+						.headerNav-item: a.headerNav-link: u Проживание
+						.headerNav-item: a.headerNav-link: u Питание
+					.headerNav-column
+						.headerNav-item: a.headerNav-link: u Детский отдых
+						.headerNav-item: a.headerNav-link: u Фотогалерея
+					.headerNav-column
+						.headerNav-item: a.headerNav-link: u О комплексе
+						.headerNav-item: a.headerNav-link: u Как проехать
+
+
+
+
+		= include 'partials/scripts.slim'
+
+
