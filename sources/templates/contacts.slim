@@ -7,7 +7,11 @@ html lang="ru"
 		= include 'partials/modal-seasons-safe.slim'
 		= include 'partials/modals.slim'
 		= include 'partials/header.slim'
-
+		.modal data-role="modal thanks"
+			.modal-overlay data-role="modal-close"
+			.modal-window.modal-window--yellow
+				h1 Вы — чудо!
+				h2 Мы получили вашу заявку. Она прекрасна!<br>Осталось совсем немного подождать<br>и мы с вами свяжемся.
 
 
 
@@ -55,7 +59,7 @@ html lang="ru"
 								td width="40%"
 									input.field.field--white type="text" placeholder="Ваш e-mail" style="width: 100%"
 								td width="20%"
-									input.button.button--blue type="submit" value="Отправить"
+									input.button.button--blue type="submit" value="Отправить" data-role="showBlock" data-target="thanks"
 								td width="40%" &nbsp;
 
 

@@ -319,7 +319,7 @@
         </div>
         <!-- Навигация -->
         <div class="header-place header-place--nav">
-          <div class="headerNav">
+          <div class="headerNav" data-role="headerNav">
             <div class="headerNav-column">
               <div class="headerNav-item">
                 <a class="headerNav-link"><u>Акции</u></a>
@@ -394,6 +394,17 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="modal" data-role="modal thanks">
+      <div class="modal-overlay" data-role="modal-close"></div>
+      <div class="modal-window modal-window--yellow">
+        <h1>
+          Вы — чудо!
+        </h1>
+        <h2>
+          Мы получили вашу заявку. Она прекрасна!<br>Осталось совсем немного подождать<br>и мы с вами свяжемся.
+        </h2>
       </div>
     </div>
     <div class="layout">
@@ -474,7 +485,7 @@
                   <input class="field field--white" placeholder="Ваш e-mail" style="width: 100%" type="text" />
                 </td>
                 <td width="20%">
-                  <input class="button button--blue" type="submit" value="Отправить" />
+                  <input class="button button--blue" data-role="showBlock" data-target="thanks" type="submit" value="Отправить" />
                 </td>
                 <td width="40%">
                   &nbsp;
