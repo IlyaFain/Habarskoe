@@ -23,11 +23,11 @@ $ ->
 
 	$body = $('body')
 
-	$showBlockLinks = $('@showBlock')
-	$hideBlockLinks = $('@hideBlock')
-	$switchBlockLinks = $('@switchBlock')
-	$toggleBlockLinks = $('@toggleBlock')
-	$showLightboxLinks = $('@lightbox')
+	$showBlockLinks = '@showBlock'
+	$hideBlockLinks = '@hideBlock'
+	$switchBlockLinks = '@switchBlock'
+	$toggleBlockLinks = '@toggleBlock'
+	$showLightboxLinks = '@lightbox'
 	$photos = $('@photos').find('@lightbox').find('img')
 
 
@@ -64,39 +64,39 @@ $ ->
 			if e.keyCode is 27
 				hideBlock(role)
 
-	$showBlockLinks.on 'click', ->
+	$body.on 'click', $showBlockLinks, ->
 		role = $(this).attr('data-target')
 		showBlock(role)
 		$(window).trigger('resize')
 
-	$hideBlockLinks.on 'click', ->
+	$body.on 'click', $hideBlockLinks, ->
 		role = $(this).attr('data-target')
 		hideBlock(role)
 		$(window).trigger('resize')
 
-	$toggleBlockLinks.on 'click', ->
+	$body.on 'click', $toggleBlockLinks, ->
 		role = $(this).attr('data-target')
 		toggleBlock(role)
 		$(window).trigger('resize')
 
-	$switchBlockLinks.on 'click', ->
+	$body.on 'click', $switchBlockLinks, ->
 		targetRole = $(this).attr('data-target')
 		targetsRole = $(this).attr('data-targets')
 		$('@'+targetsRole).removeClass('is-visible').filter('@'+targetRole).addClass('is-visible')
 		$('[data-targets="'+targetsRole+'"]').removeClass('is-active').filter($(this)).addClass('is-active')
 
 
-	$closeModalLinks = $('@modal-close')
-	$zoomModalLinks = $('@modal-zoom')
+	$closeModalLinks = '@modal-close'
+	$zoomModalLinks = '@modal-zoom'
 
-	$closeModalLinks.on 'click', ->
+	$body.on 'click', $closeModalLinks, ->
 		$modal = $(this).closest('@modal')
 		$modal.removeClass('is-visible')
 		role = $modal.roles()[1]
 		$('[data-target="'+role+'"]').removeClass('is-active')
 		bodyUnlock(role)
 
-	$zoomModalLinks.on 'click', ->
+	$body.on 'click', $zoomModalLinks, ->
 		$modal = $(this).closest('@modal')
 		$modal.toggleClass('is-zoomed')
 
@@ -138,7 +138,7 @@ $ ->
 
 
 
-	$showLightboxLinks.on 'click', ->
+	$body.on 'click', $showLightboxLinks, ->
 		role = 'photos'
 		$original = $(this).find('img')
 		setPhoto($original)

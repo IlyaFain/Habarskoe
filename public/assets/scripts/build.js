@@ -132,11 +132,11 @@ $(function() {
 $(function() {
   var $body, $closeModalLinks, $hideBlockLinks, $photos, $showBlockLinks, $showLightboxLinks, $switchBlockLinks, $toggleBlockLinks, $zoomModalLinks, bodyLock, bodyUnlock, getBlock, getLink, setArrows, setPhoto, toggleBlock;
   $body = $('body');
-  $showBlockLinks = $('@showBlock');
-  $hideBlockLinks = $('@hideBlock');
-  $switchBlockLinks = $('@switchBlock');
-  $toggleBlockLinks = $('@toggleBlock');
-  $showLightboxLinks = $('@lightbox');
+  $showBlockLinks = '@showBlock';
+  $hideBlockLinks = '@hideBlock';
+  $switchBlockLinks = '@switchBlock';
+  $toggleBlockLinks = '@toggleBlock';
+  $showLightboxLinks = '@lightbox';
   $photos = $('@photos').find('@lightbox').find('img');
   getLink = function(role) {
     return $('[data-target="' + role + '"]');
@@ -174,34 +174,34 @@ $(function() {
       }
     });
   };
-  $showBlockLinks.on('click', function() {
+  $body.on('click', $showBlockLinks, function() {
     var role;
     role = $(this).attr('data-target');
     showBlock(role);
     return $(window).trigger('resize');
   });
-  $hideBlockLinks.on('click', function() {
+  $body.on('click', $hideBlockLinks, function() {
     var role;
     role = $(this).attr('data-target');
     hideBlock(role);
     return $(window).trigger('resize');
   });
-  $toggleBlockLinks.on('click', function() {
+  $body.on('click', $toggleBlockLinks, function() {
     var role;
     role = $(this).attr('data-target');
     toggleBlock(role);
     return $(window).trigger('resize');
   });
-  $switchBlockLinks.on('click', function() {
+  $body.on('click', $switchBlockLinks, function() {
     var targetRole, targetsRole;
     targetRole = $(this).attr('data-target');
     targetsRole = $(this).attr('data-targets');
     $('@' + targetsRole).removeClass('is-visible').filter('@' + targetRole).addClass('is-visible');
     return $('[data-targets="' + targetsRole + '"]').removeClass('is-active').filter($(this)).addClass('is-active');
   });
-  $closeModalLinks = $('@modal-close');
-  $zoomModalLinks = $('@modal-zoom');
-  $closeModalLinks.on('click', function() {
+  $closeModalLinks = '@modal-close';
+  $zoomModalLinks = '@modal-zoom';
+  $body.on('click', $closeModalLinks, function() {
     var $modal, role;
     $modal = $(this).closest('@modal');
     $modal.removeClass('is-visible');
@@ -209,7 +209,7 @@ $(function() {
     $('[data-target="' + role + '"]').removeClass('is-active');
     return bodyUnlock(role);
   });
-  $zoomModalLinks.on('click', function() {
+  $body.on('click', $zoomModalLinks, function() {
     var $modal;
     $modal = $(this).closest('@modal');
     return $modal.toggleClass('is-zoomed');
@@ -252,7 +252,7 @@ $(function() {
       return setPhoto($photos.eq(i - 1));
     });
   };
-  return $showLightboxLinks.on('click', function() {
+  return $body.on('click', $showLightboxLinks, function() {
     var $original, role;
     role = 'photos';
     $original = $(this).find('img');
