@@ -273,3 +273,7 @@ $ ->
 		$('@headerNav').addClass('headerNav--summer')
 	$('@toWinter').on 'click', ->
 		$('@headerNav').removeClass('headerNav--summer')
+
+$ ->
+	$('#test').on 'click', ->
+		console.log '123'

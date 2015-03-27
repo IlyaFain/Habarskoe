@@ -408,3 +408,9 @@ $(function() {
     return $('@headerNav').removeClass('headerNav--summer');
   });
 });
+
+$(function() {
+  return $('#test').on('click', function() {
+    return console.log('123');
+  });
+});
