@@ -413,6 +413,7 @@ td:hover .calendar-popup {
   position: relative;
   font-style: italic;
   font-weight: bold;
+  empty-cells: hide;
 }
 .calendar tbody th {
   padding-top: 1em;
