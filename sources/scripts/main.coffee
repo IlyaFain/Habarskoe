@@ -234,7 +234,8 @@ $ ->
 
 	onComplete = ->
 		console.log 'complete'
-		# $(window).resize()
+		after 50, =>
+			$(window).resize()
 
 
 

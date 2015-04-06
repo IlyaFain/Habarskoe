@@ -359,7 +359,12 @@ $(function() {
     }
   });
   onComplete = function() {
-    return console.log('complete');
+    console.log('complete');
+    return after(50, (function(_this) {
+      return function() {
+        return $(window).resize();
+      };
+    })(this));
   };
   return $gallery.isotope('on', 'layoutComplete', onComplete());
 });
