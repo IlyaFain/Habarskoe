@@ -15,9 +15,9 @@ $ ->
 			height = Math.max.apply(Math, heights)
 			$columns.css('height', height)
 
-	$(window).on 'load', ->
-		after 200, =>
-			$(window).trigger('resize')
+	# $(window).on 'load', ->
+	# 	after 200, =>
+	# 		$(window).trigger('resize')
 
 $ ->
 
@@ -226,25 +226,24 @@ $ ->
 		fit: 'cober'
 
 $ ->
-	$gallery = $('@gallery').isotope
-		itemSelector: '.gallery-item'
-		masonry:
-			columnWidth: 280
-			gutter: 10
+	$gallery =
+	$images = $('@gallery img')
+	l = $images.length - 1
+	$images.waitForImages
+		waitForAll: true
+		each: (a, b, c) ->
+			if a is l
+				console.log 'last'
+				$gallery = $('@gallery').isotope
+					itemSelector: '.gallery-item'
+					masonry:
+						columnWidth: 280
+						gutter: 10
+				# $gallery.isotope 'on', 'layoutComplete', onComplete()
 
-	onComplete = ->
-		console.log 'complete'
-		after 50, =>
-			$(window).resize()
+	# onComplete = ->
+	# 	console.log 'compleate'
 
-
-
-	$gallery.isotope 'on', 'layoutComplete', onComplete()
-		# $(window).resize()
-		# setTimeout ->
-		# 	console.log 'layoutComplete'
-		# 	$(window).resize()
-		# , 1500
 
 
 $ ->

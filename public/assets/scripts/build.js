@@ -106,7 +106,7 @@ $(function() {
     }
     return cb();
   };
-  $(window).on('resize', function() {
+  return $(window).on('resize', function() {
     return likeFooterHeight(function() {
       var height, heights;
       $columns.css('height', 'auto');
@@ -119,13 +119,6 @@ $(function() {
       height = Math.max.apply(Math, heights);
       return $columns.css('height', height);
     });
-  });
-  return $(window).on('load', function() {
-    return after(200, (function(_this) {
-      return function() {
-        return $(window).trigger('resize');
-      };
-    })(this));
   });
 });
 
@@ -350,23 +343,24 @@ $(function() {
 });
 
 $(function() {
-  var $gallery, onComplete;
-  $gallery = $('@gallery').isotope({
-    itemSelector: '.gallery-item',
-    masonry: {
-      columnWidth: 280,
-      gutter: 10
+  var $gallery, $images, l;
+  $gallery = $images = $('@gallery img');
+  l = $images.length - 1;
+  return $images.waitForImages({
+    waitForAll: true,
+    each: function(a, b, c) {
+      if (a === l) {
+        console.log('last');
+        return $gallery = $('@gallery').isotope({
+          itemSelector: '.gallery-item',
+          masonry: {
+            columnWidth: 280,
+            gutter: 10
+          }
+        });
+      }
     }
   });
-  onComplete = function() {
-    console.log('complete');
-    return after(50, (function(_this) {
-      return function() {
-        return $(window).resize();
-      };
-    })(this));
-  };
-  return $gallery.isotope('on', 'layoutComplete', onComplete());
 });
 
 $(function() {
