@@ -106,7 +106,7 @@ $(function() {
     }
     return cb();
   };
-  return $(window).on('resize', function() {
+  $(window).on('resize', function() {
     return likeFooterHeight(function() {
       var height, heights;
       $columns.css('height', 'auto');
@@ -119,6 +119,9 @@ $(function() {
       height = Math.max.apply(Math, heights);
       return $columns.css('height', height);
     });
+  });
+  return $(window).on('load', function() {
+    return $(window).trigger('resize');
   });
 });
 

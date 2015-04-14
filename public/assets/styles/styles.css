@@ -887,6 +887,15 @@ label {
   margin-top: 5px;
   display: block;
 }
+.rama {
+  height: 412px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.rama.fotorama {
+  opacity: 1;
+}
 .fotorama__nav-wrap {
   position: absolute;
   bottom: 0;
