@@ -2577,19 +2577,27 @@ qe[Xc]=d(N(yb)),qe[Zc]=d(N(Mb+" "+Ob+rc,N(ic))),qe[Yc]=d(N(Mb+" "+Nb+rc,N(hc))),
             //New FireFox
             else if (we === 'wheel') {
                 if (s.params.mousewheelForceToAxis) {
+<<<<<<< HEAD
                     console.log('1')
                     if (isH()) {
                         console.log('1.1')
+=======
+                    if (isH()) {
+>>>>>>> Сролл в фаерфоксе
                         if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) delta = -e.deltaX;
                         else return;
                     }
                     else {
+<<<<<<< HEAD
                         console.log('1.2')
+=======
+>>>>>>> Сролл в фаерфоксе
                         if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) delta = -e.deltaY;
                         else return;
                     }
                 }
                 else {
+<<<<<<< HEAD
                     console.log('2')
                     // delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? - e.deltaX : - e.deltaY;
                     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
@@ -2597,6 +2605,11 @@ qe[Xc]=d(N(yb)),qe[Zc]=d(N(Mb+" "+Ob+rc,N(ic))),qe[Yc]=d(N(Mb+" "+Nb+rc,N(hc))),
                         delta = - e.deltaX;
                     } else {
                         console.log('2.2')
+=======
+                    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                        delta = - e.deltaX;
+                    } else {
+>>>>>>> Сролл в фаерфоксе
                         delta = 30 * -e.deltaY;
                     }
 
