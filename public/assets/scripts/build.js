@@ -260,7 +260,7 @@ $(function() {
 
 $(function() {
   window.swiperSoon = $('@swiper@soon').swiper({
-    mode: 'horizontal',
+    direction: 'horizontal',
     loop: false,
     slidesPerView: 3,
     calculateHeight: true,
@@ -280,7 +280,7 @@ $(function() {
 
 $(function() {
   return window.swiperPhotos = $('@swiper@photos').swiper({
-    mode: 'horizontal',
+    direction: 'horizontal',
     loop: false,
     slidesPerView: 3,
     slidesPerGroup: 3,
@@ -300,7 +300,8 @@ $(function() {
 $(function() {
   var swiperPhotos;
   return swiperPhotos = $('@swiper@archive').swiper({
-    mode: 'vertival',
+    direction: 'vertical',
+    speed: 300,
     loop: false,
     slidesPerView: 'auto',
     calculateHeight: false,
@@ -311,10 +312,29 @@ $(function() {
     freeMode: true,
     mousewheelControl: true,
     scrollContainer: true,
-    scrollbar: {
-      container: '.swiper-scrollbar',
-      draggable: true,
-      hide: false
+    scrollbar: '.swiper-scrollbar',
+    onInit: function() {
+      var $swiperContainer, swiperContainer, wheelDistance;
+      $swiperContainer = $('@swiper@archive');
+      swiperContainer = $swiperContainer[0];
+      $swiperContainer.on('mousewheel', function() {
+        return console.log('1333');
+      });
+      wheelDistance = function(e) {
+        var d, w;
+        e = e || event;
+        w = e.wheelDelta;
+        d = e.detail;
+        console.log('123');
+        if (w) {
+          return w / 120;
+        } else if (d) {
+          return -d / 3;
+        } else {
+          return 0;
+        }
+      };
+      return swiperContainer.addEventListener('WheelEvent', wheelDistance, false);
     }
   });
 });

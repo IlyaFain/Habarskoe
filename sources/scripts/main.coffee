@@ -146,7 +146,7 @@ $ ->
 
 $ ->
 	window.swiperSoon = $('@swiper@soon').swiper
-		mode: 'horizontal'
+		direction: 'horizontal'
 		loop: false
 		slidesPerView: 3
 		calculateHeight: true
@@ -162,7 +162,7 @@ $ ->
 
 $ ->
 	window.swiperPhotos = $('@swiper@photos').swiper
-		mode: 'horizontal'
+		direction: 'horizontal'
 		loop: false
 		slidesPerView: 3
 		slidesPerGroup: 3
@@ -183,8 +183,11 @@ $ ->
 
 
 $ ->
+
+
 	swiperPhotos = $('@swiper@archive').swiper
-		mode: 'vertival'
+		direction: 'vertical'
+		speed: 300
 		loop: false
 		slidesPerView: 'auto'
 		# calculateHeight: tr
@@ -199,10 +202,28 @@ $ ->
 		# freeModeFluid: true
 		mousewheelControl: true
 		scrollContainer: true
-		scrollbar:
-			container: '.swiper-scrollbar'
-			draggable: true
-			hide: false
+		scrollbar: '.swiper-scrollbar'
+		onInit: ->
+
+			$swiperContainer = $('@swiper@archive')
+			swiperContainer = $swiperContainer[0]
+
+			$swiperContainer.on 'mousewheel', ->
+				console.log '1333'
+
+			wheelDistance = (e) ->
+				e = e or event
+				w = e.wheelDelta
+				d = e.detail
+				console.log '123'
+				if w then w / 120 else if d then -d / 3 else 0
+
+
+			# swiper.addEventListener 'mousewheel', wheelDistance, false
+			swiperContainer.addEventListener 'WheelEvent', wheelDistance, false # for Firefox
+
+
+
 
 $ ->
 	$column = $('@columnFixed')
